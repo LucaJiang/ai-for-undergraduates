@@ -43,13 +43,29 @@ A practical public workshop website for undergraduate students in Hong Kong on s
 
 ### Part 3 — implemented
 
-- difficult-concept learning framework: intuition → formalism → example → self-check;
-- eigenvector demo connecting formula, geometry, and computation;
-- Socratic one-hint-at-a-time tutoring pattern;
-- multi-representation learning: words, symbols, diagrams, numbers, and code;
-- coding-assisted concept visualization with a minimal Python example;
-- discipline-specific concept options for STEM, medicine, business, and humanities/social science;
-- Exercise 2: students choose a hard concept and make AI test their understanding.
+- difficult-concept learning framework;
+- intuitive → formal → example → self-check → critique sequence;
+- Socratic tutoring prompts;
+- multiple representations for STEM, medicine, business, and humanities/social science;
+- code-aided learning as a small toy model, not assignment outsourcing;
+- Exercise 2: students ask AI for scaffolding on a hard concept.
+
+### Part 4 — implemented
+
+- beyond-chat interfaces: chat, notebook, code, and agents;
+- Notebook as source-grounded study space;
+- code as a way to make ideas executable and inspectable;
+- safe delegation ladder for agentic workflows;
+- Exercise 3: students ask AI to critique their own explanation.
+
+### Part 5 — implemented
+
+- verification, privacy, and academic-integrity closing;
+- hallucination taxonomy beyond fake facts;
+- verification ladder and checkable-answer prompt;
+- practical boundary for appropriate / policy-dependent / inappropriate AI use;
+- disclosure record template;
+- final student checklist before asking AI, after receiving an answer, and before submitting work.
 
 ## Workshop structure
 
@@ -85,8 +101,21 @@ See [`schedule.md`](schedule.md) for the 90-minute formal session plus Q&A struc
 - [`slides/part3.md`](slides/part3.md)
 - [`css/part3.css`](css/part3.css)
 - [`resources/part3-runbook.md`](resources/part3-runbook.md)
-- [`prompts/part3-hard-concepts.md`](prompts/part3-hard-concepts.md)
-- [`examples/linear-transform-visualization.py`](examples/linear-transform-visualization.py)
+- [`prompts/part3-difficult-concepts.md`](prompts/part3-difficult-concepts.md)
+- [`demo-materials/part3/eigenvector-toy-model.html`](demo-materials/part3/eigenvector-toy-model.html)
+
+## Part 4 materials
+
+- [`slides/part4.md`](slides/part4.md)
+- [`css/part4.css`](css/part4.css)
+- [`resources/part4-runbook.md`](resources/part4-runbook.md)
+
+## Part 5 materials
+
+- [`slides/part5.md`](slides/part5.md)
+- [`css/part5.css`](css/part5.css)
+- [`resources/part5-runbook.md`](resources/part5-runbook.md)
+- [`prompts/critique-and-verification-prompts.md`](prompts/critique-and-verification-prompts.md)
 
 ## Local preview
 
