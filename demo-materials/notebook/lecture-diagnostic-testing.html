@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lecture Note: Diagnostic Testing</title>
+  <link rel="stylesheet" href="../../css/workshop.css">
+</head>
+<body class="demo-page">
+  <main class="demo-wrap">
+    <article class="demo-card">
+      <p class="demo-note">Gemini Notebook demo source 1 of 3</p>
+      <h1>Lecture Note: Diagnostic Testing</h1>
+      <p><strong>Learning objective:</strong> distinguish sensitivity and specificity from post-test probabilities such as positive predictive value (PPV).</p>
+
+      <div class="demo-grid">
+        <div class="demo-box">
+          <h2>Sensitivity</h2>
+          <p>The probability that the test is positive among people who truly have the disease:</p>
+          <div class="demo-equation">P(Test + | Disease +)</div>
+        </div>
+        <div class="demo-box">
+          <h2>Specificity</h2>
+          <p>The probability that the test is negative among people who truly do not have the disease:</p>
+          <div class="demo-equation">P(Test − | Disease −)</div>
+        </div>
+      </div>
+
+      <h2>Positive predictive value is a different probability</h2>
+      <p>PPV asks the reverse conditional question: among people who test positive, what proportion truly have the disease?</p>
+      <div class="demo-equation">PPV = P(Disease + | Test +)</div>
+      <p>Sensitivity and PPV condition on different groups, so they are not interchangeable.</p>
+
+      <h2>Worked example</h2>
+      <p>Suppose 1,000 people are screened. Disease prevalence is 10%. The test has 90% sensitivity and 90% specificity.</p>
+      <table class="demo-table">
+        <thead><tr><th></th><th>Disease +</th><th>Disease −</th></tr></thead>
+        <tbody>
+          <tr><th>Test +</th><td>90 true positives</td><td>90 false positives</td></tr>
+          <tr><th>Test −</th><td>10 false negatives</td><td>810 true negatives</td></tr>
+        </tbody>
+      </table>
+      <p>Among the 180 positive tests, only 90 are true positives. Therefore:</p>
+      <div class="demo-equation">PPV = 90 / 180 = 50%</div>
+      <p class="demo-note">A test can have 90% sensitivity and 90% specificity while a positive result corresponds to only a 50% probability of disease in this population.</p>
+    </article>
+  </main>
+</body>
+</html>
