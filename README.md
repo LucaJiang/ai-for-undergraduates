@@ -41,6 +41,16 @@ A practical public workshop website for undergraduate students in Hong Kong on s
 - Exercise 1: students build their own study loop;
 - public undergraduate prompt template library.
 
+### Part 3 — implemented
+
+- difficult-concept learning framework: intuition → formalism → example → self-check;
+- eigenvector demo connecting formula, geometry, and computation;
+- Socratic one-hint-at-a-time tutoring pattern;
+- multi-representation learning: words, symbols, diagrams, numbers, and code;
+- coding-assisted concept visualization with a minimal Python example;
+- discipline-specific concept options for STEM, medicine, business, and humanities/social science;
+- Exercise 2: students choose a hard concept and make AI test their understanding.
+
 ## Workshop structure
 
 See [`schedule.md`](schedule.md) for the 90-minute formal session plus Q&A structure.
@@ -69,6 +79,14 @@ See [`schedule.md`](schedule.md) for the 90-minute formal session plus Q&A struc
 - [`css/part2.css`](css/part2.css)
 - [`resources/part2-runbook.md`](resources/part2-runbook.md)
 - [`prompts/undergraduate-study-prompts.md`](prompts/undergraduate-study-prompts.md)
+
+## Part 3 materials
+
+- [`slides/part3.md`](slides/part3.md)
+- [`css/part3.css`](css/part3.css)
+- [`resources/part3-runbook.md`](resources/part3-runbook.md)
+- [`prompts/part3-hard-concepts.md`](prompts/part3-hard-concepts.md)
+- [`examples/linear-transform-visualization.py`](examples/linear-transform-visualization.py)
 
 ## Local preview
 
