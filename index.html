@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boost Your Study Skills with AI</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="css/workshop.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section class="title-slide" data-background-gradient="linear-gradient(135deg, #0f172a, #1e293b 55%, #312e81)">
+  <p class="eyebrow">90-minute practical workshop · Hong Kong undergraduates</p>
+  <h1>Boost Your Study Skills with AI</h1>
+  <p class="subtitle">Use AI to think better — not to stop thinking.</p>
+  <p class="meta">Part 0: Opening, risks, and first learning demo</p>
+  <aside class="notes">普通话讲解。开场不要先展示炫技，而是先定调：AI 可以帮助学习，也可以削弱学习。今天的目标不是禁止 AI，而是学会有意识地使用 AI。</aside>
+</section>
+
+<section>
+  <h2>AI can make you perform better — and learn less.</h2>
+  <p class="bigline">Performance with AI ≠ learning without AI</p>
+  <div class="split">
+    <div class="panel bad"><h3>Looks good</h3><p>Finished faster<br>Got more answers right<br>Felt more confident</p></div>
+    <div class="panel warn"><h3>May be fragile</h3><p>Could you solve it later?<br>Could you explain why?<br>Could you notice an error?</p></div>
+  </div>
+  <aside class="notes">问学生：如果 AI 帮你把练习做对了，这是否等于你学会了？答案是不一定。这里把“成绩/表现”和“学习迁移”分开。</aside>
+</section>
+
+<section>
+  <h2>A field experiment gives us the warning.</h2>
+  <p class="source">Bastani et al., PNAS 2025 · nearly 1,000 high-school math students</p>
+  <div class="result-grid">
+    <div class="result-card"><span>GPT Base</span><strong>+48%</strong><small>practice performance<br>with AI</small></div>
+    <div class="arrow">→</div>
+    <div class="result-card negative"><span>Then no AI</span><strong>−17%</strong><small>independent exam<br>performance</small></div>
+  </div>
+  <p class="takeaway">Getting the answer is not the same as learning how to get the answer.</p>
+  <aside class="notes">这篇研究的重点不是“AI 有害”，而是没有 guardrails 的 AI 容易让学生绕过思考。学生练习时表现更好，但拿走 AI 后迁移表现变差。</aside>
+</section>
+
+<section>
+  <h2>But AI can also make students learn more.</h2>
+  <p class="source">Kestin et al., Scientific Reports 2025 · Harvard undergraduate physics RCT</p>
+  <div class="contrast">
+    <div><h3>Not an answer machine</h3><p>Designed around active learning, scaffolding, targeted feedback, and self-pacing.</p></div>
+    <div><h3>Better learning gains</h3><p>Students learned substantially more than in the active-learning classroom condition, while using less time.</p></div>
+  </div>
+  <p class="takeaway">AI is not the problem. The interaction pattern is the problem.</p>
+  <aside class="notes">这里马上平衡：我们不是反对 AI。好的 AI tutor 设计可以提高学习效果。今天要学的是 interaction pattern，而不是简单工具列表。</aside>
+</section>
+
+<section>
+  <h2>Crutch or scaffold?</h2>
+  <div class="two-paths">
+    <div class="path bad"><h3>Cognitive crutch</h3><ol><li>Problem</li><li>AI answer</li><li>Copy</li><li>Move on</li></ol></div>
+    <div class="path good"><h3>Cognitive scaffold</h3><ol><li>Problem</li><li>My attempt</li><li>AI hint / feedback</li><li>My revision</li><li>Explain it myself</li></ol></div>
+  </div>
+  <aside class="notes">用“拐杖”和“脚手架”区分。拐杖替你走路，脚手架帮助你搭建结构，最后是要拆掉的。</aside>
+</section>
+
+<section>
+  <h2>Rule #1</h2>
+  <blockquote>Do not outsource the struggle that creates learning.</blockquote>
+  <div class="check-row">
+    <span>Try first</span><span>Ask for hints</span><span>Explain back</span><span>Verify</span>
+  </div>
+  <aside class="notes">这句话作为整个 workshop 的第一条规则。后面的 Gemini、DeepSeek、NotebookLM 都服务于这个规则。</aside>
+</section>
+
+<section>
+  <h2>Live demo: AI can read your learning materials.</h2>
+  <p class="bigline">Screenshot → Gemini → better learning prompt</p>
+  <div class="prompt-compare">
+    <div class="prompt bad"><h3>Weak prompt</h3><pre><code>Explain this slide.</code></pre></div>
+    <div class="prompt good"><h3>Learning prompt</h3><pre><code>I am learning this topic for the first time.
+Do not simply summarize the slide.
+
+1. Identify the prerequisite idea I need first.
+2. Explain only that idea with an intuitive example.
+3. Ask me one question to check my understanding.
+4. Do not continue until I answer.</code></pre><button class="copy" data-copy="I am learning this topic for the first time.\nDo not simply summarize the slide.\n\n1. Identify the prerequisite idea I need first.\n2. Explain only that idea with an intuitive example.\n3. Ask me one question to check my understanding.\n4. Do not continue until I answer.">Copy prompt</button></div>
+  </div>
+  <aside class="notes">现场打开 demo-materials/stem/eigenvectors.html 或图片截图给 Gemini。先用弱 prompt，再用 learning prompt，对比输出质量。</aside>
+</section>
+
+<section>
+  <h2>Choose your own demo track.</h2>
+  <div class="tracks">
+    <a href="demo-materials/stem/eigenvectors.html">STEM<br><small>Eigenvectors</small></a>
+    <a href="demo-materials/medicine/diagnostic-testing.html">Medicine<br><small>Sensitivity vs PPV</small></a>
+    <a href="demo-materials/business/price-elasticity.html">Business<br><small>Price elasticity</small></a>
+    <a href="demo-materials/humanities/argument-structure.html">Humanities<br><small>Argument structure</small></a>
+  </div>
+  <p class="takeaway">Use AI on material you actually want to understand.</p>
+  <aside class="notes">学生构成跨专业，所以不要强迫所有人只做线代。现场演示 STEM，之后他们可按自己的专业选择。</aside>
+</section>
+
+<section>
+  <h2>Three risks to keep visible</h2>
+  <div class="risk-row">
+    <div><strong>THINK</strong><p>Am I still doing the thinking?</p></div>
+    <div><strong>VERIFY</strong><p>Is the answer actually correct?</p></div>
+    <div><strong>INTEGRITY</strong><p>Am I allowed to use AI this way?</p></div>
+  </div>
+  <aside class="notes">这三个风险从开头贯穿到结尾。不是最后才突然讲学术诚信，而是每个 demo 都回到这三个问题。</aside>
+</section>
+
+<section>
+  <h2>Use AI deliberately.</h2>
+  <ol class="large-list">
+    <li>What am I trying to achieve?</li>
+    <li>Which tool fits the task?</li>
+    <li>How much reasoning should I ask for?</li>
+  </ol>
+  <p class="next">Next: choosing tools and reasoning effort.</p>
+  <aside class="notes">转入 Part 1：Gemini、NotebookLM、DeepSeek 不是排名关系，而是任务匹配和思考强度选择。</aside>
+</section>
+
+<section>
+  <h2>References for Part 0</h2>
+  <ul class="refs">
+    <li>Bastani et al. (2025). <em>Generative AI can harm learning</em>. PNAS. DOI: 10.1073/pnas.2422633122.</li>
+    <li>Kestin et al. (2025). <em>AI tutoring outperforms in-class active learning</em>. Scientific Reports. DOI: 10.1038/s41598-025-97652-6.</li>
+    <li>OECD (2026). <em>PISA 2025 Results, Volume I</em>. Released 8 September 2026.</li>
+    <li>Kosmyna et al. (2025). <em>Your Brain on ChatGPT</em>. arXiv preprint; use as suggestive, not definitive, evidence.</li>
+  </ul>
+  <aside class="notes">如果学生追问证据，可以讲 PNAS 作为主证据，Harvard RCT 作为积极反例，PISA 作为宏观观察性证据，MIT preprint 只作为 appendix，不夸大。</aside>
+</section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+<script src="js/workshop.js"></script>
+<script>
+Reveal.initialize({ hash: true, slideNumber: true, plugins: [ RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ] });
+</script>
+</body>
+</html>
