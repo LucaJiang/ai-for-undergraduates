@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Material: Diagnostic Testing</title>
+  <link rel="stylesheet" href="../../css/workshop.css">
+</head>
+<body class="demo-page">
+  <main class="demo-wrap">
+    <section class="demo-card">
+      <h1>Medicine demo: Sensitivity vs positive predictive value</h1>
+      <p class="demo-note">Screenshot this page and ask an AI model to help you learn from it.</p>
+      <table class="demo-table">
+        <thead><tr><th></th><th>Disease +</th><th>Disease −</th></tr></thead>
+        <tbody>
+          <tr><th>Test +</th><td>90</td><td>90</td></tr>
+          <tr><th>Test −</th><td>10</td><td>810</td></tr>
+        </tbody>
+      </table>
+      <div class="demo-grid">
+        <div class="demo-box"><h2>Given</h2><p>Sensitivity = 90%. Specificity = 90%. Prevalence = 10%.</p></div>
+        <div class="demo-box"><h2>Common confusion</h2><p>“90% sensitivity” does not mean a positive test result has a 90% chance of disease.</p></div>
+      </div>
+      <div class="demo-box"><h2>Question</h2><p>Why is the positive predictive value only 50% in this example?</p></div>
+    </section>
+  </main>
+</body>
+</html>
