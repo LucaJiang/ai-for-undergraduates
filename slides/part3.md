@@ -1,210 +1,108 @@
-# Part 3
-## Learn difficult concepts with AI
+<!-- .slide: id="part3" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<p class="part3-subtitle">Use AI as a tutor, visualizer, and debugging partner — not as a solution manual.</p>
+## Learn a difficult concept — not just its wording.
 
-<div class="part3-route">
-  <span>Intuition</span>
-  <span>Formalism</span>
-  <span>Example</span>
-  <span>Self-check</span>
-</div>
+<div class="cards"><div><h3>Prerequisite gap</h3><p>What earlier idea am I missing?</p></div><div><h3>Representation gap</h3><p>How do the words, symbols and diagram connect?</p></div><div><h3>Checking gap</h3><p>Can I apply it to a new example?</p></div></div><p class="takeaway">Ask about the obstacle before asking for everything.</p>
 
 Note:
-休息回来之后先重新定调。Part 3 不是教学生问 AI 要完整答案，而是教他们遇到抽象概念、证明、公式、机制时如何让 AI 拆解学习过程。这里承接 Part 2 的 prompt 结构，但场景换成“难概念”。
+15:25–15:27。休息后回到学生自己的困难概念。沿用Exercise1的主题，不反复选材料。
 
 ---
 
-## Hard concepts are often hard for a specific reason.
+<!-- .slide: id="concept-layers" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="hard-reasons">
-  <div><strong>Missing prerequisite</strong><p>You do not yet know the idea the new concept depends on.</p></div>
-  <div><strong>Representation gap</strong><p>The formula, diagram, and verbal explanation do not yet connect.</p></div>
-  <div><strong>No feedback loop</strong><p>You think you understand it, but you have not tested that understanding.</p></div>
-</div>
+## Move between representations.
 
-<p class="part3-takeaway">Ask AI to diagnose the obstacle before asking it to explain everything.</p>
+<div class="sequence"><div><b>Intuition</b><p>What is the idea doing?</p></div><div><b>Definition</b><p>What does each symbol mean?</p></div><div><b>Example</b><p>What happens in a small case?</p></div><div><b>Self-check</b><p>Can I predict the next case?</p></div></div><p class="caution">A useful analogy is a bridge — not a replacement for the definition.</p>
 
 Note:
-很多学生觉得“我就是笨”或者“这个概念太难”，其实常常是三种具体问题：前置知识缺口、表示方式没有连起来、没有反馈。AI 最有价值的是帮助定位是哪一种，而不是立刻输出一大段百科式解释。
+15:27–15:29。不是每个学科都要公式，但都要把直觉与学科正式定义连上。数学可用符号，文科可用主张条件和反例。
 
 ---
 
-## A better concept-learning prompt has layers.
+<!-- .slide: id="vector-predict" class="lab-slide" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="concept-layers">
-  <div><span>1</span><strong>Intuition</strong><p>What is the idea doing?</p></div>
-  <div><span>2</span><strong>Formal definition</strong><p>What does the notation mean?</p></div>
-  <div><span>3</span><strong>Worked example</strong><p>How does it behave in a concrete case?</p></div>
-  <div><span>4</span><strong>Self-check</strong><p>Can I explain or apply it myself?</p></div>
-</div>
+## Predict before you reveal.
+
+<p class="sub">A = diag(2, 1) · compare v = (1, 0) with v = (1, 1).</p><iframe class="lab-frame" data-src="demo-materials/stem/eigenvectors.html?embed=1" title="Interactive eigenvector prediction lab"></iframe><p class="footer"><a href="demo-materials/stem/eigenvectors.html" target="_blank" rel="noopener">Open full lab ↗</a> · Change one thing at a time.</p>
 
 Note:
-这里可以强调：对于复杂概念，不要让 AI 一次性“全面解释”。好的学习顺序是先建立直觉，再映射到符号，再看例子，最后检查自己是否能说出来。
+15:29–15:33。先选e1，问输出位置和是否沿同一直线；Reveal。再选(1,1)，先预测再Reveal。不要一上来解特征多项式。图有输入/输出数值，学生可以算矩阵乘法验证。此页为我们已检查的教学工具，不假装是当场AI生成。
 
 ---
 
-## Example: eigenvectors are not just a formula.
+<!-- .slide: id="vector-definition" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="eigen-demo">
-  <div class="formula-card">
-    <span>Formal</span>
-    <strong>A v = λ v</strong>
-  </div>
-  <div class="meaning-card">
-    <span>Intuition</span>
-    <p>Some directions survive a transformation: they may stretch, shrink, or flip, but they do not rotate into a new direction.</p>
-  </div>
-</div>
+## Connect the picture to the definition.
 
-<p class="part3-takeaway">The goal is to connect symbol, geometry, and computation.</p>
+<div class="equation">Av = λv &nbsp; with v ≠ 0</div><div class="cards"><div><h3>A scalar multiple</h3><p>The output stays on the line spanned by v, or becomes zero.</p></div><div><h3>Watch the edge cases</h3><p>λ &lt; 0 flips orientation. λ = 0 maps v to zero. The zero vector is not an eigenvector.</p></div></div><p class="takeaway">For A = diag(2, 1): (1, 0) is an eigenvector; (1, 1) is not.</p>
 
 Note:
-现场主 demo 可以用 eigenvector，因为它非常适合从公式走到图像再到 Python。讲的时候不要证明特征值分解，只讲“某些方向在变换后仍然沿着原方向”。
+15:33–15:35。修复“方向不变”过度简化。定义是非零v与Av标量倍数；零输出没有方向，但仍可对应λ0。选反射和投影验证边界，不说所有实矩阵必有实特征向量。
 
 ---
 
-## Same question, better prompt structure
+<!-- .slide: id="hint-mode" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="part3-prompt-compare">
-  <div class="weak"><h3>Weak</h3><pre><code>Explain eigenvectors.</code></pre></div>
-  <div class="strong"><h3>Learning prompt</h3><pre><code>Role: Act as a patient linear algebra tutor.
+## A hint should leave you something to decide.
 
-Context: I know matrix-vector multiplication, but I do not understand the geometric meaning of eigenvectors.
-
-Constraints: Do not start with a formal proof. Explain the intuition first, then connect it to A v = λ v. Use one 2D example.
-
-Format: Give me a short explanation, one diagram description, and one self-check question. Do not reveal the answer until I try.</code></pre></div>
-</div>
+<p class="footer">Prepared example, not a recorded AI response</p><div class="dialogue"><p><b>My attempt:</b> A(1,1) = (2,1), so λ = 2.</p><p><b>Helpful next step:</b> If λ were 2, what would λ(1,1) be? Compare both coordinates.</p><p><b>My next task:</b> Decide whether one scalar matches the whole vector.</p></div><div class="prompt"><pre><code>Check my attempt against the definition. If there is an error,
+give one hint about the first incorrect step. If it is correct,
+say so. Wait for my revision; do not finish the problem for me.</code></pre><button class="copy" type="button">Copy prompt</button></div>
 
 Note:
-这里回应你前面强调的结构：问答型学习 prompt 还是 Role + Context + Constraints + Format。这里不是指挥 agent 操作电脑，而是让 AI 以明确身份、背景、限制和输出格式回答学习问题。
+15:35–15:37。RCCF已经学过，此处是可追加短句不必重新填四段。模拟学生只检查一维而忽略另一维的错误。不要让AI不论学生答案都必须指出错误。
 
 ---
 
-## Make AI Socratic, not a solution manual.
+<!-- .slide: id="analogy-limit" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="socratic-flow">
-  <span>My attempt</span>
-  <span>One hint</span>
-  <span>Guiding question</span>
-  <span>My revision</span>
-  <span>Feedback</span>
-</div>
+## Ask where the analogy stops working.
 
-<pre class="compact-prompt"><code>I am working on this problem. Do not solve it for me.
-
-First, identify what kind of problem this is.
-Then give only one hint for the next step.
-Ask me a question that forces me to decide what to do next.
-Wait for my answer before continuing.</code></pre>
+<div class="dialogue"><p><b>Analogy:</b> Stretch a sheet horizontally.</p><p><b>Useful here:</b> It helps visualize A = diag(2,1).</p><p><b>Not the definition:</b> Reflection, projection and rotation need different pictures.</p></div><div class="prompt"><pre><code>Which part of this analogy matches the formal definition?
+Where does it fail? Give one counterexample or boundary case.</code></pre><button class="copy" type="button">Copy prompt</button></div>
 
 Note:
-这页非常重要。要明确说：如果这是作业题，不要让 AI 直接写答案。你可以让它判断题型、给第一步提示、问引导问题。这能保留学生自己的思考空间，也更符合学术规范。
+15:37–15:38。“直觉好听”不是充分证据。医学机制/经济类比也要检查适用条件，避免一个比喻替代整个理论。
 
 ---
 
-## Use multiple representations.
+<!-- .slide: id="choose-track" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="representations">
-  <div><strong>Words</strong><p>Explain the intuition.</p></div>
-  <div><strong>Symbols</strong><p>Map each term in the formula.</p></div>
-  <div><strong>Diagram</strong><p>Describe what I should draw.</p></div>
-  <div><strong>Numbers</strong><p>Give a small worked example.</p></div>
-  <div><strong>Code</strong><p>Simulate or visualize it.</p></div>
-</div>
+## One method. Different subjects.
 
-<p class="part3-takeaway">When one representation fails, switch representation.</p>
+<div class="cards"><div><h3>STEM</h3><p>Eigenvectors: scalar multiples, not motionlessness.</p></div><div><h3>Medicine</h3><p>Sensitivity vs PPV: which denominator?</p></div><div><h3>Business</h3><p>Elasticity: percentage changes, not raw slope.</p></div><div><h3>Humanities</h3><p>Claim, reason, assumption — where is the evidence?</p></div></div><p class="links"><a href="materials.html#tracks" target="_blank" rel="noopener">Four source packs + questions ↗</a> · Or continue with your own course.</p>
 
 Note:
-很多学生卡住不是因为不努力，而是一直停留在同一种表示。比如只看公式不看图，只看文字不算例子。AI 很适合快速切换表示方式。
+15:38–15:40。四轨有相近大小的材料、两道自检和单独核验答案。无需每个专业都讲一遍；学生自由选或自带课程。不要把病人信息带入医学轨。
 
 ---
 
-## Coding can become a microscope for abstract ideas.
+<!-- .slide: id="exercise2" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="code-learning">
-  <div>
-    <h3>Good use</h3>
-    <p>Ask AI to create a minimal simulation or visualization, then change parameters and observe what happens.</p>
-  </div>
-  <div>
-    <h3>Risky use</h3>
-    <p>Ask AI to write the full assignment or analysis report while you only read the final output.</p>
-  </div>
-</div>
+## Exercise 2 · explain without looking.
 
-<p class="part3-link">Example script: <a href="examples/linear-transform-visualization.py" target="_blank">linear-transform-visualization.py ↗</a></p>
+<div class="sequence"><div><b>1 + 3 min</b><p>Choose a concept; ask for intuition, definition and one example.</p></div><div><b>2 min</b><p>Hide the answer. Write your explanation or attempt a new case.</p></div><div><b>2 min</b><p>Check the source or answer key. Mark one remaining uncertainty.</p></div></div><div class="timer" data-seconds="480"><output aria-live="off">08:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="links"><a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a> · <a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a></p><p class="caution">Deliverable: your own explanation — not a copied AI paragraph.</p>
 
 Note:
-这里可以现场打开脚本，也可以只展示链接。重点不是“AI 会写代码”，而是代码可以帮助观察概念。对于 STEM 学生很有用；商科和医学也可以用小模拟理解阈值、概率、增长率等。
+15:40–15:48。实际8分钟。AI可以解释；学生需要离开答案写自己的版本。最后对来源自查，不在这里做长篇AI批改，避免和Exercise3重复。
 
 ---
 
-## This works beyond mathematics.
+<!-- .slide: id="exercise2-debrief" class="" -->
+<p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-<div class="discipline-menu">
-  <div><span>STEM</span><strong>Eigenvectors</strong><small>What direction survives a transformation?</small></div>
-  <div><span>Medicine</span><strong>Sensitivity vs PPV</strong><small>Why does prevalence change interpretation?</small></div>
-  <div><span>Business</span><strong>Marginal effect</strong><small>What changes when one input changes?</small></div>
-  <div><span>Humanities</span><strong>Argument structure</strong><small>What is the claim, evidence, and assumption?</small></div>
-</div>
+## Can you transfer the idea?
+
+<p class="lead small-lead">Explain it to a classmate.<br>Try a slightly different case.<br>Name one limit of your explanation.</p><p class="takeaway">Keep this paragraph. You will evaluate feedback on it in Exercise 3.</p>
 
 Note:
-提醒学生 Part 3 不只是数学。线代只是现场示范最方便。真正练习时他们应该拿自己的专业概念来试。
-
----
-
-## Exercise 2 · Choose a hard concept
-
-<p class="exercise-time">8 minutes</p>
-
-<div class="exercise-steps">
-  <div><strong>1 min</strong><p>Choose one concept you recently struggled with.</p></div>
-  <div><strong>3 min</strong><p>Ask AI for intuition → formalism → example.</p></div>
-  <div><strong>2 min</strong><p>Ask for one self-check question.</p></div>
-  <div><strong>2 min</strong><p>Explain your answer back and get feedback.</p></div>
-</div>
-
-Note:
-这段练习时间控制在 8 分钟。让学生自由选择概念。如果有人不知道选什么，就从 slide 上四个学科入口选一个。你可以在教室里走动，提醒他们不要只读解释，一定要让 AI 问他们问题。
-
----
-
-## Copy this prompt
-
-<pre class="exercise-prompt"><code>Role: Act as a patient tutor in [subject].
-
-Context: I am trying to understand [concept]. I already know [what I know], but I am confused about [specific difficulty].
-
-Constraints: Do not give a long textbook-style explanation. Start with intuition, then connect it to the formal definition. Do not solve my assignment for me.
-
-Format:
-1. One intuitive analogy
-2. One formal explanation
-3. One small worked example
-4. One common misconception
-5. One self-check question
-
-After I answer the self-check question, critique my reasoning.</code></pre>
-
-<button class="copy" data-copy="Role: Act as a patient tutor in [subject].&#10;&#10;Context: I am trying to understand [concept]. I already know [what I know], but I am confused about [specific difficulty].&#10;&#10;Constraints: Do not give a long textbook-style explanation. Start with intuition, then connect it to the formal definition. Do not solve my assignment for me.&#10;&#10;Format:&#10;1. One intuitive analogy&#10;2. One formal explanation&#10;3. One small worked example&#10;4. One common misconception&#10;5. One self-check question&#10;&#10;After I answer the self-check question, critique my reasoning.">Copy prompt</button>
-
-Note:
-这页让学生直接复制。强调他们要填自己的 subject/concept/known/confused，而不是原封不动粘贴。最后一句“critique my reasoning”很关键，它把 AI 从 answer generator 改成 feedback partner。
-
----
-
-## Debrief
-
-<div class="debrief-questions">
-  <h3>Ask yourself:</h3>
-  <p>Did AI explain the concept, or did it help me test my understanding?</p>
-  <p>Can I now explain the idea without looking at the answer?</p>
-  <p>What would I verify before using this in homework or an exam?</p>
-</div>
-
-<p class="next">Next: beyond chat — notebooks, data, code, and larger projects.</p>
-
-Note:
-练习结束以后收束：不需要每个人分享。可以问 1–2 个学生：你们的 prompt 改了以后有什么区别？最后转入 Part 4，说明下一部分会展示更复杂的工作流，但底线还是不外包思考。
+练习最后30秒，不另计时。接下来Part4不再泛讲“代码能帮助学习”，而是展示一个可运行的小工具并检验它。

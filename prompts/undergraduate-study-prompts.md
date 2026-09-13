@@ -1,417 +1,452 @@
 # Undergraduate AI Study Prompt Templates
 
-These templates are for learning conversations with AI tools such as Gemini, Gemini Notebook / NotebookLM, DeepSeek, ChatGPT, Claude, or other similar systems.
+Use these for conversations about coursework, not for submitting work you are required to do independently. Check course instructions first. These templates are not accuracy guarantees.
 
-Core principle:
+**Role + Context + Constraints + Format** is a checklist, not a requirement to write four long paragraphs. Simple questions may need one sentence. The role sets a helpful style; it does not make the model a qualified or infallible expert.
 
-> Use AI to create better thinking, not to replace thinking.
+Choose **Explain** when the material is new and you need instruction or a worked example. Choose **Practice** when you want a hint, retrieval or feedback on your own attempt. Action-oriented requests additionally need scope, permissions and checks; only the final optional template covers that case.
 
-For normal coursework Q&A, use this frame:
+Replace every bracket. Use permitted material only. Keep at least one step for yourself and independently check important claims. This website stores no conversations and sends no prompts to AI providers.
 
-```text
-Role + Context + Constraints + Format
-```
+[Browse, search and copy templates](index.html) · [Student materials](../materials.html)
 
-For action-heavy workflows where AI operates tools, files, code, browsers, or agents, use a more operational frame:
+## 01. Understand a difficult concept
 
-```text
-Goal + Inputs + Steps + Boundaries + Checks
-```
+Category: Understand
 
-This workshop mainly uses the first frame because undergraduate study usually starts with asking, explaining, testing, and clarifying — not delegating the entire task.
+Mode: Explain
 
----
+Use for: First exposure to an unfamiliar concept.
 
-## 0. Quick checklist before you ask AI
+Fill in: Topic, course level, what you know, and the specific gap.
 
-```text
-Role: Who should AI act as?
-Context: What course, level, source, and current understanding should it know?
-Constraints: What should AI not do for me?
-Format: What output would actually help me study?
-```
-
-Useful constraints:
-
-```text
-Do not give me the final answer yet.
-Ask me one question at a time.
-Wait for my answer before continuing.
-Use only the sources I uploaded.
-Point out uncertainty instead of guessing.
-Do not write my assignment for me.
-Do not invent citations.
-```
-
----
-
-## 1. Understand a difficult concept
+Check: Match the explanation to the formal definition.
 
 ```text
 Role: Act as a patient undergraduate tutor.
 
-Context: I am learning [concept] in [course].
-I currently understand [what I already know], but I am confused about [specific confusion].
+Context: I am learning [concept] in [course]. I know [prior knowledge] but do not understand [gap].
 
-Constraints: Do not give a textbook-style summary. Do not explain everything at once.
+Constraints: Explain this gap, not the entire subject. State the limits of any analogy.
 
-Format: Start from my confusion. Give one intuitive analogy, one formal definition, and one simple example.
-Then ask me one question to check whether I understand it.
+Format: Give one short explanation and one worked example. Then ask one check question and wait for my answer.
 ```
 
----
+## 02. Find a prerequisite gap
 
-## 2. Find my prerequisite gap
+Category: Understand
+
+Mode: Explain
+
+Use for: You repeatedly get stuck at the same step.
+
+Fill in: The step and your current attempt.
+
+Check: Treat the proposed gap as a hypothesis, not a diagnosis.
 
 ```text
 Role: Act as a diagnostic tutor.
 
-Context: I am trying to understand [topic], but I keep getting stuck at [specific point].
+Context: I am learning [topic] and get stuck at [step]. My attempt is [attempt].
 
-Constraints: Do not solve the whole problem. Identify what prerequisite idea I may be missing.
+Constraints: Do not assume the cause or solve the whole problem. Ask a clarifying question if needed.
 
-Format: Give me:
-1. The likely missing prerequisite.
-2. A short explanation of that prerequisite.
-3. One mini-question to test whether I understand it.
+Format: Suggest a likely prerequisite to check, explain it briefly, and ask one mini-question. Wait.
 ```
 
----
+## 03. Read a slide or screenshot
 
-## 3. Explain a lecture slide or screenshot
+Category: Materials
+
+Mode: Explain
+
+Use for: Text, notation and figures do not connect.
+
+Fill in: A readable image plus the exact confusing part.
+
+Check: Check image transcription and symbols against the original.
 
 ```text
 Role: Act as a teaching assistant for [course].
 
-Context: I will upload a lecture slide / screenshot. I am a [year/major] student.
+Context: This is my lecture slide. I am a [year/major] student. I am confused about [part].
 
-Constraints: Do not simply summarize the slide. Do not assume I understand every symbol.
+Constraints: Do not guess unreadable text. Distinguish what the slide states from your added explanation.
 
-Format: Explain:
-1. The main point of the slide.
-2. The prerequisite ideas needed to understand it.
-3. Any symbols or notation.
-4. One common misunderstanding.
-5. One question for me to answer before you continue.
+Format: Connect the main claim, notation and figure. Use a small example, then ask one question.
 ```
 
----
+## 04. Study selected Notebook sources
 
-## 4. Study with Gemini Notebook / NotebookLM
+Category: Materials
+
+Mode: Any
+
+Use for: Reviewing a defined course source set.
+
+Fill in: Select the source titles relevant to your question.
+
+Check: Open citations and confirm the passage supports the claim.
 
 ```text
 Role: Act as a source-grounded study assistant.
 
-Context: Use only the uploaded lecture notes, readings, and slides in this notebook.
+Context: Use only [selected lecture notes/readings] to answer [question].
 
-Constraints: If the answer is not supported by the sources, say so. Do not use outside knowledge unless I explicitly ask.
+Constraints: Say when the sources are insufficient. Return fewer items rather than inventing content. Label inferences.
 
-Format: Create:
-1. A 5-point concept map.
-2. A list of 5 confusing pairs of concepts.
-3. 6 quiz questions, but hide the answers until I ask.
-4. Source references for each major claim.
+Format: Map up to five supported ideas with source locations. Ask one quiz question without giving its answer. Wait.
 ```
 
----
+## 05. Active recall practice
 
-## 5. Active recall exam practice
+Category: Recall
+
+Mode: Practice
+
+Use for: Reviewing previously studied material.
+
+Fill in: Topic, course level, and notes or learning objectives.
+
+Check: Check feedback against the source; disagreement is not automatically your error.
 
 ```text
 Role: Act as an examiner and tutor.
 
-Context: I am reviewing [topic] for [course/exam].
+Context: I am reviewing [topic] for [course]. Use [provided material/objectives].
 
-Constraints: Do not show the answer first. Ask only one question at a time. If I am wrong, do not reveal the full answer immediately.
+Constraints: Ask one question at a time and hide the answer. Do not invent a mistake in a correct response.
 
-Format: Start with a conceptual question. Wait for my answer. Then identify the flaw in my reasoning and give one hint. Increase the difficulty if I answer correctly.
+Format: Wait for my attempt. If incorrect, identify the first problem and give one hint; if correct, say why and offer a harder question.
 ```
 
----
+## 06. Multiple-choice practice
 
-## 6. Multiple-choice questions without answers first
+Category: Recall
+
+Mode: Practice
+
+Use for: Discriminating between easily confused concepts.
+
+Fill in: Notes, topic and difficulty.
+
+Check: Check whether one option is uniquely correct.
 
 ```text
 Role: Act as a course examiner.
 
-Context: I am studying [topic] at [course level].
+Context: I am studying [topic] at [level] using [notes].
 
-Constraints: Do not give me the correct answers yet. Avoid trick questions that depend on wording rather than understanding.
+Constraints: No answer key yet. Avoid ambiguity and invented facts; use fewer questions if the material is short.
 
-Format: Create 5 multiple-choice questions testing easily confused concepts. Wait for my choices. After I answer, grade them and explain why each option is right or wrong.
+Format: Give up to five MCQs with plausible distractors. Wait for my choices, then explain the options with source support.
 ```
 
----
+## 07. Homework hints
 
-## 7. Homework help without giving the answer
+Category: Reasoning
+
+Mode: Practice
+
+Use for: Permitted help on your own attempted problem.
+
+Fill in: Problem and your attempt; check the assessment rules first.
+
+Check: Confirm the hint does not violate required independent work.
 
 ```text
 Role: Act as a Socratic tutor.
 
-Context: I am working on this homework problem: [paste problem].
-I have tried: [paste your attempt].
+Context: This is my problem: [problem]. I have tried [attempt] and am stuck at [step].
 
-Constraints: Do not solve it for me. Do not give the final answer. Do not write text that I can submit directly.
+Constraints: Do not give the full solution or submission-ready text. If my attempt is correct, say so.
 
-Format: First identify where my attempt goes wrong or gets stuck. Then give only one hint and ask me what I would try next.
+Format: Check the attempt. Give one targeted hint and ask what I would try next. Wait.
 ```
 
----
+## 08. Critique my explanation
 
-## 8. Critique my explanation
+Category: Feedback
+
+Mode: Practice
+
+Use for: Testing an explanation you have already written.
+
+Fill in: Your paragraph and an appropriate source or definition.
+
+Check: Accept or reject each suggestion using evidence.
 
 ```text
-Role: Act as a strict but helpful tutor.
+Role: Act as a careful tutor, not a ghostwriter.
 
-Context: Here is my explanation of [concept/problem]: [paste your explanation].
+Context: Here is my explanation of [concept]: [text]. Check against [source/definition].
 
-Constraints: Do not rewrite it immediately. Do not be polite at the cost of accuracy.
+Constraints: Do not rewrite it. Do not invent an error or demand a missing idea irrelevant to my goal.
 
-Format: Give me:
-1. What is correct.
-2. What is wrong or imprecise.
-3. What important idea I missed.
-4. One question that tests whether I really understand it.
-5. A revised version only after I try again.
+Format: State what is correct. For any error, quote the passage and give the reason. Ask one check question and wait for my own revision.
 ```
 
----
+## 09. Compare two model answers
 
-## 9. Compare two model answers
+Category: Verification
+
+Mode: Any
+
+Use for: Models disagree or explain the same issue differently.
+
+Fill in: Identical question, both answers, and source material.
+
+Check: A model-based comparison remains provisional; verify outside the models.
 
 ```text
-Role: Act as a learning-quality evaluator.
+Role: Act as a critical comparison assistant.
 
-Context: I asked two AI models the same question. Here are their answers:
-Model A: [paste]
-Model B: [paste]
+Context: Question: [question]. Answer A: [text]. Answer B: [text]. Sources: [material].
 
-Constraints: Do not choose based on length or confidence. Evaluate correctness, clarity, assumptions, and verifiability.
+Constraints: Do not select by length, confidence or majority vote. Mark what cannot be checked from the evidence.
 
-Format: Give me a comparison table with:
-1. Correctness.
-2. Clarity.
-3. Hidden assumptions.
-4. Missing caveats.
-5. Which answer is better for learning and why.
+Format: Compare claims, assumptions, clarity and source support. Identify one disagreement I should independently investigate.
 ```
 
----
+## 10. Plan from a syllabus
 
-## 10. Build a study plan from a syllabus
+Category: Planning
+
+Mode: Any
+
+Use for: Preparing for the next two weeks of a course.
+
+Fill in: Syllabus, dates, available hours, unavailable days and existing knowledge.
+
+Check: Do not accept invented dates or inferred dependencies as course requirements.
 
 ```text
 Role: Act as an undergraduate study planner.
 
-Context: I will paste a course syllabus, weekly topics, and assessment dates.
+Context: Syllabus/dates: [paste]. Available hours: [hours]. Unavailable days: [days]. Already mastered: [topics].
 
-Constraints: Do not only make a calendar. Identify conceptual dependencies and likely bottlenecks.
+Constraints: Ask for missing scheduling information. Do not invent deadlines. Separate stated requirements from suggested dependencies.
 
-Format: Produce:
-1. A dependency map of topics.
-2. What I should review first.
-3. A two-week study plan.
-4. A warning list of topics that may become difficult later if I ignore them now.
+Format: Make a two-week plan with prerequisites, feasible time blocks and one self-check per topic.
 ```
 
----
+## 11. Map lecture concepts
 
-## 11. Turn slides into a concept map
+Category: Materials
+
+Mode: Explain
+
+Use for: Reorganizing notes after class.
+
+Fill in: A short source and the lesson objective.
+
+Check: Check whether the arrows/connections are actually supported.
 
 ```text
 Role: Act as a teaching assistant.
 
-Context: These are my lecture slides / notes for [topic].
+Context: Use these lecture notes for [objective]: [notes].
 
-Constraints: Do not summarize slide by slide. Focus on structure.
+Constraints: Do not merely compress each slide. Do not force a fixed count. Mark inferred connections.
 
-Format: Extract:
-1. Five core concepts.
-2. How the concepts depend on each other.
-3. Which items are definitions, mechanisms, assumptions, or consequences.
-4. Three common confusions.
-5. Three active-recall questions.
+Format: Map up to five ideas: definitions, mechanisms, assumptions or consequences. Add source locations and one recall question.
 ```
 
----
+## 12. Bilingual glossary
 
-## 12. Generate a bilingual glossary
+Category: Materials
+
+Mode: Explain
+
+Use for: English-language coursework with Chinese support.
+
+Fill in: Topic, source and preferred Chinese terminology or script.
+
+Check: Check discipline-specific terminology in the course material.
 
 ```text
 Role: Act as a bilingual academic tutor.
 
-Context: I am studying [course/topic] in English, but I want Chinese support for difficult terms.
+Context: I study [topic] in English. Use [Traditional/Simplified] Chinese support and the supplied course terminology.
 
-Constraints: Do not translate mechanically. Explain the concept, not just the word.
+Constraints: Do not translate mechanically or invent an official translation. Mark ambiguous terms.
 
-Format: Create a table with columns:
-English term | Chinese translation | Plain-English explanation | Example sentence | Common confusion
+Format: Use columns: English term, Chinese term, plain-English meaning, example, possible confusion.
 ```
 
----
+## 13. Proof hint mode
 
-## 13. Math proof hint mode
+Category: Reasoning
+
+Mode: Practice
+
+Use for: A permitted proof exercise you have already attempted.
+
+Fill in: Statement, definitions allowed, attempted proof and sticking point.
+
+Check: A valid hint must preserve assumptions and the domain.
 
 ```text
 Role: Act as a proof tutor.
 
-Context: I am trying to prove [statement]. My current attempt is [paste attempt].
+Context: Statement: [statement]. My attempt: [attempt]. Allowed methods: [methods].
 
-Constraints: Do not give the proof. Do not skip steps. Do not introduce advanced methods unless necessary.
+Constraints: Do not give the proof. Check whether the statement is valid as written. Do not invent an error.
 
-Format: Tell me:
-1. What kind of proof strategy may work.
-2. Which definition/theorem I should inspect first.
-3. One hint only.
-4. One question I should answer before asking for the next hint.
+Format: Give one useful definition or hint and one question for my next step. Wait for my answer.
 ```
 
----
+## 14. Debug my own code
 
-## 14. Coding for learning, not outsourcing
+Category: Reasoning
+
+Mode: Practice
+
+Use for: Understanding a programming bug.
+
+Fill in: Minimal code, expected output, observed output and error text.
+
+Check: Run the minimal test and inspect what changed.
 
 ```text
 Role: Act as a coding tutor.
 
-Context: I am learning [programming concept / algorithm / statistical method].
-I wrote this code: [paste code].
+Context: I wrote [code]. I expected [result], got [result/error], and am learning [concept].
 
-Constraints: Do not replace the entire code. Do not simply give me the final solution.
+Constraints: Do not replace the whole program or finish the assignment. Ask for missing information.
 
-Format: Explain what my code is doing, identify the bug or misconception, and give me the smallest change I should try next.
+Format: Explain the relevant behavior, suggest the smallest change and one test. Let me try before proposing more changes.
 ```
 
----
+## 15. Plan an analysis, not a report
 
-## 15. Data analysis planning without writing the report
+Category: Planning
+
+Mode: Any
+
+Use for: Discussing methods before a permitted analysis.
+
+Fill in: Question, variable definitions, study design and rubric; no sensitive raw data.
+
+Check: Check study design, assumptions and course expectations with the instructor.
 
 ```text
-Role: Act as a data analysis coach.
+Role: Act as a data-analysis coach.
 
-Context: I have a dataset about [topic]. The assignment asks me to [task].
+Context: Research/assignment question: [question]. Design: [design]. Variables: [definitions]. Rubric: [rubric].
 
-Constraints: Do not run the full analysis for me. Do not write my report. Help me design a valid analysis plan.
+Constraints: Do not run the analysis or write the report. Do not infer causality from association.
 
-Format: Give me:
-1. Variables I need to understand.
-2. Possible analysis steps.
-3. Checks for assumptions or data quality.
-4. Questions I should answer before choosing a method.
-5. Things I should verify with the instructor or rubric.
+Format: Ask the key design questions before choosing a method. Suggest a provisional plan and assumption/data-quality checks.
 ```
 
----
+## 16. Writing feedback
 
-## 16. Writing feedback without ghostwriting
+Category: Feedback
+
+Mode: Practice
+
+Use for: Revising your own permitted draft.
+
+Fill in: Your text, intended claim and assessment criteria.
+
+Check: Keep ownership of the revision; verify no added claims.
 
 ```text
-Role: Act as an academic writing coach.
+Role: Act as a writing coach.
 
-Context: This is my draft paragraph: [paste paragraph].
+Context: My paragraph: [text]. Intended claim: [claim]. Rubric: [criteria].
 
-Constraints: Do not rewrite the whole paragraph for me. Do not add claims or citations. Focus on feedback.
+Constraints: Do not rewrite the paragraph or add claims/citations. If the logic is sound, say so.
 
-Format: Give me:
-1. The main idea you think I am trying to express.
-2. Sentences that are unclear.
-3. Places where logic jumps.
-4. Suggestions for how I can revise it myself.
-5. A short example revision for one sentence only.
+Format: Identify unclear wording or unsupported transitions, explain why they matter, and ask me to revise one passage.
 ```
 
----
+## 17. Check a claim against a source
 
-## 17. Verify claims and citations
+Category: Verification
+
+Mode: Any
+
+Use for: Checking whether evidence supports a statement.
+
+Fill in: Exact claim and the original material.
+
+Check: Open the source yourself; unsupported is not the same as false.
 
 ```text
-Role: Act as a verification assistant.
+Role: Act as a source-checking assistant.
 
-Context: I want to check whether the following claim is supported: [claim].
-Here are my sources / readings: [paste or upload].
+Context: Claim: [claim]. Source material: [paste/upload].
 
-Constraints: Do not invent sources. If the source does not support the claim, say so.
+Constraints: Do not invent references, quotations or page numbers. Say when evidence is insufficient.
 
-Format: For each claim, return:
-Claim | Supported? | Evidence from source | Missing evidence | What I should verify next
+Format: Give: claim, source passage/location, supported or not established, limitations, next verification step.
 ```
-
----
 
 ## 18. Prepare for office hours
 
-```text
-Role: Act as a study coach preparing me for office hours.
+Category: Planning
 
-Context: I am confused about [topic/problem]. I tried [your attempt].
+Mode: Any
 
-Constraints: Do not solve the issue fully. Help me ask better questions to my instructor.
+Use for: Turning a vague problem into a useful question for a teacher.
 
-Format: Give me:
-1. A concise summary of what I do understand.
-2. The exact point where I am stuck.
-3. Three specific questions to ask in office hours.
-4. One thing I should try before going.
-```
+Fill in: Your understanding, attempt and sticking point.
 
----
-
-## 19. Group project coordination
+Check: Does the summary accurately reflect what you actually tried?
 
 ```text
-Role: Act as a project coordinator.
+Role: Act as a study coach.
 
-Context: We are doing a group project on [topic]. Members are [roles/constraints]. Deadline is [date].
+Context: I understand [ideas], tried [attempt], and am stuck at [point].
 
-Constraints: Do not do the project content for us. Help us coordinate work fairly.
+Constraints: Do not solve the whole issue or pretend I tried steps I did not try.
 
-Format: Create:
-1. A task breakdown.
-2. Suggested owner for each task.
-3. Dependencies.
-4. A short meeting agenda.
-5. Risks we should discuss as a group.
+Format: Summarize the gap, suggest up to three specific questions, and one small thing to try before office hours.
 ```
 
----
+## 19. Coordinate a group project
 
-## 20. When to use the action-workflow frame
+Category: Planning
 
-Use this only when you are asking AI to operate tools, code, files, or multi-step workflows. Do not use it as a shortcut for coursework you are expected to do yourself.
+Mode: Any
+
+Use for: Planning work without delegating the assessed content.
+
+Fill in: Agreed roles, availability, deadline and project requirements.
+
+Check: Confirm allocations with all group members; keep private details out.
 
 ```text
-Goal: [What should be accomplished?]
-Inputs: [Files, data, links, constraints, rubrics]
-Steps: [What sequence should AI follow?]
-Boundaries: [What should AI not change, assume, or decide?]
-Checks: [How should AI verify the result?]
-Output: [What final format should be returned?]
+Role: Act as a project planning assistant.
+
+Context: Project: [task]. Team roles/availability: [non-sensitive summary]. Deadline: [date].
+
+Constraints: Do not write the project content or make binding decisions for others.
+
+Format: Propose tasks, dependencies, time estimates and a meeting agenda. Mark assignments as suggestions for group agreement.
 ```
 
-Example:
+## 20. Test a concept with a toy tool
+
+Category: Explore
+
+Mode: Any
+
+Use for: An optional action-oriented workflow, not ordinary coursework Q&A.
+
+Fill in: Concept, assumptions, allowed inputs/tools and independently known cases.
+
+Check: Inspect code before running; compare against known answers.
 
 ```text
-Goal: Help me organize my lecture notes into a study checklist.
-Inputs: I will upload three lecture PDFs.
-Steps: Extract topics, group related ideas, mark dependencies, and suggest review order.
-Boundaries: Do not answer assignment questions or create text to submit.
-Checks: Mark any unclear or unsupported inference.
-Output: A checklist plus 10 active-recall questions.
+Role: Act as a teaching-tool designer.
+
+Context: Goal: illustrate [concept]. Inputs: [synthetic/public example]. Known cases: [manual calculations].
+
+Constraints: No private data, network access, file modification or assignment submission. State assumptions and undefined cases.
+
+Format: Propose a minimal tool and checks first. Wait for approval before producing runnable code. Include a prediction before displaying results.
 ```
 
----
-
-## Final reminder
-
-A good prompt should make AI ask you to think again.
-
-Bad sign:
-
-```text
-AI gives me something I can copy immediately.
-```
-
-Good sign:
-
-```text
-AI helps me notice what I do not understand yet.
-```

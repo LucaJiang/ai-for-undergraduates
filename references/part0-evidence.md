@@ -1,58 +1,21 @@
-# Part 0 Evidence Notes
+# Part 0: evidence and limits
 
-These notes support the opening warning: AI can improve task performance while weakening independent learning if students use it as an answer machine.
+Verified against primary sources on 13 September 2026. The teaching routines in this workshop are our recommendations, not the interventions tested in these studies.
 
-## Primary warning evidence
+## Bastani et al. (2025)
 
-**Bastani et al. (2025). _Generative AI can harm learning_. Proceedings of the National Academy of Sciences. DOI: `10.1073/pnas.2422633122`**
+*Generative AI without guardrails can harm learning: Evidence from high school mathematics.* PNAS. DOI: [10.1073/pnas.2422633122](https://doi.org/10.1073/pnas.2422633122). [Author manuscript](https://hamsabastani.github.io/education_llm.pdf).
 
-Workshop use:
+The study used a high-school mathematics field experiment. Its reported practice improvements were 48% (GPT Base) and 127% (GPT Tutor), relative to the no-AI control. Subsequent unassisted test performance was 17% lower for GPT Base; GPT Tutor did not differ significantly from control. These are relative differences, not percentage points or a within-student before/after change. Table 1 in the author manuscript gives the GPT Base exam coefficient −0.054 on a 0–1 scale against a 0.321 control mean: approximately −5.4 percentage points, or −17% relatively.
 
-- Use this as the main opening study.
-- Core message: unguided generative AI improved practice performance but reduced later independent performance without AI.
-- Framing: this is not evidence that AI is intrinsically harmful; it is evidence that interaction design matters.
+The tutor included teacher-written solutions, common mistakes and targeted guidance, not merely “give hints”. No significant effect does not prove an exact zero effect. Do not generalize this short-term setting to every student, subject, tool or semester.
 
-Slide wording:
+## Kestin et al. (2025)
 
-> Performance with AI is not the same as learning without AI.
+*AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting.* Scientific Reports 15, 17458. DOI: [10.1038/s41598-025-97652-6](https://doi.org/10.1038/s41598-025-97652-6).
 
-## Positive counterexample
+A crossover study of two physics lessons with 194 eligible Harvard students found higher immediate post-test performance with its structured AI tutor than with the active-learning classroom comparison. The tutor used pedagogical scaffolding and teacher-prepared answers. The result supports a positive example in this context, not “AI always teaches better” or a guarantee of doubled course grades. The workshop's generic prompts are not a replication of this intervention.
 
-**Kestin et al. (2025). _AI tutoring outperforms in-class active learning_. Scientific Reports. DOI: `10.1038/s41598-025-97652-6`**
+## Scope of this revision
 
-Workshop use:
-
-- Use immediately after Bastani et al. to avoid an anti-AI framing.
-- Core message: a pedagogically designed AI tutor can improve learning outcomes.
-- Framing: AI works better when used for scaffolding, feedback, and active learning rather than direct answer copying.
-
-Slide wording:
-
-> AI is not the problem. The interaction pattern is the problem.
-
-## Recent observational context
-
-**OECD (2026). _PISA 2025 Results, Volume I_. Released 8 September 2026.**
-
-Workshop use:
-
-- Use as an appendix or speaker note.
-- Core message: AI use is now common among students, but its relationship with achievement depends on use pattern and AI literacy.
-- Important caution: PISA evidence is observational. Do not present it as causal evidence that AI causes lower scores.
-
-Slide wording:
-
-> AI literacy matters more than AI access.
-
-## Optional appendix only
-
-**Kosmyna et al. (2025). _Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task_. arXiv preprint.**
-
-Workshop use:
-
-- Optional appendix or Q&A only.
-- Do not overclaim. This is suggestive evidence about cognitive engagement during writing, not proof that ChatGPT damages the brain.
-
-Slide wording:
-
-> Interesting preliminary evidence; do not turn it into a slogan.
+Unused PISA and EEG/preprint references from the first draft have been removed from the live deck, rather than used as additional unsupported slogans. They are not needed for the opening argument. The full revision history remains in Git.

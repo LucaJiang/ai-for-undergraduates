@@ -1,130 +1,56 @@
-# ai-for-undergraduates
+# AI for undergraduates
 
-A practical public workshop website for undergraduate students in Hong Kong on studying with Generative AI.
+A public workshop for undergraduate students in Hong Kong. English slides, Mandarin presenter notes. **Use AI to think better — not to stop thinking.**
 
-**Core message:** use AI to think better — not to stop thinking.
+## Open the workshop
 
-## View the slides
+- [Slides](https://lucajiang.github.io/ai-for-undergraduates/)
+- [Student materials and four subject tracks](https://lucajiang.github.io/ai-for-undergraduates/materials.html)
+- [Searchable, copyable prompt library](https://lucajiang.github.io/ai-for-undergraduates/prompts/)
+- [Sources](https://lucajiang.github.io/ai-for-undergraduates/references/)
 
-- Slide deck: `index.html`
-- GitHub Pages: `https://lucajiang.github.io/ai-for-undergraduates/`
+## Current version
 
-## Current status
+Second-pass revision: 51 projected pages across Parts 0–5. The agreed schedule is 90 minutes of teaching/practice, a 10-minute break and 20 minutes of Q&A. See [schedule](schedule.md) and the detailed [presenter guide](resources/presenter-guide.md).
 
-### Part 0 — implemented
+All parts now use external Markdown without nested slide sections. Copy buttons read the displayed code. The two Notebook processing stages have explicit fallbacks. Exercises separately assess prompt improvement, independent explanation and judgment of feedback. The eigenvector and PPV labs run locally in the browser on fictional teaching data.
 
-- evidence-based opening warning about AI and learning;
-- frontier multimodal capability montage with short timestamped video excerpts;
-- crutch-vs-scaffold framing;
-- multimodal learning demo;
-- four demo tracks for STEM, medicine, business, and humanities/social science;
-- speaker notes, prompt cards, evidence and media notes.
+The original outline is retained and labelled archived. Git history contains the first-pass deck. Current university policy and actual school-account screenshots have not been supplied; these are rehearsal checks, not fabricated content.
 
-### Part 1 — implemented
+## Edit and preview
 
-- task-first tool selection rather than a model leaderboard;
-- Gemini / DeepSeek / Gemini Notebook positioning;
-- reasoning-effort framework (routine → standard → extended/deep);
-- quota-aware model use;
-- live Gemini Notebook demo with processing time filled by reasoning slides;
-- public Notebook demo source pack;
-- backup/fallback presenter workflow;
-- verification rubric and final decision tree.
+Content lives in `slides/part0.md` through `slides/part5.md`; shared styles in `css/workshop.css`. Use `---` for page breaks, `Note:` for Mandarin notes and `<!-- .slide: id="..." -->` for stable links. Do not wrap each Markdown page in `<section>`.
 
-### Part 2 — implemented
-
-- Q&A prompt structure: **Role + Context + Constraints + Format**;
-- distinction between study conversation prompts and action / agentic workflow prompts;
-- bad-prompt-to-study-prompt examples;
-- before-class, after-class, and exam-prep study workflows;
-- active recall and AI-as-examiner workflow;
-- Exercise 1: students build their own study loop;
-- public undergraduate prompt template library.
-
-### Part 3 — implemented
-
-- difficult-concept learning framework;
-- intuitive → formal → example → self-check → critique sequence;
-- Socratic tutoring prompts;
-- multiple representations for STEM, medicine, business, and humanities/social science;
-- code-aided learning as a small toy model, not assignment outsourcing;
-- Exercise 2: students ask AI for scaffolding on a hard concept.
-
-### Part 4 — implemented
-
-- beyond-chat interfaces: chat, notebook, code, and agents;
-- Notebook as source-grounded study space;
-- code as a way to make ideas executable and inspectable;
-- safe delegation ladder for agentic workflows;
-- Exercise 3: students ask AI to critique their own explanation.
-
-### Part 5 — implemented
-
-- verification, privacy, and academic-integrity closing;
-- hallucination taxonomy beyond fake facts;
-- verification ladder and checkable-answer prompt;
-- practical boundary for appropriate / policy-dependent / inappropriate AI use;
-- disclosure record template;
-- final student checklist before asking AI, after receiving an answer, and before submitting work.
-
-## Workshop structure
-
-See [`schedule.md`](schedule.md) for the 90-minute formal session plus Q&A structure.
-
-## Part 0 materials
-
-- [`prompts/part0-learning-prompt.md`](prompts/part0-learning-prompt.md)
-- [`references/part0-evidence.md`](references/part0-evidence.md)
-- [`resources/part0-media.md`](resources/part0-media.md)
-- [`demo-materials/stem/eigenvectors.html`](demo-materials/stem/eigenvectors.html)
-- [`demo-materials/medicine/diagnostic-testing.html`](demo-materials/medicine/diagnostic-testing.html)
-- [`demo-materials/business/price-elasticity.html`](demo-materials/business/price-elasticity.html)
-- [`demo-materials/humanities/argument-structure.html`](demo-materials/humanities/argument-structure.html)
-
-## Part 1 materials
-
-- [`slides/part1.md`](slides/part1.md)
-- [`resources/part1-runbook.md`](resources/part1-runbook.md)
-- [`demo-materials/notebook/lecture-diagnostic-testing.html`](demo-materials/notebook/lecture-diagnostic-testing.html)
-- [`demo-materials/notebook/screening-reading.html`](demo-materials/notebook/screening-reading.html)
-- [`demo-materials/notebook/common-misconceptions.html`](demo-materials/notebook/common-misconceptions.html)
-
-## Part 2 materials
-
-- [`slides/part2.md`](slides/part2.md)
-- [`css/part2.css`](css/part2.css)
-- [`resources/part2-runbook.md`](resources/part2-runbook.md)
-- [`prompts/undergraduate-study-prompts.md`](prompts/undergraduate-study-prompts.md)
-
-## Part 3 materials
-
-- [`slides/part3.md`](slides/part3.md)
-- [`css/part3.css`](css/part3.css)
-- [`resources/part3-runbook.md`](resources/part3-runbook.md)
-- [`prompts/part3-difficult-concepts.md`](prompts/part3-difficult-concepts.md)
-- [`demo-materials/part3/eigenvector-toy-model.html`](demo-materials/part3/eigenvector-toy-model.html)
-
-## Part 4 materials
-
-- [`slides/part4.md`](slides/part4.md)
-- [`css/part4.css`](css/part4.css)
-- [`resources/part4-runbook.md`](resources/part4-runbook.md)
-
-## Part 5 materials
-
-- [`slides/part5.md`](slides/part5.md)
-- [`css/part5.css`](css/part5.css)
-- [`resources/part5-runbook.md`](resources/part5-runbook.md)
-- [`prompts/critique-and-verification-prompts.md`](prompts/critique-and-verification-prompts.md)
-
-## Local preview
+For a quick preview with Internet access:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open <http://localhost:8000>.
+For a bundled build (Node.js and Python required):
 
-## Presenter notes
+```bash
+npm install --ignore-scripts --no-audit --no-fund
+npm run build
+python -m http.server 8000 --directory _site
+```
 
-Press `S` in Reveal.js to open speaker view.
+Open localhost:8000. The bundled build includes Reveal.js locally; only external links and YouTube playback need the Internet. No font files or video files are copied from the development environment. Reveal.js is pinned to 5.2.1.
+
+## Teaching materials
+
+- [Prompt source of truth](prompts/undergraduate-study-prompts.md)
+- [Difficult-concept prompts](prompts/part3-hard-concepts.md)
+- [Critique and verification](prompts/critique-and-verification-prompts.md)
+- [Eigenvector lab](demo-materials/stem/eigenvectors.html)
+- [PPV lab](demo-materials/medicine/ppv-lab.html)
+- [Answer keys](resources/answer-keys.md)
+- [Evidence interpretation](references/part0-evidence.md)
+- [Media notes](resources/part0-media.md)
+- [QA scope and commands](resources/qa.md)
+
+Press `S` or Notes for speaker view, `Esc` for overview. Chapter links are at the top. Timers start manually; pause/reset when required. Click a video to load its bounded excerpt; leaving the slide unloads it.
+
+## Before delivery
+
+Rehearse Notebook import and artifact generation with the actual school account. Confirm the host's academic-integrity policy, projected text size and video/audio playback on the venue network. Automated checks do not certify those external services. No private student, patient or research data belongs in this public repository.

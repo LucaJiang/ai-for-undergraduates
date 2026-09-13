@@ -1,19 +1,15 @@
-name: Deploy static slides to GitHub Pages
-
+name: Test and publish workshop
 on:
   push:
     branches: [master]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: false
-
 jobs:
   deploy:
     environment:
@@ -21,14 +17,35 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
         with:
-          path: .
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned runtime and test browser
+        run: |
+          npm install --ignore-scripts --no-audit --no-fund
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Structural and link checks
+        run: python scripts/check_sources.py
+      - name: Build bundled site
+        run: npm run build
+      - name: Browser checks
+        run: python scripts/browser_check.py
+      - name: Save QA results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: workshop-qa
+          path: test-results
+          retention-days: 7
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

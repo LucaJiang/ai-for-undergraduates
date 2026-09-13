@@ -1,34 +1,43 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Demo Material: Eigenvectors</title>
-  <link rel="stylesheet" href="../../css/workshop.css">
-</head>
-<body class="demo-page">
-  <main class="demo-wrap">
-    <section class="demo-card">
-      <h1>STEM demo: Eigenvectors</h1>
-      <p class="demo-note">Screenshot this page and ask an AI model to help you learn from it.</p>
-      <div class="demo-equation">A v = λ v</div>
-      <div class="demo-grid">
-        <div class="demo-box">
-          <h2>Transformation</h2>
-          <p>A matrix transforms a vector. Most vectors change both length and direction.</p>
-          <p>Some special vectors keep the same direction after the transformation.</p>
-        </div>
-        <div class="demo-box">
-          <h2>Common confusion</h2>
-          <p>An eigenvector is not a vector that does not move. It can stretch, shrink, or flip.</p>
-          <p>The key property is direction, not length.</p>
-        </div>
-      </div>
-      <div class="demo-grid">
-        <div class="demo-box"><h2>Question</h2><p>Why does this vector keep its direction after applying the matrix?</p></div>
-        <div class="demo-box"><h2>Learning goal</h2><p>Connect the algebraic equation <strong>A v = λ v</strong> with geometric transformation.</p></div>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Eigenvectors · Predict and check</title><link rel="stylesheet" href="../../css/workshop.css"></head>
+<body class="source-page"><main class="page-wrap">
+<nav class="page-nav full-only"><a href="../../materials.html#tracks">Materials</a><a href="../../index.html#/vector-predict">Slides</a><a href="../../prompts/index.html">Prompts</a></nav>
+<p class="tag full-only">STEM · original teaching example</p><h1>When is Av a scalar multiple of v?</h1>
+<p class="full-only">A matrix transforms a vector. A nonzero vector v is an eigenvector when Av = λv for some scalar λ. For a positive λ the orientation is preserved; a negative λ reverses it; λ = 0 sends v to zero. The zero vector itself is not an eigenvector.</p>
+<div class="lab-grid"><svg id="plot" viewBox="0 0 640 460" role="img" aria-label="Input vector and its transformed output on a labelled coordinate grid"></svg>
+<div class="lab-controls"><label>Matrix A <select id="matrix"><option value="stretch">Stretch: diag(2, 1)</option><option value="reflect">Reflect: diag(−1, 1)</option><option value="project">Project: diag(1, 0)</option><option value="identity">Identity: diag(1, 1)</option><option value="zero">Zero matrix</option></select></label>
+<div class="controls-row"><label>v₁ <input id="vx" type="number" min="-3" max="3" step="1" value="1"></label><label>v₂ <input id="vy" type="number" min="-3" max="3" step="1" value="0"></label></div>
+<div class="controls-row"><button type="button" data-vector="1,0">v = (1,0)</button><button type="button" data-vector="1,1">v = (1,1)</button></div>
+<p class="hint" id="prediction">Predict the output before revealing it. Is one scalar enough to map both coordinates?</p>
+<button type="button" id="reveal-result">Reveal / check</button>
+<div class="result" id="result" hidden aria-live="polite"></div><p class="hint">Solid blue: v. Dashed amber: Av. All values are computed locally from the displayed matrix.</p>
+</div></div>
+<section class="box full-only"><h2>Source note</h2><p>With A = diag(2,1), multiplying (x,y) gives (2x,y). The first coordinate doubles; the second is unchanged. An eigenvector condition must use the same λ for every coordinate. For v = (1,1), matching only the first coordinate does not establish the condition.</p><p>A stretching-sheet analogy fits this example, but not every matrix. This page uses real diagonal matrices deliberately; it does not claim every real matrix has a real eigenvector.</p><h2>Two checks — try before opening the key</h2><ol><li>For A = diag(2,1), compare v = (1,0) and v = (1,1). Which meets the definition?</li><li>For A = diag(1,0), does v = (0,1) count? What is λ? Does v = (0,0) count?</li></ol><p><a href="../../resources/answer-keys.html#stem">Answer key</a></p></section>
+</main><script>
+'use strict';
+if(new URLSearchParams(location.search).has('embed'))document.body.classList.add('embedded');
+const $=id=>document.getElementById(id),matrices={stretch:[2,1],reflect:[-1,1],project:[1,0],identity:[1,1],zero:[0,0]};
+let revealed=false;
+function evaluateVector(x,y,a,b){
+ const u=a*x,w=b*y,n=x*x+y*y;
+ if(n===0)return {u,w,valid:false,eigen:false,lambda:null};
+ const lambda=(u*x+w*y)/n,residual=Math.hypot(u-lambda*x,w-lambda*y);
+ return {u,w,valid:true,eigen:residual<1e-10,lambda};
+}
+function arrow(x,y,color,marker,dashed,label){
+ const X=320+40*x,Y=230-40*y;
+ if(Math.hypot(x,y)<1e-10)return `<circle cx="320" cy="230" r="8" fill="${color}"/><text x="333" y="250" fill="${color}" font-size="18">${label} = 0</text>`;
+ return `<line x1="320" y1="230" x2="${X}" y2="${Y}" stroke="${color}" stroke-width="4" ${dashed?'stroke-dasharray="9 6"':''} marker-end="url(#${marker})"/><text x="${X+(x>3?-8:8)}" y="${Y+(dashed?25:-10)}" text-anchor="${x>3?'end':'start'}" fill="${color}" font-size="19" font-weight="bold">${label} (${x}, ${y})</text>`;
+}
+function draw(){
+ let x=Number($('vx').value),y=Number($('vy').value);
+ if(!Number.isFinite(x)||!Number.isFinite(y)||Math.abs(x)>3||Math.abs(y)>3){$('result').hidden=false;$('result').textContent='Choose finite coordinates between −3 and 3.';return;}
+ const [a,b]=matrices[$('matrix').value],r=evaluateVector(x,y,a,b);window.labResult=r;
+ let grid='';for(let t=-7;t<=7;t++)grid+=`<line x1="${320+40*t}" y1="30" x2="${320+40*t}" y2="430" stroke="#e3e9f0"/>`;for(let t=-5;t<=5;t++)grid+=`<line x1="40" y1="${230-40*t}" x2="600" y2="${230-40*t}" stroke="#e3e9f0"/>`;
+ $('plot').innerHTML='<defs><marker id="blue" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#2066a8"/></marker><marker id="amber" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#a15b05"/></marker></defs>'+grid+'<path d="M30 230H608 M320 25V435" stroke="#65788b" stroke-width="2"/><text x="610" y="250" font-size="18">x</text><text x="335" y="26" font-size="18">y</text><text x="300" y="250" font-size="16">0</text><text x="355" y="250" font-size="16">1</text><text x="297" y="193" font-size="16">1</text>'+arrow(x,y,'#2066a8','blue',false,'v')+(revealed?arrow(r.u,r.w,'#a15b05','amber',true,'Av'):'');
+ $('result').hidden=!revealed;
+ if(revealed){let conclusion=!r.valid?'The zero vector is excluded by definition.':r.eigen?`Eigenvector: λ = ${Number(r.lambda.toFixed(5))}.`:'Not an eigenvector: no single scalar matches both coordinates.';$('result').textContent=`Av = (${r.u}, ${r.w}). ${conclusion}`;}
+}
+['matrix','vx','vy'].forEach(id=>$(id).addEventListener('input',()=>{revealed=false;draw();}));
+document.querySelectorAll('[data-vector]').forEach(b=>b.addEventListener('click',()=>{const [x,y]=b.dataset.vector.split(',');$('vx').value=x;$('vy').value=y;revealed=false;draw();}));
+$('reveal-result').addEventListener('click',()=>{revealed=true;draw();});draw();
+</script></body></html>
