@@ -31,6 +31,16 @@ A practical public workshop website for undergraduate students in Hong Kong on s
 - backup/fallback presenter workflow;
 - verification rubric and final decision tree.
 
+### Part 2 — implemented
+
+- Q&A prompt structure: **Role + Context + Constraints + Format**;
+- distinction between study conversation prompts and action / agentic workflow prompts;
+- bad-prompt-to-study-prompt examples;
+- before-class, after-class, and exam-prep study workflows;
+- active recall and AI-as-examiner workflow;
+- Exercise 1: students build their own study loop;
+- public undergraduate prompt template library.
+
 ## Workshop structure
 
 See [`schedule.md`](schedule.md) for the 90-minute formal session plus Q&A structure.
@@ -52,6 +62,13 @@ See [`schedule.md`](schedule.md) for the 90-minute formal session plus Q&A struc
 - [`demo-materials/notebook/lecture-diagnostic-testing.html`](demo-materials/notebook/lecture-diagnostic-testing.html)
 - [`demo-materials/notebook/screening-reading.html`](demo-materials/notebook/screening-reading.html)
 - [`demo-materials/notebook/common-misconceptions.html`](demo-materials/notebook/common-misconceptions.html)
+
+## Part 2 materials
+
+- [`slides/part2.md`](slides/part2.md)
+- [`css/part2.css`](css/part2.css)
+- [`resources/part2-runbook.md`](resources/part2-runbook.md)
+- [`prompts/undergraduate-study-prompts.md`](prompts/undergraduate-study-prompts.md)
 
 ## Local preview
 
