@@ -7,31 +7,51 @@ A practical public workshop website for undergraduate students in Hong Kong on s
 ## View the slides
 
 - Slide deck: `index.html`
-- Expected GitHub Pages URL after Pages deployment is enabled: `https://lucajiang.github.io/ai-for-undergraduates/`
+- GitHub Pages: `https://lucajiang.github.io/ai-for-undergraduates/`
 
 ## Current status
 
-Part 0 is implemented:
+### Part 0 — implemented
 
 - evidence-based opening warning about AI and learning;
+- frontier multimodal capability montage with short timestamped video excerpts;
 - crutch-vs-scaffold framing;
 - multimodal learning demo;
 - four demo tracks for STEM, medicine, business, and humanities/social science;
-- speaker notes in Reveal.js;
-- prompt cards and evidence notes.
+- speaker notes, prompt cards, evidence and media notes.
+
+### Part 1 — implemented
+
+- task-first tool selection rather than a model leaderboard;
+- Gemini / DeepSeek / Gemini Notebook positioning;
+- reasoning-effort framework (routine → standard → extended/deep);
+- quota-aware model use;
+- live Gemini Notebook demo with processing time filled by reasoning slides;
+- public Notebook demo source pack;
+- backup/fallback presenter workflow;
+- verification rubric and final decision tree.
 
 ## Workshop structure
 
 See [`schedule.md`](schedule.md) for the 90-minute formal session plus Q&A structure.
 
-## Materials
+## Part 0 materials
 
 - [`prompts/part0-learning-prompt.md`](prompts/part0-learning-prompt.md)
 - [`references/part0-evidence.md`](references/part0-evidence.md)
+- [`resources/part0-media.md`](resources/part0-media.md)
 - [`demo-materials/stem/eigenvectors.html`](demo-materials/stem/eigenvectors.html)
 - [`demo-materials/medicine/diagnostic-testing.html`](demo-materials/medicine/diagnostic-testing.html)
 - [`demo-materials/business/price-elasticity.html`](demo-materials/business/price-elasticity.html)
 - [`demo-materials/humanities/argument-structure.html`](demo-materials/humanities/argument-structure.html)
+
+## Part 1 materials
+
+- [`slides/part1.md`](slides/part1.md)
+- [`resources/part1-runbook.md`](resources/part1-runbook.md)
+- [`demo-materials/notebook/lecture-diagnostic-testing.html`](demo-materials/notebook/lecture-diagnostic-testing.html)
+- [`demo-materials/notebook/screening-reading.html`](demo-materials/notebook/screening-reading.html)
+- [`demo-materials/notebook/common-misconceptions.html`](demo-materials/notebook/common-misconceptions.html)
 
 ## Local preview
 
