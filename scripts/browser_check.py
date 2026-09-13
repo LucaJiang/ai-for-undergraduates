@@ -3,7 +3,7 @@ from pathlib import Path
 from functools import partial
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from threading import Thread
-import argparse, json, math
+import argparse, json, math, re
 from playwright.sync_api import sync_playwright
 
 parser = argparse.ArgumentParser()
@@ -17,25 +17,42 @@ server = ThreadingHTTPServer(("127.0.0.1", 0), partial(SimpleHTTPRequestHandler,
 Thread(target=server.serve_forever, daemon=True).start()
 base = f"http://127.0.0.1:{server.server_port}"
 report = {"external_services_tested": False, "failures": [], "checks": []}
+
+def contrast_ratio(first, second):
+    def luminance(color):
+        values = [float(v) / 255 for v in re.findall(r"[\d.]+", color)[:3]]
+        assert len(values) == 3, color
+        linear = [v/12.92 if v <= .04045 else ((v+.055)/1.055)**2.4 for v in values]
+        return sum(v*w for v,w in zip(linear,(.2126,.7152,.0722)))
+    a,b=sorted((luminance(first),luminance(second)))
+    return (b+.05)/(a+.05)
+
 with sync_playwright() as pw:
     executable = "/usr/bin/chromium" if Path("/usr/bin/chromium").exists() else None
     browser = pw.chromium.launch(headless=True, executable_path=executable, args=["--no-sandbox"])
     context = browser.new_context(viewport={"width":1280,"height":720}, permissions=["clipboard-read","clipboard-write"])
     page = context.new_page(); js_errors=[]
     page.on("pageerror", lambda e: js_errors.append(str(e)))
-    # Deliberately do not treat external streaming as a tested local capability.
+    # Do not treat external streaming as a tested local capability.
     context.route("**/*youtube*/*", lambda route: route.fulfill(status=200, content_type="text/html", body="<p>External video playback is excluded from this test.</p>"))
     if not args.materials_only:
         page.goto(base, wait_until="networkidle")
         page.wait_for_function("window.Reveal && Reveal.isReady()")
         count=page.evaluate("Reveal.getSlides().length"); assert count==51,count
         assert page.locator('.slides > section > section').count()==0
+        viewport_bg = page.evaluate("getComputedStyle(document.body).backgroundColor")
+        assert viewport_bg == 'rgb(11, 20, 36)', ('Wrong Reveal viewport background', viewport_bg)
         ids=page.evaluate("Reveal.getSlides().map(s=>s.id)")
         for width,height in [(1280,720),(1440,900)]:
             page.set_viewport_size({"width":width,"height":height})
             for i,ident in enumerate(ids):
                 page.evaluate("i=>Reveal.slide(i)",i); page.wait_for_timeout(80)
                 assert page.evaluate("Boolean(Reveal.getSlideNotes()?.trim())"),ident
+                heading_color = page.locator(f'#{ident} h2').first.evaluate('(el)=>getComputedStyle(el).color')
+                assert contrast_ratio(heading_color, viewport_bg) >= 4.5, ('Heading contrast',ident)
+                for footer in page.locator(f'#{ident} > .footer').all():
+                    footer_color = footer.evaluate('(el)=>getComputedStyle(el).color')
+                    assert contrast_ratio(footer_color,viewport_bg) >= 4.5, ('Footer contrast',ident)
                 box=page.locator(f'#{ident}').bounding_box()
                 if box and (box['y'] < -2 or box['y']+box['height']>height+2):
                     report['failures'].append(f"Slide bounds {ident} at {width}x{height}: {box}")
@@ -61,7 +78,7 @@ with sync_playwright() as pw:
         with page.expect_popup() as pop:
             page.locator('[data-notes]').click()
         notes=pop.value;notes.wait_for_timeout(1000);assert not notes.is_closed();notes.close()
-        report['checks']+=['51 real Reveal slides at 1280×720 and 1440×900','all slide notes and copy buttons','speaker popup','timer start/pause/reset','video timestamp bounds and unloading']
+        report['checks']+=['51 real Reveal slides at 1280×720 and 1440×900','dark viewport and heading/footer contrast','all slide notes and copy buttons','speaker popup','timer start/pause/reset','video timestamp bounds and unloading']
     page.goto(base+'/prompts/index.html');page.wait_for_function("document.querySelectorAll('#library details').length===20")
     page.locator('#search').fill('glossary');assert page.locator('#library details:visible').count()==1
     page.locator('#library details:visible summary').click()
