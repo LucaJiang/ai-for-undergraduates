@@ -1,33 +1,33 @@
 <!-- .slide: id="part1" class="" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Start the notebook. Then keep teaching.
+## Turn your course materials into a study notebook.
 
-<p class="sub">Live demo · import first, generate later.</p><div class="cards"><div><h3>Now</h3><p>Open a fresh notebook and add the three short course sources.</p></div><div><h3>While it imports</h3><p>We will choose tools and decide where answers should come from.</p></div></div><p class="links"><a href="materials.html#notebook" target="_blank" rel="noopener">Open Notebook source pack ↗</a> · <a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Open Notebook ↗</a></p><p class="caution">Importing sources and generating a quiz are different waiting steps.</p>
+<div class="cards"><div><h3>Bring your sources</h3><p>Lecture notes, readings and slides from the same topic.</p></div><div><h3>Study from them</h3><p>Ask a question, inspect its source, then test yourself.</p></div></div><p class="links"><a href="materials.html#notebook" target="_blank" rel="noopener">Course source pack ↗</a> · <a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Open Notebook ↗</a></p>
 
 Note:
-0:00–1:00。立刻启动资料导入。不要等导入完成、不要先提问再回slides。准备三个tab：新Notebook、已导入资料的Notebook B、已生成Quiz和slides的Notebook C。学校已提供账号；不要要求学生此时同步操作。
+0:00–1:00。讲者现在切到学校账号的新Notebook A，开始导入三份公开source，马上回slides讲工具选择。不要等导入完成才离开。学生此时看演示即可。准备Notebook B已导入资料，C已生成Quiz/Slides。两段等待只写讲稿，不作为学生必须理解的新概念。
 
 ---
 
 <!-- .slide: id="choose-tools" class="" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Start with the task, not a leaderboard.
+## Choose a tool for your question.
 
-<div class="cards"><div><h3>Gemini</h3><p>General study conversation and multimodal questions. Our default starting point.</p></div><div><h3>DeepSeek</h3><p>Compare explanations, try another model, or continue when a quota blocks you.</p></div><div><h3>Notebook</h3><p>Study a selected set of course sources and inspect source-linked answers.</p></div></div><p class="footer">NotebookLM is now Gemini Notebook; we use “Notebook” for short. <a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noopener">Naming update ↗</a></p>
+<div class="cards"><div><h3>Gemini</h3><p>Start here for general coursework questions, images and explanations.</p></div><div><h3>DeepSeek</h3><p>Try another explanation or continue when you reach a usage limit.</p></div><div><h3>Notebook</h3><p>Ask about your chosen course materials and see where the answer comes from.</p></div></div>
 
 Note:
-1:00–2:00。Gemini优先是本workshop的选择，不是综合排名。DeepSeek是备选让学生自己比较。Notebook有source-grounded工作流，但不是零幻觉保证，也不把品牌当研究结论。
+1:00–2:00。Notebook指前页所打开的学校Notebook服务（NotebookLM/Gemini Notebook按实际界面）。不要让命名迁移占用学生注意力。工具不是排行榜：Gemini是课堂默认，DeepSeek用于比较/额度备选，Notebook适合课程sources。
 
 ---
 
 <!-- .slide: id="source-choice" class="" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Where should the answer come from?
+## Should the answer use your notes or wider knowledge?
 
-<div class="cards"><div><h3>My course materials</h3><p>Select the relevant sources. Ask for a supporting passage. Accept “not in these sources”.</p></div><div><h3>An open question</h3><p>Use a general assistant. Tell it your level, assumptions and what you need to verify.</p></div></div><p class="caution">Check what was actually imported: web URLs → page text; YouTube URLs → transcript, not the video frames.</p><p class="footer"><a href="https://support.google.com/notebooklm/answer/16215270?hl=en" target="_blank" rel="noopener">Notebook source limitations ↗</a></p>
+<div class="cards"><div><h3>Studying your course notes</h3><p>Ask: “Which passage supports this?” If the notes do not answer the question, the AI should say so rather than guess.</p></div><div><h3>Exploring beyond the notes</h3><p>Ask for another explanation or example. Check new claims against a textbook or reliable source.</p></div></div><p class="footer">In Notebook, a website link imports page text; a YouTube link imports its transcript. <a href="https://support.google.com/notebooklm/answer/16215270?hl=en" target="_blank" rel="noopener">Source types ↗</a></p>
 
 Note:
 2:00–3:30。两个工具类型不是互斥：一般聊天也能上传材料；Notebook也有发现来源功能。这里是使用策略，不是说某产品只能做某任务。Google说明网页URL只导入文字、YouTube只导入字幕；上传图片/PDF属于其他source类型。
@@ -37,12 +37,12 @@ Note:
 <!-- .slide: id="notebook-checkpoint" class="" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Checkpoint: are the sources ready?
+## Choose how you want to review.
 
-<div class="sequence"><div><b>Ready</b><p>Check the source text. Start one Quiz in Studio.</p></div><div><b>Still importing</b><p>Switch to the prepared source notebook. Start the Quiz there.</p></div><div><b>Then</b><p>Return to the slides while generation runs.</p></div></div><p class="caution">A prepared notebook is a backup, not a live result. Say which one you are showing.</p>
+<div class="cards"><div><h3>Quiz</h3><p>Answer a question before revealing the explanation.</p></div><div><h3>Flashcards</h3><p>Try to recall the idea before turning the card.</p></div><div><h3>Study slides</h3><p>See how topics fit together, then return to the original notes.</p></div></div>
 
 Note:
-3:30–4:00。最多检查一次。新Notebook没好就用B，不挤占后面演示。可以展示Slide Deck入口，但不现场同时排多个耗时任务。学校界面实际名称为准。
+3:30–4:00。讲完这页切回Notebook A检查一次导入；准备好就在Studio点Quiz，没准备好用已导入的B。然后回slides讲思考强度，不盯进度条。可说“我们用这份资料做一道小测”，不要求学生理解后台流程。C中预生成slides留到返回时展示；使用预先准备的结果口头如实说明，不放一条让学生看不懂的备课提醒。
 
 ---
 
@@ -51,7 +51,7 @@ Note:
 
 ## How much thinking does this task need?
 
-<div class="cards"><div><h3>Less</h3><p>Translate a sentence; format notes; extract defined terms.</p></div><div><h3>More</h3><p>Find a gap in a proof; compare assumptions; solve a multi-step problem.</p></div></div><p class="takeaway">Use a sufficient reasoning budget — not always the maximum.</p><p class="footer">Higher effort can cost time and quota. A simple task can still require verification.</p>
+<div class="cards"><div><h3>Quick, routine work</h3><p>Translate a sentence, format notes or extract definitions.</p></div><div><h3>Multi-step reasoning</h3><p>Check a proof, compare assumptions or debug a difficult error.</p></div></div><p class="takeaway">Use a thinking mode when the task needs it.</p><p class="footer">More thinking may take longer or use more of your available quota. It still does not guarantee a correct answer.</p>
 
 Note:
 4:00–5:00。Notebook生成Quiz。讲选择思考强度，也强调“短问题”可能难、“长摘要”也可能需要核验，不能机械分类。不要写固定每日额度。
@@ -61,9 +61,9 @@ Note:
 <!-- .slide: id="actual-controls" class="" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Find the control in your own account.
+## Choose a mode before you ask.
 
-<div class="cards"><div><h3>Gemini / DeepSeek</h3><p>Open the model or thinking menu. Inspect what your account actually offers.</p></div><div><h3>Notebook</h3><p>Choose sources and study outputs. Do not assume it has the same reasoning switch.</p></div></div><p class="caution">Product names, account permissions and subscriptions differ.<br>Writing “think carefully” is not the same as changing a model setting.</p><p class="footer"><a href="references/index.html#products" target="_blank" rel="noopener">Current official documentation ↗</a></p>
+<div class="cards"><div><h3>Gemini / DeepSeek</h3><p>Open the model or thinking menu. Choose from the options in your account.</p></div><div><h3>Notebook</h3><p>Select the course sources and the output you need, such as a quiz.</p></div></div><p class="caution">Typing “think carefully” does not change the model setting.</p><p class="footer">Available modes depend on your account. <a href="references/index.html#products" target="_blank" rel="noopener">Tool guides ↗</a></p>
 
 Note:
 5:00–5:45。用你实际账号展示一次model/thinking菜单，不伪造截图。不将DeepSeek API的effort参数当网页按钮。不要求学生购买高级功能。个人Google和学校账号菜单可能不同。
@@ -85,14 +85,16 @@ Note:
 <!-- .slide: id="notebook-return" class="" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Return to Notebook: inspect, then try.
+## From your notes to a question you can answer.
 
-<div class="sequence"><div><b>1 · Inspect a citation</b><p>Does the passage support the answer?</p></div><div><b>2 · Answer a quiz item</b><p>Choose before revealing feedback.</p></div><div><b>3 · Preview one artifact</b><p>Use a pre-generated deck if needed.</p></div></div><div class="prompt"><pre><code>Based only on the selected sources, explain why sensitivity
-is not P(disease | positive). Cite a supporting passage.
-If the sources do not support a claim, say so.</code></pre><button class="copy" type="button">Copy prompt</button></div><p class="footer">Still generating? Show the prepared result or use the printed source exercise.</p>
+<div class="sequence"><div><b>Find the evidence</b><p>Open a citation and read the supporting passage.</p></div><div><b>Try a quiz</b><p>Choose your answer before looking at the feedback.</p></div><div><b>See the overview</b><p>Use study slides to see how the ideas connect.</p></div></div><div class="prompt"><pre><code>Use the selected course notes to explain the difference between
+sensitivity and the chance of disease after a positive test.
+Show the passage that supports your explanation.</code></pre><button class="copy" type="button">Copy prompt</button></div>
 
 Note:
-6:30–9:15。预留2分45秒给你演示。点击citation不只是看有没有角标，还看原文是否支持。Quiz先请学生答一道再显示反馈。结果未完成立刻切C并说明提前准备；无法登录时用materials页面的原始表和答案，不声称是Notebook输出。生成slides官方提示可需要多分钟。
+6:30–9:15，给讲者2分45秒演示。先粘贴屏幕上的具体问题：
+“Use the selected course notes to explain the difference between sensitivity and the chance of disease after a positive test. Show the passage that supports your explanation.”
+点击引用让学生看到真实原文，再切到Quiz请学生作答。如果要一个确定提问，使用“Among the 180 people with positive tests, 90 have the disease. What fraction is that?” 等学生回答50%后，核对原文中的表格。最后快速看预先生成的slides1–2页，口头说“这份是我提前生成的”。如果仍在生成，直接用C；不能登录则用公开source页面和答案，不把页面当Notebook的输出。
 
 ---
 

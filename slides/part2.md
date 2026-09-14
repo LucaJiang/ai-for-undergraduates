@@ -32,7 +32,7 @@ Note:
 
 ## A useful answer can start another question.
 
-<p class="footer">Illustrative teaching dialogue — not a recorded model output</p><div class="dialogue"><p><b>Student:</b> I know sensitivity is 90%. Why is PPV not 90%?</p><p><b>Tutor:</b> In this example, 90 positive tests come from people with disease and 90 from people without it. Which group belongs in the PPV denominator?</p><p><b>Student:</b> Everyone with a positive result: 180 people. So PPV is 90/180 = 50%?</p><p><b>Tutor:</b> Correct for this table. Sensitivity instead uses everyone with disease as the denominator.</p></div><p class="takeaway">“Here is my understanding. Is it correct for this example?”</p>
+<div class="dialogue"><p><b>Student:</b> I know sensitivity is 90%. Why is PPV not 90%?</p><p><b>Tutor:</b> In this example, 90 positive tests come from people with disease and 90 from people without it. Which group belongs in the PPV denominator?</p><p><b>Student:</b> Everyone with a positive result: 180 people. So PPV is 90/180 = 50%?</p><p><b>Tutor:</b> Correct for this table. Sensitivity instead uses everyone with disease as the denominator.</p></div><p class="takeaway">“Here is my understanding. Is it correct for this example?”</p>
 
 Note:
 3:30–5:30。这是备课对话，不冒充Gemini实测结果。来源为我们提供的1000人教学表。强调不用每次重写整段prompt，告诉AI具体卡在哪儿，再复述自己的理解。也可现场用同一问题，但不要预设它必出错。
@@ -85,7 +85,7 @@ Note:
 
 ## Before exams: retrieve, then review.
 
-<div class="sequence"><div><b>Close the explanation</b><p>Try a question or explain from memory.</p></div><div><b>Get feedback</b><p>Ask whether the reasoning is correct. Do not demand an error.</p></div><div><b>Re-open the source</b><p>Check the gap, revise, then try again later.</p></div></div><p class="takeaway">Familiarity is not the same test as independent explanation.</p><p class="footer">This is a practice routine, not a promise of a particular grade improvement.</p>
+<div class="sequence"><div><b>Close the explanation</b><p>Try a question or explain from memory.</p></div><div><b>Get feedback</b><p>Ask which steps are correct and which, if any, need fixing.</p></div><div><b>Re-open the source</b><p>Check the gap, revise, then try again later.</p></div></div><p class="takeaway">Recognizing an answer is not the same as recalling it.</p>
 
 Note:
 11:00–13:00。回忆练习适用于已经接触的内容，不能替代初次学习。提醒AI反馈也会错，不能让它必须找错。可用Part1已生成Quiz，但目的不同：Part1展示功能，这里解释如何学习。
@@ -95,12 +95,12 @@ Note:
 <!-- .slide: id="exercise1" class="" -->
 <p class="eyebrow">PART 2 · ASK</p>
 
-## Exercise 1 · improve one study question.
+## Exercise 2 · improve your assignment conversation.
 
-<p class="sub">Choose: understand · recall · plan · your own course.</p><div class="cards"><div><h3>First</h3><p>Ask with your current prompt. Inspect what is missing.</p></div><div><h3>Then</h3><p>Add useful context or constraints. Ask again.</p></div><div><h3>Leave with</h3><p>Your before/after prompts and one specific change in the answer.</p></div></div><div class="timer" data-seconds="600"><output aria-live="off">10:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a></p>
+<p class="sub">Return to your first Gemini conversation, or choose another course question.</p><div class="cards"><div><h3>First</h3><p>Read your earlier exchange. What was unclear or unhelpful?</p></div><div><h3>Then</h3><p>Add useful context or constraints. Ask again.</p></div><div><h3>Leave with</h3><p>Your before/after prompts and one specific change in the answer.</p></div></div><div class="timer" data-seconds="600"><output aria-live="off">10:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a></p>
 
 Note:
-13:00–15:00说明任务；15:05–15:15实际10分钟练习。前2分钟选材料，4分钟比较回答，3分钟追问或修改，最后1分钟记录。不限专业；材料网址页面提供兜底。时间不足缩短讲解，不占用10分钟练习。
+13:00–15:00说明任务；15:05–15:15实际10分钟练习。前2分钟打开熟题交流或选材料，4分钟比较回答，3分钟追问或修改，最后1分钟记录。不限专业；材料网址页面提供兜底。时间不足缩短讲解，不占用10分钟练习。
 
 ---
 
@@ -121,7 +121,7 @@ Note:
 
 ## 10-minute break
 
-<p class="lead">Keep one concept you want to understand better.</p><div class="timer" data-seconds="600"><output aria-live="off">10:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a></p><p class="footer">Scheduled return: 15:25 HKT</p>
+<p class="lead">Keep one concept you want to understand better.</p><div class="timer" data-seconds="600"><output aria-live="off">10:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a></p>
 
 Note:
 15:15–15:25。计时器手动开始，切页不会自动重置。不要强迫学生休息时继续操作。返场先看实际时钟，若延迟要从讲解部分回收时间。

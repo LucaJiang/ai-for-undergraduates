@@ -1,25 +1,26 @@
-# Part 0 media — second-pass runbook
+# Part 0 media runbook
 
-Three previously selected publisher demonstrations, not a model ranking or an independent benchmark. The deck requests only the intervals below, for 74 seconds of video in total. These are bounded YouTube embeds, not downloaded or rehosted video files.
+Three source-video excerpts: OpenAI GPT-Realtime-2 06:58–07:28 (30 s), Genie 3 00:07–00:31 (24 s), Runway Gen-4.5 00:06–00:26 (20 s). Total video time: 74 seconds. These are publisher demonstrations; detailed provenance belongs in notes, not on the capability overview slide.
 
-| Demonstration | Original source | Interval | Length |
-|---|---|---|---|
-| OpenAI, Build Hour: GPT-Realtime-2 | https://www.youtube.com/watch?v=qGS9Ghnq1RU | 06:58–07:28 | 30 s |
-| Google DeepMind, Genie 3 | https://www.youtube.com/watch?v=PDKhUknuQDg | 00:07–00:31 | 24 s |
-| Runway, Introducing Gen-4.5 | https://www.youtube.com/watch?v=ei2PsDpPbB4 | 00:06–00:26 | 20 s |
+| Source | Start | End |
+|---|---|---|
+| [OpenAI](https://www.youtube.com/watch?v=qGS9Ghnq1RU) | 418 s | 448 s |
+| [Google DeepMind](https://www.youtube.com/watch?v=PDKhUknuQDg) | 7 s | 31 s |
+| [Runway](https://www.youtube.com/watch?v=ei2PsDpPbB4) | 6 s | 26 s |
 
-Optional embodied-AI example: [Figure Helix 02](https://www.figure.ai/news/helix-02). Keep this as a source link, not a four-minute additional presentation.
+## Preferred rehearsal workflow
 
-## Player behavior
+1. Open the deck in the actual presentation browser. Press V to open Video setup, or add `?presenter=1` to expose the setup button.
+2. Select a video file you have permission to use. Choose full source video or already-trimmed excerpt. Files are local object URLs only: not uploaded, persisted or added to the public repository.
+3. Play the excerpt. For a full source file, playback seeks to the recorded start and pauses at the end. A trimmed excerpt starts at zero and plays up to the specified excerpt length or the shorter file duration. Native controls allow pausing; Replay restarts the excerpt.
+4. Re-select files after reloading. Leaving a slide stops playback. Keep a fallback sentence rather than debugging audio or streaming on stage.
 
-Click Play to load YouTube only for the current slide. The player receives the selected `start` and `end` seconds. Leaving the slide or opening the overview removes the iframe, preventing background audio. Returning to the slide restores the launch button. The source link starts at the chosen time but an external YouTube tab is not automatically stopped by the deck.
+## External player
 
-## What to say
+The default uses standard youtube.com embeds. Timestamp parameters do not bypass sign-in, age, anti-bot, region, network or embedding restrictions. An iframe alone cannot identify why a particular user was asked to sign in. Changing from youtube-nocookie.com is an alternative, not a confirmed fix.
 
-Voice: conversation can connect to tools. World model: the environment responds to action. Generative media: outputs are not limited to text. One observation per clip is enough; return to the learning question rather than explaining model architecture.
+The Watch on YouTube link opens the original video at the starting timestamp. It does not enforce the ending timestamp; pause it manually. Use the same signed-in browser if needed. Do not weaken browser security or suggest circumvention.
 
-## Rehearsal still required
+No third-party video is downloaded or redistributed by this repository. Local player mechanics and external URL construction are testable; actual YouTube playback and campus audio/network remain rehearsal tasks.
 
-Check the strongest moment in each selected interval, playback permission, captions, ads, audio, screen size and campus network. Player-parameter tests do not watch the actual video and do not establish that the selected segment is the optimal highlight. No live streaming or venue playback test is claimed here. Do not promise frame-exact starts on all browsers.
-
-If playback fails, describe the capability using the slide text and continue immediately. A link is not an offline video backup. A live rehearsal can revise these intervals and the matching `data-start`/`data-end` values together.
+[Official player parameters](https://developers.google.com/youtube/player_parameters) · [Presenter guide](presenter-guide.md)

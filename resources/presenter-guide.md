@@ -1,86 +1,167 @@
-# Presenter guide — second-pass revision
+# Presenter guide — reader-focused revision
 
-English slides, Mandarin delivery. Six parts, 51 projected pages including exercise/debrief/break/Q&A pages. The source packs, prompt library and evidence notes are companion material, not additional lecture pages. Keep the agreed 90 minutes of content/practice, a 10-minute break, and 20 minutes of Q&A. The original outline is archived, not the current run-of-show.
+**Wenxin Jiang · 23 September 2026 · Hong Kong**
+
+English slides and Mandarin delivery. The deck has 52 pages. Presenter logistics belong here and in `Note:` blocks, not on student slides. Four exercises now run in chronological order; existing fragment IDs remain stable for old links.
 
 ## Clock schedule
 
-| Time (HKT) | Segment | Content / output |
+| Time | Segment | Student activity |
 |---|---|---|
-| 14:30–14:40 | Part 0 | Learning evidence, 74 seconds of video, brief educational demo |
-| 14:40–14:50 | Part 1 | Tool choice + two-stage Notebook preparation/demonstration |
-| 14:50–15:05 | Part 2 | Role + Context + Constraints + Format; useful follow-up questions |
-| 15:05–15:15 | Exercise 1 | Before/after prompts and one observable improvement |
-| 15:15–15:25 | Break | 10 minutes, not another exercise |
-| 15:25–15:40 | Part 3 | Predict → reveal → connect geometry and definition |
-| 15:40–15:48 | Exercise 2 | Own explanation or attempt with AI answer hidden |
-| 15:48–15:56 | Part 4 | One complete PPV toy-tool demonstration and independent checks |
-| 15:56–16:02 | Exercise 3 | Accept/reject AI feedback with a reason, then revise |
-| 16:02–16:10 | Part 5 | Source verification, course policy, privacy, disclosure, closing |
+| 14:30–14:40 | Opening / Part 0 | Evidence, short demos and Exercise 1 (four minutes on a familiar assignment question) |
+| 14:40–14:50 | Part 1 | Tool and thinking choices; Notebook demonstration |
+| 14:50–15:05 | Part 2 | Role + Context + Constraints + Format; follow-up questions |
+| 15:05–15:15 | Exercise 2 | Improve the first conversation |
+| 15:15–15:25 | Break | Ten-minute break after Part 2, before Part 3 |
+| 15:25–15:40 | Part 3 | Difficult concepts and multiple representations |
+| 15:40–15:48 | Exercise 3 | Explain without looking at the AI answer |
+| 15:48–15:56 | Part 4 | In-chat interactive visualization, prediction and independent checks |
+| 15:56–16:02 | Exercise 4 | Accept or reject AI feedback with a reason |
+| 16:02–16:10 | Part 5 | Sources, course rules, privacy and closing |
 | 16:10–16:30 | Q&A | Questions and unresolved concerns |
 
-Exercise debriefs are included in the exercise minutes. Do not add extra discussion blocks after each one. All slides have Mandarin notes; press S or Notes. Timers are manual and continue across slide navigation; pause/reset explicitly.
+90 minutes teaching/practice + 10-minute break + 20-minute Q&A. Debriefs stay inside exercise slots. Do not let a generation delay consume an exercise or the break.
 
-## Part 0 — 10 minutes
+Ask students to bring an assignment and their own solutions before arrival. They must check whether discussing the question with AI is allowed. Share one question, not a whole document with names or student IDs. Use the [public warm-up](../demo-materials/assignment-warmup.html) when an assignment cannot be used.
 
-0:00–0:40 opening; 0:40–2:00 negative and guarded-tutor comparison; 2:00–2:45 positive study; 2:45–5:00 capability setup and three excerpts; 5:00–7:40 one source-image learning conversation; 7:40–10:00 agreement, student response and transition buffer.
+## Part 0 — exact Gemini conversation
 
-The video player is click-to-load with start/end bounds, not a local video edit. Leaving a slide unloads it. Check audio, ads, captions, embedding permission, selected scene and the venue network. No actual third-party playback or best-frame selection is certified by the automated browser tests. Skip a failed video immediately; use the on-screen capability and original link. Do not claim that all clips show the newest model version.
+Suggested timing: cover and outline 40 seconds; mathematics study 70 seconds; positive study 35 seconds; capabilities 15 seconds; videos and transitions 90 seconds; instructor demonstration 40 seconds; student exercise four minutes; debrief and transition about one minute. Simplify commentary rather than rushing student work.
 
-For the learning-image demo open the eigenvector lab, reveal the first vector, then screenshot the matrix selector and graph. The page now supplies a matrix, coordinates and input/output labels. A general explanation is not wrong; the improved prompt supplies the student's actual gap. Use a prepared example when generation is slow and label it as prepared.
+开场：“我是 Wenxin Jiang。今天我们练习怎样和 AI 讨论功课、核对解释，再用它帮助自己学会。”目录明确休息在Part 2及练习之后。研究数值是相对对照组的变化，不是百分点变化；不把短期研究结果推广成普遍的学期成绩保证。
 
-## Part 1 — two waiting stages, not one
+### 讲者第一条消息
 
-Prepare three tabs on the instructor's school account:
+打开Gemini普通聊天，不需要Canvas。直接粘贴：
 
-- A: a fresh notebook for importing sources live.
-- B: the same sources already imported, for import failure/latency.
-- C: one pre-generated Quiz, one source-linked answer and optionally one Slide Deck.
+```text
+I am studying introductory quantitative reasoning.
+A price rises from HK$100 to HK$120. What is the percentage increase?
+My solution is (120 - 100) / 100 × 100% = 20%, because the original price is the reference value.
+Check my reasoning without rewriting my solution. If it is correct, say so.
+Ask me one question about why I used 100 in the denominator, then wait.
+```
 
-| Elapsed | Action |
-|---|---|
-| 0:00–1:00 | Start import in A, then immediately return to slides. Do not wait to ask a question. |
-| 1:00–3:30 | Explain tool choice and source-grounded vs open questions. |
-| 3:30–4:00 | Check once: if A is ready start Quiz; otherwise use B. |
-| 4:00–6:30 | Explain reasoning effort, show the real account's menu, discuss checks. |
-| 6:30–9:15 | Return: inspect a citation, answer one quiz item, optionally preview prepared slides. If still generating use C. |
-| 9:15–10:00 | Recap and transition. |
+若问为什么分母是100，回答：
 
-When using B/C say it was prepared in advance. Import latency and artifact latency are variable; the schedule is not a service-time guarantee. A Quiz is started from the actual Studio control after source import, not assumed to start from an ordinary chat prompt. Do not display a fabricated product screenshot. Student access is reported by the organizer; it has not been tested from this development environment.
+```text
+My denominator is the original price because percentage change compares the change with the starting value.
+Is that explanation precise? Please check it, then ask one related question without giving the answer.
+```
 
-Public source pack: [materials.html#notebook](../materials.html#notebook). If account/network access fails, work through the original table and questions with [the answer key](answer-keys.html), not a fake Notebook result. Sources this short may yield a whole-source citation rather than a pinpoint citation. Check it before presenting.
+若问从120降回100，先请学生预测，再回答：
 
-## Part 2 — study conversation, not task delegation
+```text
+I would use (120 - 100) / 120 × 100%, about 16.7%, because 120 is now the starting price. Check my explanation.
+```
 
-Use RCCF as a context checklist. Short questions remain valid. Show the prepared three-turn example, explicitly labelled illustrative, to teach follow-up rather than “rewrite a longer prompt”. Explain and Practice modes serve different stages: beginners may need a worked example before retrieval. Study plans must include available hours and distinguish inferred dependencies from the syllabus.
+若直接给完答案：
 
-During Exercise 1: 2 minutes choose material; 4 minutes test and inspect; 3 minutes refine/follow up; 1 minute record. Keep one topic for the next exercises. Use the searchable [prompt library](../prompts/index.html); students replace brackets rather than submitting blank templates.
+```text
+Pause. Do not give another solution. Ask me one check question and wait for my response.
+```
 
-## Part 3 — 15 minutes + 8-minute exercise
+若它错误否定20%：
 
-2 minutes frame the obstacle, 2 minutes connect representations, 4 minutes predict/reveal the eigenvector lab, 2 minutes connect to Av=λv and edge cases, 2 minutes one-hint dialogue, 1 minute analogy limits, 2 minutes explain track choice/exercise.
+```text
+Check which value is the starting price. It is HK$100.
+Please recompute the percentage change and identify the exact step you think is wrong.
+```
 
-Use A=diag(2,1). Compare (1,0) with (1,1), asking for a prediction first. Then show reflection or projection as time permits. Nonzero input is required; λ=0 is allowed; “same direction” needs a sign/zero caveat. The labelled interactive tool is prepared and numerically tested, not a live model transcript. Keep code generation for Part 4.
+独立核验：涨幅20%；反向跌幅约16.7%。不要为了演示制造虚假的模型错误。回应慢时让学生开始自己的交流，不等讲者示范完成。
 
-Exercise 2: 1 minute choose, 3 minutes learn, 2 minutes hide the answer and explain/apply, 2 minutes independently check a source/key. Keep the student's paragraph for Exercise 3. A new example and a limit of the analogy matter more than fluent wording.
+### 学生四分钟
 
-## Part 4 — one complete demo / 8 minutes
+1分钟选择会做的一题、贴题及自己的解法；2分钟阅读反馈并回答一次追问；1分钟判断反馈是否正确并保存。巡视问：“它检查的是同一道题吗？你能判断它哪句话是对的吗？”这里不让AI先解一道学生完全不会做的题。后面Exercise 2继续改进这段交流。
 
-1 minute frame the question; 1 minute show the action-oriented build request; 3 minutes operate the PPV lab; 1 minute check arithmetic independently; 2 minutes explain boundaries and hand off to Exercise 3.
+### Video playback
 
-Open [the PPV lab](../demo-materials/medicine/ppv-lab.html). Change only prevalence first. Se=Sp=90%, N=10,000: p=10% gives 900/(900+900)=50%; p=1% gives 90/(90+990)≈8.3%. Then use the no-positive preset: PPV is undefined, not zero. Counts are expected values, not sampled people; fixed test performance across populations is a deliberate simplification. This is not clinical advice.
+See [media runbook](part0-media.md). Press **V** before class, or open the deck with `?presenter=1`, to select video files you have permission to use. Full source videos use the saved source times; already-trimmed excerpts begin at zero. Files remain local, survive slide navigation, and must be selected again after reload. Leaving a slide stops its player. No video files are committed or uploaded.
 
-The safe default is to show the prepared implementation and its request. Live code generation is optional, requires review, and must not consume the demonstration slot. Do not require student installations or let an agent submit assessed work.
+Standard YouTube embeds are an alternative, not a promised fix for login/anti-bot restrictions. Watch on YouTube opens the source in the signed-in browser at the start time; manually stop at the listed end. Do not imply that changing the embed domain bypasses authentication. Failed playback should not become an on-stage debugging session.
 
-Exercise 3: 1 minute prepare own text, 3 minutes inspect feedback, 2 minutes revise. A correct explanation need not change. Students may reject an unsupported criticism, with evidence. Do not accept feedback merely because it is confident or long.
+## Part 1 — two waiting stages, only in the presenter workflow
 
-## Part 5 — 8 minutes + Q&A
+Prepare A: empty Notebook, B: sources already imported, C: quiz and optional study slides already generated. Use the actual school account.
 
-Use the original humanities passage for a one-minute claim/source check. It supplies an argument, not a controlled study. “Unsupported by this passage” is not “proved false”. Show the source, ask students, then reveal the answer. Follow with exact-source checks, course-policy priority, privacy and an honest disclosure example. Keep the final THINK / VERIFY / INTEGRITY checklist visible before Q&A.
+| Elapsed | Presenter action | Student-facing topic |
+|---|---|---|
+| 0:00–1:00 | Start import in A, return to slides | What a course notebook helps you do |
+| 1:00–3:30 | Leave import running | Tool choice; notes versus wider knowledge |
+| 3:30–4:00 | Check A once; use B if needed; start Quiz | Quiz, flashcards and study slides |
+| 4:00–6:30 | Leave generation running | Thinking modes and checking answers |
+| 6:30–9:15 | Show an answer/citation, one quiz question and optional slides; use C if needed | Read the source and answer before feedback |
+| 9:15–10:00 | Return to slides | Source, effort and verification |
 
-## Final rehearsal still required
+具体提问：
 
-The school/account menus, Notebook imports/generation, venue network/audio, third-party videos, and host policy cannot be validated by local automated tests. Prepare the actual school policy URL before delivery. Under-18 availability and Workspace sharing rules may constrain some optional artifacts; no student is required to create a slide deck. Do not promise a public Notebook share link from an Education account.
+```text
+Use the selected course notes to explain the difference between sensitivity and the chance of disease after a positive test.
+Show the passage that supports your explanation.
+```
 
-## Sources and status
+点击引用让学生看到原文。Quiz可以用确定问题：“Among the 180 people with positive tests, 90 have the disease. What fraction is that?” 答案50%。这里是1000人的source表，不要与Part 4的10000人表混淆。
 
-[Evidence notes](../references/part0-evidence.md) distinguish study results from teaching recommendations. [Official product references](../references/index.html#products) were checked on 13 September 2026. [QA documentation](qa.md) explains what automated checks cover and what they do not.
+使用预生成结果时，口头如实说明“这份是我提前生成的”。学生不需要看备课标记。等待时间不作保证。导入网页文字不代表已经读到全部图片或视频画面。
+
+## Part 2 — improve the first conversation
+
+Retain RCCF. It is a checklist, not four mandatory paragraphs. Simple questions may be short. The teaching dialogue is illustrative; do not call it a recorded Gemini run. Its provenance belongs in notes, not as a caption interrupting the student conversation.
+
+Exercise 2: reopen Exercise 1, identify missing context or an unhelpful response, then revise and ask again. Suggested split: two minutes inspect, four minutes test, three minutes follow up, one minute record. Keep before/after prompts and a specific difference. Debrief inside the last minute.
+
+Break: 15:15–15:25. Show a ten-minute timer; the outline already establishes its position. Do not add work to the break.
+
+## Part 3 — understand and explain
+
+Use the student's own course where possible. Eigenvectors are the demonstration, not a requirement for every discipline. Let students predict what happens to (1,0) and (1,1) under a matrix doubling x and keeping y fixed. Connect the picture to Av = λv. Require nonzero input; negative λ can reverse orientation, and zero λ can collapse the vector.
+
+Exercise 3: one minute choose, three minutes explanation/example, two minutes hide the answer and write independently, two minutes check against the material. Keep the paragraph for Exercise 4. Ask where an analogy fails, not only where it sounds appealing.
+
+## Part 4 — interactive visualization directly in chat
+
+**Canvas is not required.** Use the [student guide](interactive-guide.html). Google documents an in-chat visualization feature distinct from writing code in Canvas. In a new ordinary Gemini chat select Pro if offered; start from “help me visualize” plus the concept and one control. Do not begin by requesting HTML, JavaScript, a downloadable file or Canvas Preview: the objective is a usable learning visualization, not a code listing.
+
+```text
+Help me visualize how disease prevalence changes the meaning
+of a positive test. Show an interactive visualization in this chat,
+with a prevalence slider, not an HTML code block.
+Use 10,000 fictional people. Keep sensitivity and specificity at 90%.
+Show true positives, false positives and PPV as I move the slider.
+Ask me to predict what changes from 10% to 1% prevalence.
+```
+
+If only text/code appears, try once:
+
+```text
+Please show an interactive visualization directly in this conversation.
+I want to move a prevalence slider and see the counts change.
+Do not give me code or instructions for building an app.
+If this chat cannot display an interactive visualization, tell me plainly.
+```
+
+For a simpler pre-class capability check:
+
+```text
+Help me visualize a pendulum. Show an interactive simulation here with a length slider and a play/pause button.
+```
+
+A successful pendulum demo does not guarantee the PPV request will work. A failed request does not by itself identify an account restriction. The prompts are proposed workshop requests; they have not been tested in the lecturer's authenticated account. No prompt can guarantee enabling a feature.
+
+Use the [prepared PPV lab](../demo-materials/medicine/ppv-lab.html) if no usable result appears. Say it is a prepared tool, not a newly generated Gemini result. Students can still predict, change parameters and verify. Do not require buying a plan or moving restricted materials to a private account.
+
+Timing: one minute show how to ask, one minute send request, three minutes operate the available visualization or prepared lab, one minute manual checks, two minutes boundaries/transition. With N=10000 and sensitivity=specificity=90%, prevalence 10% gives 900/(900+900)=50%; prevalence 1% gives 90/(90+990)=8.33%. In the prepared lab, prevalence 0% and specificity 100% gives no positives and PPV undefined. These are expected-count calculations, not patient data or clinical recommendations.
+
+Exercise 4: one minute reopen own paragraph, three minutes evaluate feedback, two minutes revise or reject a suggestion with a reason. Correct work need not be changed.
+
+## Part 5 — check claims
+
+Show the source passage and let students choose A/B before revealing the explanation. The source contains an argument, not a controlled experiment. Distinguish unsupported from false. Check course rules before assessed use. Disclosure must describe the help and checks actually performed.
+
+## Sources and rehearsal boundaries
+
+- [Google, 9 April 2026: interactive simulations directly in Gemini chat](https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts/): Pro and “show me”/“help me visualize” guidance.
+- [Google, 19 August 2026: student tools](https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/), section 4 and footnote 8: consumer and school-issued accounts. This supersedes the narrower education exclusion in the April launch note; actual availability and limits still require checking.
+- [YouTube player parameters](https://developers.google.com/youtube/player_parameters): start/end are playback settings, not authentication workarounds.
+
+Official feature descriptions checked 14 September 2026. Local/CI tests cover the website, layout, copy buttons, timers and numerical examples, not authenticated Gemini/Notebook, YouTube login or campus audio/network. Host policy and school-account behavior must be rehearsed; do not present them as verified by a successful CI run.

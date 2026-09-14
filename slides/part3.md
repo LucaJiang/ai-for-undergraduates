@@ -1,12 +1,12 @@
 <!-- .slide: id="part3" class="" -->
 <p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-## Learn a difficult concept — not just its wording.
+## What makes this concept difficult?
 
-<div class="cards"><div><h3>Prerequisite gap</h3><p>What earlier idea am I missing?</p></div><div><h3>Representation gap</h3><p>How do the words, symbols and diagram connect?</p></div><div><h3>Checking gap</h3><p>Can I apply it to a new example?</p></div></div><p class="takeaway">Ask about the obstacle before asking for everything.</p>
+<div class="cards"><div><h3>Missing background?</h3><p>Which earlier idea do I need first?</p></div><div><h3>The explanation does not click?</h3><p>Can a diagram or a small numerical example help?</p></div><div><h3>Unsure I understand?</h3><p>Can I explain it or apply it to a new question?</p></div></div><p class="takeaway">Tell AI exactly where you get stuck.</p>
 
 Note:
-15:25–15:27。休息后回到学生自己的困难概念。沿用Exercise1的主题，不反复选材料。
+15:25–15:27。休息后回到学生自己的困难概念。沿用Exercise2的主题，不反复选材料。
 
 ---
 
@@ -27,7 +27,7 @@ Note:
 
 ## Predict before you reveal.
 
-<p class="sub">A = diag(2, 1) · compare v = (1, 0) with v = (1, 1).</p><iframe class="lab-frame" data-src="demo-materials/stem/eigenvectors.html?embed=1" title="Interactive eigenvector prediction lab"></iframe><p class="footer"><a href="demo-materials/stem/eigenvectors.html" target="_blank" rel="noopener">Open full lab ↗</a> · Change one thing at a time.</p>
+<p class="sub">A doubles the x-coordinate and leaves y unchanged. Compare (1, 0) and (1, 1).</p><iframe class="lab-frame" data-src="demo-materials/stem/eigenvectors.html?embed=1" title="Interactive eigenvector prediction lab"></iframe><p class="footer"><a href="demo-materials/stem/eigenvectors.html" target="_blank" rel="noopener">Open full lab ↗</a> · Change one thing at a time.</p>
 
 Note:
 15:29–15:33。先选e1，问输出位置和是否沿同一直线；Reveal。再选(1,1)，先预测再Reveal。不要一上来解特征多项式。图有输入/输出数值，学生可以算矩阵乘法验证。此页为我们已检查的教学工具，不假装是当场AI生成。
@@ -39,7 +39,7 @@ Note:
 
 ## Connect the picture to the definition.
 
-<div class="equation">Av = λv &nbsp; with v ≠ 0</div><div class="cards"><div><h3>A scalar multiple</h3><p>The output stays on the line spanned by v, or becomes zero.</p></div><div><h3>Watch the edge cases</h3><p>λ &lt; 0 flips orientation. λ = 0 maps v to zero. The zero vector is not an eigenvector.</p></div></div><p class="takeaway">For A = diag(2, 1): (1, 0) is an eigenvector; (1, 1) is not.</p>
+<div class="equation">Av = λv &nbsp; with v ≠ 0</div><div class="cards"><div><h3>λ is the scale factor</h3><p>The matrix sends v to a scalar multiple of itself.</p></div><div><h3>Stretch, flip or collapse</h3><p>λ &lt; 0 reverses the vector. λ = 0 sends it to zero.</p></div></div><p class="takeaway">In our example: (1, 0) is an eigenvector; (1, 1) is not.</p><p class="footer">The input vector must be nonzero.</p>
 
 Note:
 15:33–15:35。修复“方向不变”过度简化。定义是非零v与Av标量倍数；零输出没有方向，但仍可对应λ0。选反射和投影验证边界，不说所有实矩阵必有实特征向量。
@@ -51,7 +51,7 @@ Note:
 
 ## A hint should leave you something to decide.
 
-<p class="footer">Prepared example, not a recorded AI response</p><div class="dialogue"><p><b>My attempt:</b> A(1,1) = (2,1), so λ = 2.</p><p><b>Helpful next step:</b> If λ were 2, what would λ(1,1) be? Compare both coordinates.</p><p><b>My next task:</b> Decide whether one scalar matches the whole vector.</p></div><div class="prompt"><pre><code>Check my attempt against the definition. If there is an error,
+<div class="dialogue"><p><b>My attempt:</b> A(1,1) = (2,1), so λ = 2.</p><p><b>Helpful next step:</b> If λ were 2, what would λ(1,1) be? Compare both coordinates.</p><p><b>My next task:</b> Decide whether one scalar matches the whole vector.</p></div><div class="prompt"><pre><code>Check my attempt against the definition. If there is an error,
 give one hint about the first incorrect step. If it is correct,
 say so. Wait for my revision; do not finish the problem for me.</code></pre><button class="copy" type="button">Copy prompt</button></div>
 
@@ -88,21 +88,21 @@ Note:
 <!-- .slide: id="exercise2" class="" -->
 <p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-## Exercise 2 · explain without looking.
+## Exercise 3 · explain without looking.
 
-<div class="sequence"><div><b>1 + 3 min</b><p>Choose a concept; ask for intuition, definition and one example.</p></div><div><b>2 min</b><p>Hide the answer. Write your explanation or attempt a new case.</p></div><div><b>2 min</b><p>Check the source or answer key. Mark one remaining uncertainty.</p></div></div><div class="timer" data-seconds="480"><output aria-live="off">08:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="links"><a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a> · <a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a></p><p class="caution">Deliverable: your own explanation — not a copied AI paragraph.</p>
+<div class="sequence"><div><b>1 + 3 min</b><p>Choose a concept; ask for intuition, definition and one example.</p></div><div><b>2 min</b><p>Hide the answer. Write your explanation or attempt a new case.</p></div><div><b>2 min</b><p>Check the source or answer key. Mark one remaining uncertainty.</p></div></div><div class="timer" data-seconds="480"><output aria-live="off">08:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="links"><a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a> · <a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a></p><p class="caution">Keep: your own explanation — not a copied AI paragraph.</p>
 
 Note:
-15:40–15:48。实际8分钟。AI可以解释；学生需要离开答案写自己的版本。最后对来源自查，不在这里做长篇AI批改，避免和Exercise3重复。
+15:40–15:48。实际8分钟。AI可以解释；学生需要离开答案写自己的版本。最后对来源自查，不在这里做长篇AI批改，避免和Exercise4重复。
 
 ---
 
 <!-- .slide: id="exercise2-debrief" class="" -->
 <p class="eyebrow">PART 3 · UNDERSTAND</p>
 
-## Can you transfer the idea?
+## Can you use the idea in a new example?
 
-<p class="lead small-lead">Explain it to a classmate.<br>Try a slightly different case.<br>Name one limit of your explanation.</p><p class="takeaway">Keep this paragraph. You will evaluate feedback on it in Exercise 3.</p>
+<p class="lead small-lead">Explain it to a classmate.<br>Try a slightly different case.<br>Name one limit of your explanation.</p><p class="takeaway">Keep this paragraph. You will evaluate feedback on it in Exercise 4.</p>
 
 Note:
 练习最后30秒，不另计时。接下来Part4不再泛讲“代码能帮助学习”，而是展示一个可运行的小工具并检验它。

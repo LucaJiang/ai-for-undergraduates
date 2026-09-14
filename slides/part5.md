@@ -1,9 +1,9 @@
 <!-- .slide: id="part5" class="" -->
 <p class="eyebrow">PART 5 · VERIFY</p>
 
-## Make it checkable. Then check it.
+## Make the answer clear enough to check.
 
-<div class="cards"><div><h3>Clarify</h3><p>Ask for assumptions, source locations and uncertainty.</p></div><div><h3>Verify externally</h3><p>Read the passage. Calculate a test case. Look for a counterexample.</p></div><div><h3>Escalate</h3><p>Ask a teacher or other qualified person when the stakes or uncertainty require it.</p></div></div><p class="takeaway">Self-checking by AI is a starting point, not independent evidence.</p>
+<div class="cards"><div><h3>Ask for details</h3><p>What assumptions did AI make? Where did each claim come from?</p></div><div><h3>Check for yourself</h3><p>Read the source or work through a small example.</p></div><div><h3>Ask a person</h3><p>Talk to your teacher when an important point is still unclear.</p></div></div><p class="takeaway">Asking AI to check itself is not the same as checking the evidence.</p>
 
 Note:
 16:02–16:03。不是“层数越高模型越多就更可靠”。外部查证与问AI自检性质不同。
@@ -15,7 +15,7 @@ Note:
 
 ## Does this source support that claim?
 
-<p class="footer">Original workshop argument · no study data supplied</p><blockquote>Brainstorming support can reduce the blank-page problem and help students compare possible arguments.</blockquote><div class="dialogue"><p><b>Claim A:</b> The passage argues that brainstorming support may help students compare arguments.</p><p><b>Claim B:</b> A controlled study proves that AI brainstorming raises exam scores.</p></div><p class="fragment caution">A is supported as a summary of the argument. B is not supported by this passage.</p><p class="footer"><a href="demo-materials/humanities/argument-structure.html" target="_blank" rel="noopener">Read the full teaching source ↗</a></p>
+<p class="sub">Read the passage. Which claim does it support?</p><blockquote>Brainstorming support can reduce the blank-page problem and help students compare possible arguments.</blockquote><div class="dialogue"><p><b>Claim A:</b> The passage argues that brainstorming support may help students compare arguments.</p><p><b>Claim B:</b> A controlled study proves that AI brainstorming raises exam scores.</p></div><p class="fragment caution">A is supported as a summary of the argument. B is not supported by this passage.</p><p class="footer"><a href="demo-materials/humanities/argument-structure.html" target="_blank" rel="noopener">Read the full teaching source ↗</a></p>
 
 Note:
 16:03–16:04。请学生选A/B。按右键揭晓：来源有主张与理由，没有提供实证研究。Unsupported不等于已证明false；不能编造研究把表格填满。
@@ -39,7 +39,7 @@ Note:
 
 ## Check course instructions first.
 
-<div class="cards"><div><h3>Before using AI</h3><p>Check the assessment rules; ask the instructor if unclear.</p></div><div><h3>When use is allowed</h3><p>Stay within the permitted purpose. Record the help and your own work.</p></div><div><h3>When independence is required</h3><p>Do not use AI to produce the assessed answer or hide its contribution.</p></div></div><p class="caution">This workshop is not your university’s policy.<br>Permission to use a tool is not permission to submit every output.</p>
+<div class="cards"><div><h3>Before using AI</h3><p>Check the assessment rules; ask the instructor if unclear.</p></div><div><h3>When use is allowed</h3><p>Stay within the permitted purpose. Record the help and your own work.</p></div><div><h3>When independence is required</h3><p>Do not use AI to produce the assessed answer or hide its contribution.</p></div></div><p class="caution">Course and assignment rules determine what help is allowed.</p>
 
 Note:
 16:05–16:06。尚未得到主办学校具体政策，不写校名或编造允许范围。不把“润色一定允许”“给提示就一定合规”写死。需要讲者会前补学校/课程官方链接。
@@ -63,7 +63,7 @@ Note:
 
 ## Describe the help — and your contribution.
 
-<div class="dialogue"><p><b>Example record to adapt, only if true:</b></p><p>I used [tool, date] to get feedback on my explanation of [topic]. I checked the suggested changes against [source/test], revised [specific part] myself, and rejected [suggestion] because [reason].</p></div><p class="caution">Use the format required by your course.<br>Do not claim checks or independent work you did not perform.</p>
+<div class="dialogue"><p><b>An example you can adapt:</b></p><p>I used [tool, date] to get feedback on my explanation of [topic]. I checked the suggested changes against [source/test], revised [specific part] myself, and rejected [suggestion] because [reason].</p></div><p class="caution">Use the format required by your course.<br>Do not claim checks or independent work you did not perform.</p>
 
 Note:
 16:07–16:07:30。披露模版不是免罪声明，不能弥补未经允许的使用。记录有内容、具体且真实。
@@ -87,7 +87,7 @@ Note:
 
 ## The goal is independent understanding.
 
-<p class="lead">Use AI to think better — not to stop thinking.</p><p class="sub">Q&A · 16:10–16:30 HKT</p><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a> · <a href="references/index.html" target="_blank" rel="noopener">Evidence & sources ↗</a></p><p class="footer">Ask about a tool, a prompt, a course example or an unresolved concern.<br>Do not display private information on the projector.</p>
+<p class="lead">Use AI to think better — not to stop thinking.</p><p class="sub">Q&A · 16:10–16:30 HKT</p><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a> · <a href="references/index.html" target="_blank" rel="noopener">Evidence & sources ↗</a></p><p class="footer">Ask about a tool, a prompt, a course example or an unresolved concern.</p>
 
 Note:
 16:08:30–16:10收尾和缓冲，之后20分钟问答。问题涉及校规不确定就查官方/问课程教师。Notebook生成结果若一直未完成，不挤掉问答，可用预生成材料解释流程。
