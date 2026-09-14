@@ -4,7 +4,7 @@ from functools import partial
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from threading import Thread
 import argparse, base64, json, math, re
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--site', default='_site')
@@ -26,12 +26,13 @@ def contrast_ratio(first, second):
     a,b = sorted((luminance(first), luminance(second)))
     return (b+.05)/(a+.05)
 
+js_errors = []
 try:
     with sync_playwright() as pw:
         executable = '/usr/bin/chromium' if Path('/usr/bin/chromium').exists() else None
         browser = pw.chromium.launch(headless=True, executable_path=executable, args=['--no-sandbox'])
         context = browser.new_context(viewport={'width':1280,'height':720}, permissions=['clipboard-read','clipboard-write'])
-        page = context.new_page(); js_errors = []
+        page = context.new_page()
         page.on('pageerror', lambda error: js_errors.append(str(error)))
         context.route('**/*youtube*/*', lambda route: route.fulfill(status=200,content_type='text/html',body='<p>External streaming excluded.</p>'))
         if not args.materials_only:
@@ -58,21 +59,33 @@ try:
                         expected = button.locator('..').locator('pre').inner_text(); button.click()
                         actual = page.evaluate('navigator.clipboard.readText()')
                         assert actual==expected and '\\n' not in actual, ident
+            report['checks'] += ['52 Reveal slides at two desktop sizes','cover, outline, notes, contrast and exact clipboard text']
             page.set_viewport_size({'width':1280,'height':720})
             page.evaluate("Reveal.slide(Reveal.getSlides().findIndex(s=>s.id==='voice-demo'))")
             page.locator('#voice-demo .play-clip').click()
             url = page.locator('#voice-demo iframe').get_attribute('src')
             assert 'youtube.com/embed/' in url and 'start=418' in url and 'end=448' in url, url
             page.evaluate('Reveal.next()'); assert page.locator('#voice-demo iframe').count()==0
+            report['checks'].append('YouTube URL bounds and unloading; external streaming mocked')
+            # Wait for observable state, not 1.2 seconds close to a 1-second/250-ms boundary.
             for ident,start in [('first-demo','04:00'),('exercise1','10:00')]:
                 page.evaluate('(id)=>Reveal.slide(Reveal.getSlides().findIndex(s=>s.id===id))',ident)
-                page.locator(f'#{ident} [data-timer="toggle"]').click(); page.wait_for_timeout(1200)
-                assert page.locator(f'#{ident} output').inner_text()!=start
-                page.locator(f'#{ident} [data-timer="toggle"]').click(); page.locator(f'#{ident} [data-timer="reset"]').click()
-                assert page.locator(f'#{ident} output').inner_text()==start
+                toggle=page.locator(f'#{ident} [data-timer="toggle"]')
+                output=page.locator(f'#{ident} output')
+                page.locator(f'#{ident} [data-timer="reset"]').click()
+                expect(output).to_have_text(start)
+                toggle.click(); expect(toggle).to_have_text('Pause')
+                expect(output).not_to_have_text(start, timeout=6000)
+                toggle.click(); expect(toggle).to_have_text('Start')
+                paused=output.inner_text(); page.wait_for_timeout(600)
+                assert output.inner_text()==paused, ('Paused timer changed',ident)
+                page.locator(f'#{ident} [data-timer="reset"]').click(); expect(output).to_have_text(start)
+            report['checks'].append('Four-minute and ten-minute timers: start, countdown, pause and reset')
             with page.expect_popup() as pop: page.locator('[data-notes]').click()
             notes=pop.value; notes.wait_for_timeout(800); assert not notes.is_closed(); notes.close()
-            # A test-generated local recording, not any third-party video.
+            page.bring_to_front()
+            report['checks'].append('Speaker-view popup')
+            # Generate our own recording; no third-party video file is used.
             recording = page.evaluate('''async () => {
                 const c=document.createElement('canvas');c.width=160;c.height=90;
                 const g=c.getContext('2d');const stream=c.captureStream(12);
@@ -85,15 +98,17 @@ try:
             }''')
             page.evaluate("Reveal.slide(Reveal.getSlides().findIndex(s=>s.id==='voice-demo'))")
             page.evaluate("document.querySelector('#voice-demo .video-stage').dataset.start='0.1';document.querySelector('#voice-demo .video-stage').dataset.end='0.6'")
-            page.keyboard.press('v'); assert page.locator('dialog.media-settings').is_visible()
+            page.keyboard.press('v'); expect(page.locator('dialog.media-settings')).to_be_visible()
             page.locator('dialog .media-row input[type=file]').first.set_input_files({'name':'test.webm','mimeType':'video/webm','buffer':base64.b64decode(recording)})
             page.get_by_role('button',name='Close setup').click(); page.locator('#voice-demo .play-clip').click()
             page.wait_for_function("document.querySelector('#voice-demo video')?.readyState >= 2")
-            page.wait_for_timeout(1200)
+            page.wait_for_function("(()=>{const v=document.querySelector('#voice-demo video');return v && v.paused && v.currentTime>=.6;})()",timeout=6000)
             result=page.locator('#voice-demo video').evaluate('(v)=>({time:v.currentTime,paused:v.paused})')
             assert result['paused'] and .6 <= result['time'] <= 1.1, result
+            replay=page.locator('#voice-demo .play-again'); expect(replay).to_be_visible(); replay.click()
+            page.wait_for_function("(()=>{const v=document.querySelector('#voice-demo video');return v && v.paused && v.currentTime>=.6;})()",timeout=6000)
             page.evaluate('Reveal.next()'); assert page.locator('#voice-demo video').count()==0
-            report['checks'] += ['52 Reveal slides at two desktop sizes','cover, outline, notes, contrast and clipboard','speaker view and four-minute/ten-minute timers','YouTube URL bounds and unloading; no external playback claim','local test-video playback range and unloading']
+            report['checks'].append('Local test-video excerpt stops, can replay, and unloads on slide change')
         page.goto(base+'/prompts/index.html'); page.wait_for_function("document.querySelectorAll('#library details').length===20")
         page.locator('#search').fill('glossary'); assert page.locator('#library details:visible').count()==1
         page.locator('#library details:visible summary').click()
@@ -113,17 +128,17 @@ try:
             if expected is None: assert result['ppv'] is None
             else: assert math.isclose(result['ppv'],expected,abs_tol=1e-9),result
         page.screenshot(path=str(out/'ppv-lab.png'))
-        pages=['materials.html','prompts/index.html','demo-materials/stem/eigenvectors.html','demo-materials/medicine/ppv-lab.html','demo-materials/business/price-elasticity.html','demo-materials/humanities/argument-structure.html','demo-materials/assignment-warmup.html','resources/interactive-guide.html']
-        for path in pages:
+        paths=['materials.html','prompts/index.html','demo-materials/stem/eigenvectors.html','demo-materials/medicine/ppv-lab.html','demo-materials/business/price-elasticity.html','demo-materials/humanities/argument-structure.html','demo-materials/assignment-warmup.html','resources/interactive-guide.html']
+        for path in paths:
             page.set_viewport_size({'width':390,'height':844}); page.goto(base+'/'+path); page.wait_for_timeout(180)
             if page.evaluate('document.documentElement.scrollWidth > innerWidth+1'): report['failures'].append('Mobile overflow: '+path)
         report['checks'] += ['20 prompt templates and search/filter','eigenvector boundary cases','PPV independent reference values','eight student pages at 390px']
-        report['failures'] += js_errors
         browser.close()
 except Exception as error:
-    report['failures'].append(str(error))
+    report['failures'].append(f'{type(error).__name__}: {error}')
     raise
 finally:
+    report['failures'] += js_errors
     server.shutdown()
     (out/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     print(json.dumps(report,ensure_ascii=False,indent=2))
