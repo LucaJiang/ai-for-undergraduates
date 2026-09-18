@@ -1,93 +1,53 @@
-<!-- .slide: id="part5" class="" -->
+<!-- .slide: id="part5" -->
 <p class="eyebrow">PART 5 · VERIFY</p>
 
-## Make the answer clear enough to check.
+## Pick one important claim. Check it properly.
 
-<div class="cards"><div><h3>Ask for details</h3><p>What assumptions did AI make? Where did each claim come from?</p></div><div><h3>Check for yourself</h3><p>Read the source or work through a small example.</p></div><div><h3>Ask a person</h3><p>Talk to your teacher when an important point is still unclear.</p></div></div><p class="takeaway">Asking AI to check itself is not the same as checking the evidence.</p>
+<div class="pathway"><div><span class="icon" data-icon="target"></span><h3>Pick the claim</h3><p>A number, a definition or a key conclusion.</p></div><div><span class="icon" data-icon="book"></span><h3>Find the evidence</h3><p>Open the source or calculate an example.</p></div><div><span class="icon" data-icon="pen"></span><h3>Decide</h3><p>Keep it, correct it or ask for help.</p></div></div><p class="takeaway">Let’s check a claim about the study from our opening.</p>
 
 Note:
-16:02–16:03。不是“层数越高模型越多就更可靠”。外部查证与问AI自检性质不同。
+15:58–15:59。
+刚才我们检查了自己的解释。现在再检查一句看起来有来源、但可能概括得不准确的话。核查不必从“所有东西都不可信”开始，先挑一个影响结论的重要句子。
 
 ---
 
-<!-- .slide: id="claim-check" class="" -->
-<p class="eyebrow">PART 5 · VERIFY</p>
+<!-- .slide: id="claim-check" -->
+<p class="eyebrow">PART 5 · A CONCRETE EXAMPLE</p>
 
-## Does this source support that claim?
+## The link is real. Is the summary right?
 
-<p class="sub">Read the passage. Which claim does it support?</p><blockquote>Brainstorming support can reduce the blank-page problem and help students compare possible arguments.</blockquote><div class="dialogue"><p><b>Claim A:</b> The passage argues that brainstorming support may help students compare arguments.</p><p><b>Claim B:</b> A controlled study proves that AI brainstorming raises exam scores.</p></div><p class="fragment caution">A is supported as a summary of the argument. B is not supported by this passage.</p><p class="footer"><a href="demo-materials/humanities/argument-structure.html" target="_blank" rel="noopener">Read the full teaching source ↗</a></p>
+<div class="evidence-pair"><div><span class="icon" data-icon="chat"></span><h3>Summary to check</h3><p class="claim-text">“AI doubles students’ final exam scores.”</p><p class="mini-label">An example of an overstatement</p></div><div><span class="icon" data-icon="book"></span><h3>What the study measured</h3><p>Two physics lessons.<br>Tests before and after each lesson.<br>Learning gains.</p></div></div><p class="takeaway">Which words would you change?</p><p class="footer">Kestin et al. (2025) · <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Open the original study ↗</a></p>
 
 Note:
-16:03–16:04。请学生选A/B。按右键揭晓：来源有主张与理由，没有提供实证研究。Unsupported不等于已证明false；不能编造研究把表格填满。
+15:59–16:00。
+假设你在一段 AI 回答里看到左边这句话，后面还有一个真实的论文链接。请大家想想：这句话和开头看到的研究是同一个意思吗？
+先让学生说，再指向右边：研究测的是两节课前后的学习增益。我们需要把 final exam scores 这些词改准确。右边是对研究设计的概括，左边是为这次核查练习写的例句。
 
 ---
 
-<!-- .slide: id="verification-practice" class="" -->
+<!-- .slide: id="verification-practice" -->
 <p class="eyebrow">PART 5 · VERIFY</p>
 
-## A citation is a route to evidence, not a verdict.
+## Open the paper. Find the result. Rewrite.
 
-<div class="sequence"><div><b>Open it</b><p>Is the source real and is this the right passage?</p></div><div><b>Read the condition</b><p>Same population, definition, denominator and setting?</p></div><div><b>Match the claim</b><p>Does it support the actual conclusion, or only a weaker one?</p></div></div><p class="takeaway">A second model can suggest where to look. It cannot make unsupported evidence appear.</p>
+<div class="pathway compact-path"><div><span class="icon" data-icon="link"></span><h3>Open</h3><p>Follow the source link.</p></div><div><span class="icon" data-icon="search"></span><h3>Find</h3><p>Read the methods and result.</p></div><div><span class="icon" data-icon="pen"></span><h3>Rewrite</h3><p>Say what the study actually found.</p></div></div><div class="dialogue"><p><b>A clearer summary:</b> In two Harvard physics lessons, students made larger learning gains with a structured AI tutor than in an active-learning class.</p></div><p class="footer">Try the same check on one citation in your next project. <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Study ↗</a></p>
 
 Note:
-16:04–16:05。数学查非零v与λ0；医学查条件概率分母；文科查理由与证据。不要把有引用当事实标签。
+16:00–16:01:30。
+操作时很具体：打开论文，找作者到底测了什么，再看结果。最后用一句自己的话写清楚。以后做项目，不用把整篇报告一口气核查完，可以先从最重要的两三个结论开始。
+若现场论文页加载慢，使用前面已展示的研究信息，完整出处放在来源页。
 
 ---
 
-<!-- .slide: id="course-policy" class="" -->
-<p class="eyebrow">PART 5 · VERIFY</p>
+<!-- .slide: id="course-policy" -->
+<p class="eyebrow">PART 5 · COURSEWORK</p>
 
-## Check course instructions first.
+## Make your use of AI easy to explain.
 
-<div class="cards"><div><h3>Before using AI</h3><p>Check the assessment rules; ask the instructor if unclear.</p></div><div><h3>When use is allowed</h3><p>Stay within the permitted purpose. Record the help and your own work.</p></div><div><h3>When independence is required</h3><p>Do not use AI to produce the assessed answer or hide its contribution.</p></div></div><p class="caution">Course and assignment rules determine what help is allowed.</p>
-
-Note:
-16:05–16:06。尚未得到主办学校具体政策，不写校名或编造允许范围。不把“润色一定允许”“给提示就一定合规”写死。需要讲者会前补学校/课程官方链接。
-
----
-
-<!-- .slide: id="privacy" class="" -->
-<p class="eyebrow">PART 5 · VERIFY</p>
-
-## Pause before uploading.
-
-<div class="cards"><div><h3>Stop</h3><p>Patient records, identities, classmates’ work, confidential internship or research files.</p></div><div><h3>Use safer material</h3><p>Public teaching examples or synthetic data. Removing names alone may not remove all risk.</p></div><div><h3>Check permission</h3><p>The data owner, course rules and the approved institutional service.</p></div></div><p class="caution">A private account or a school subscription is not blanket permission to share data.</p>
+<div class="cards"><div><span class="icon" data-icon="book"></span><h3>Check the rules</h3><p>Read the assignment instructions.</p></div><div><span class="icon" data-icon="shield"></span><h3>Choose suitable materials</h3><p>Use approved course material or public examples.</p></div><div><span class="icon" data-icon="pen"></span><h3>Describe the help</h3><p>Say what AI did and what you did.</p></div></div><p class="takeaway">“AI gave feedback. I checked the source and revised the explanation.”</p>
 
 Note:
-16:06–16:07。提供一般保护原则而非法律结论。数据去标识不自动使其允许上传；不让学生分享真实患者、公司数据。公开仓库只放自制教学材料。
-
----
-
-<!-- .slide: id="disclosure" class="" -->
-<p class="eyebrow">PART 5 · VERIFY</p>
-
-## Describe the help — and your contribution.
-
-<div class="dialogue"><p><b>An example you can adapt:</b></p><p>I used [tool, date] to get feedback on my explanation of [topic]. I checked the suggested changes against [source/test], revised [specific part] myself, and rejected [suggestion] because [reason].</p></div><p class="caution">Use the format required by your course.<br>Do not claim checks or independent work you did not perform.</p>
-
-Note:
-16:07–16:07:30。披露模版不是免罪声明，不能弥补未经允许的使用。记录有内容、具体且真实。
-
----
-
-<!-- .slide: id="final-checklist" class="" -->
-<p class="eyebrow">PART 5 · VERIFY</p>
-
-## Before you close the chat…
-
-<div class="cards"><div><h3>THINK</h3><p>Can I explain it without the answer in front of me?</p></div><div><h3>VERIFY</h3><p>What did I check outside the model?</p></div><div><h3>INTEGRITY</h3><p>Was this use permitted, and did I document it as required?</p></div></div><p class="lead small-lead">Keep one useful prompt.<br>Keep one independent explanation.<br>Keep one verification habit.</p>
-
-Note:
-16:07:30–16:08:30。让学生拍照。这页呼应开头，不再增加新框架。
-
----
-
-<!-- .slide: id="questions" class="cover" -->
-<p class="eyebrow">PART 5 · VERIFY</p>
-
-## The goal is independent understanding.
-
-<p class="lead">Use AI to think better — not to stop thinking.</p><p class="sub">Q&A · 16:10–16:30 HKT</p><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a> · <a href="references/index.html" target="_blank" rel="noopener">Evidence & sources ↗</a></p><p class="footer">Ask about a tool, a prompt, a course example or an unresolved concern.</p>
-
-Note:
-16:08:30–16:10收尾和缓冲，之后20分钟问答。问题涉及校规不确定就查官方/问课程教师。Notebook生成结果若一直未完成，不挤掉问答，可用预生成材料解释流程。
+16:01:30–16:03。
+不同作业对 AI 的要求可能不同，先看说明，不清楚就问老师。患者资料、公司的机密文件、同学的作业，不适合随手上传。
+需要说明 AI 使用情况时，就具体说清楚：用了什么工具、它帮了哪一步、自己怎样修改和核查。这样回头看，也能知道自己真正完成了什么。
+我们最后把视角再放远一点：如果 AI 以后比今天更强，我们希望自己学会什么？

@@ -3,58 +3,78 @@
 
 ## Boost your study skills<br>with AI
 
-<p class="lead">Learn with AI. Keep the thinking yours.</p><p class="author">Wenxin Jiang</p><p class="sub">A practical workshop for undergraduate students</p><p class="footer">23 September · 14:30–16:30 HKT</p><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a></p>
+<p class="lead">Understand more. Prepare better.</p><p class="author">Wenxin Jiang</p><p class="sub">A practical workshop for undergraduate students</p><p class="footer">23 September · 14:30–16:30 HKT</p><p class="links"><a href="materials.html" target="_blank" rel="noopener">Student materials ↗</a> · <a href="prompts/index.html" target="_blank" rel="noopener">Prompt library ↗</a></p>
 
 Note:
-14:30，约15秒。首页不是Part 0。自我介绍：“我是 Wenxin Jiang。今天我们练习怎样和 AI 讨论功课、核对解释，再用它帮助自己学会。”不添加未经提供的任职或单位。然后翻目录。
+14:30–14:30:20。
+大家好，我是 Wenxin Jiang。今天我们一起试试，怎样用 AI 提高学习效率，弄懂课程里的难点，也更好地准备期末考试。请把电脑和自己已经做过的作业准备好。
 
 ---
 
-<!-- .slide: id="agenda" class="" -->
+<!-- .slide: id="agenda" -->
 <p class="eyebrow">TODAY</p>
 
-## Our route through the workshop.
+## From your next assignment to your future.
 
-<div class="agenda-grid"><div><h3>Before the break · 45 min</h3><p class="agenda-item"><b>Opening</b> · What AI can do</p><p class="agenda-item"><b>Part 1</b> · Choose tools and thinking modes</p><p class="agenda-item"><b>Part 2</b> · Ask better coursework questions</p><p>Try Gemini on a familiar assignment question, then improve the conversation.</p></div><div><h3>After the break · 45 min</h3><p class="agenda-item"><b>Part 3</b> · Understand difficult concepts</p><p class="agenda-item"><b>Part 4</b> · Create an interactive learning tool</p><p class="agenda-item"><b>Part 5</b> · Check answers and use AI responsibly</p><p>Explain an idea yourself, then evaluate AI feedback.</p></div></div><div class="break-band">10-minute break after Part 2, before difficult concepts</div><p class="footer">90 min of teaching & practice · 10 min break · 20 min Q&A at the end</p>
+<div class="agenda-grid"><div><h3>Before the break</h3><p class="agenda-item"><b>Opening</b> · See what AI can do</p><p class="agenda-item"><b>1 · Choose</b> your tools</p><p class="agenda-item"><b>2 · Ask</b> better questions</p><p>Try a familiar assignment question.</p></div><div><h3>After the break</h3><p class="agenda-item"><b>3 · Understand</b> a difficult concept</p><p class="agenda-item"><b>4 · Explore</b> with an interactive tool</p><p class="agenda-item"><b>5 · Verify</b> an answer</p><p class="agenda-item"><b>6 · Reflect</b> on AI and your future</p></div></div><div class="break-band">10-minute break after Part 2</div><p class="footer">90 min learning & practice · 10 min break · 20 min Q&A</p>
 
 Note:
-14:30:15–14:30:40。明确中间休息在Part 2及其练习完成之后，Part 3之前。前半场45分钟，休息10分钟，后半场45分钟，最后20分钟问答。第一次4分钟熟题交流包含在Part 0内，不额外延长总时长。告诉学生准备一份允许用于AI学习的assignment和自己的解法；没材料可用网站上的公开练习。
+14:30:20–14:30:45。
+前半场先看例子，再拿自己的作业试一试。休息以后，我们用 AI 理解概念、做一个可以操作的小工具。最后留一点时间，聊聊 AI 越来越强以后，我们为什么还要学习。
 
 ---
 
-<!-- .slide: id="evidence-warning" class="" -->
+<!-- .slide: id="evidence-warning" -->
 <p class="eyebrow">PART 0 · WHY & WHAT</p>
 
-## Better performance is not always better learning.
+## Better homework. Less learning?
 
-<p class="sub">A high-school mathematics field experiment · nearly 1,000 students</p><table><thead><tr><th>Tool during practice</th><th>Practice with AI</th><th>Later test without AI</th></tr></thead><tbody><tr><th>GPT Base</th><td class="positive">+48%</td><td class="negative">−17%</td></tr><tr><th>GPT Tutor</th><td class="positive">+127%</td><td>No significant difference</td></tr></tbody></table><p class="caution">Relative to the no-AI control group — not percentage-point changes.</p><p class="footer">Bastani et al., PNAS (2025) · <a href="https://doi.org/10.1073/pnas.2422633122" target="_blank" rel="noopener">Paper ↗</a></p>
+<p class="sub">High-school mathematics · nearly 1,000 students</p><div class="stat-grid"><div><span class="icon" data-icon="pen"></span><p>Practice with GPT Base</p><strong class="stat positive">+48%</strong><p>Higher practice scores</p></div><div><span class="icon" data-icon="book"></span><p>Later test without AI</p><strong class="stat negative">−17%</strong><p>Lower test scores</p></div></div><p class="takeaway">Use AI to practise thinking, not just finish the task.</p><p class="footer">GPT Base compared with the no-AI group · Bastani et al., PNAS (2025) · <a href="https://doi.org/10.1073/pnas.2422633122" target="_blank" rel="noopener">Study ↗</a></p>
 
 Note:
-14:30:40–14:31:50。相对无 AI 对照组，不是同一人成绩先升48%再跌17%，也不是下降17个百分点。GPT Tutor 的测验结果没有显著差异，不等于证明效果精确为零。它不仅用了提示词，还用了教师提供的正确解答和常见错误反馈。本 workshop 的通用 prompt 不等同于研究干预。细节见 evidence notes。
+14:30:45–14:31:30。
+在这项高中数学实验里，学习时使用 GPT，练习得分提高了48%，但拿掉 AI 后，考试成绩反而低了17%。这提醒我们：作业做得更好，不一定代表自己学得更好。接下来看看另一种用法。
+
+关于 GPT Tutor 的追问，见 references/part0-evidence.md；课堂主线直接进入正面案例。
 
 ---
 
-<!-- .slide: id="evidence-positive" class="" -->
+<!-- .slide: id="evidence-positive" -->
 <p class="eyebrow">PART 0 · WHY & WHAT</p>
 
-## Carefully designed tutoring can help.
+## An AI tutor that helped students learn.
 
-<div class="cards"><div><h3>A positive comparison</h3><p>194 eligible Harvard physics students; two lessons in a crossover study.</p></div><div><h3>What improved</h3><p>Higher immediate post-test performance with a structured AI tutor than with the active-learning class.</p></div></div><p class="takeaway">The design of the learning interaction matters.</p><p class="caution">Short-term results in this setting ≠ a guarantee of higher semester grades.</p><p class="footer">Kestin et al., Scientific Reports (2025) · <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Paper ↗</a></p>
+<p class="sub">Harvard physics · 194 students · two lessons</p><div class="study-compare"><div><span class="icon" data-icon="chat"></span><h3>Structured AI tutor</h3><p>Learn individually, at your own pace.</p></div><div><span class="icon" data-icon="users"></span><h3>Active-learning class</h3><p>Work through the same lesson content.</p></div></div><div class="result-strip"><p><b>More than twice the median learning gain</b><br>Measured from pre-tests to lesson post-tests.</p><p><b>49 min vs 60 min</b><br>Median AI study time vs classroom learning time.</p></div><p class="footer">Groups swapped approaches for the second lesson · Kestin et al., Scientific Reports (2025) · <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Study ↗</a></p>
 
 Note:
-14:31:50–14:32:25。积极反例，避免吓到学生不敢用 AI。强调两节课的即时测验，不说“AI永远优于教师”。结构化系统和教师解答都参与了干预，不能把效果归因于一个万能 prompt。
+14:31:30–14:32:25。
+这次不是让学生把题目扔给聊天机器人。研究者把物理课做成了一套有步骤的 AI 辅导。结果很积极：学生学得更多，而且可以按自己的节奏完成。关键在哪里？看下一页。
 
 ---
 
-<!-- .slide: id="capabilities" class="" -->
+<!-- .slide: id="tutor-design" -->
 <p class="eyebrow">PART 0 · WHY & WHAT</p>
 
-## AI is no longer just a text box.
+## What did the tutor do differently?
 
-<div class="cards"><div><h3>Hear & speak</h3><p>Talk with AI and ask it to use tools.</p></div><div><h3>Imagine & interact</h3><p>Explore a generated world that responds to your actions.</p></div><div><h3>Create</h3><p>Generate images, sound and video.</p></div></div>
+<div class="pathway"><div><span class="icon" data-icon="layers"></span><h3>Small steps</h3><p>One part of a problem at a time.</p></div><div><span class="icon" data-icon="chat"></span><h3>Personal feedback</h3><p>Respond to where the student is stuck.</p></div><div><span class="icon" data-icon="clock"></span><h3>Own pace</h3><p>Pause, ask again, then move on.</p></div></div><p class="dialogue compact"><b>Try this today:</b> “Here is my attempt. Help me with this step, then let me try again.”</p><p class="footer">Tutor design: Kestin et al. (2025). The suggested classroom prompt is our adaptation.</p>
 
 Note:
-14:32:25–14:32:40。只说明三种能力，学生无需读产品评测说明。下面是厂商演示，不是独立benchmark；这是讲者备课背景，不放在屏幕上。三个视频总长74秒，切换只用一句点评。
+14:32:25–14:33:20。
+想象你卡在一道题的第二步。整份标准答案也许能让你交作业，但你真正需要的可能只是解释第二步，再给你一次自己做的机会。今天我们就练习这样的对话：先说自己懂到哪里，再让 AI 针对那个地方帮忙。
+
+---
+
+<!-- .slide: id="capabilities" -->
+<p class="eyebrow">PART 0 · WHY & WHAT</p>
+
+## AI is more than a text box.
+
+<div class="cards"><div><span class="icon" data-icon="mic"></span><h3>Talk</h3><p>Ask aloud. Follow up naturally.</p></div><div><span class="icon" data-icon="play"></span><h3>Create</h3><p>Turn ideas into images and video.</p></div><div><span class="icon" data-icon="sliders"></span><h3>Explore</h3><p>Change a variable. See what happens.</p></div></div><p class="takeaway">Two quick demos — then your turn.</p>
+
+Note:
+14:33:20–14:33:35。
+AI 的输入和输出都不只限于文字。我们先看两段很短的演示：一段是语音，一段是视频。后半场还会亲手试试交互式学习。
 
 ---
 
@@ -63,78 +83,67 @@ Note:
 
 ## Hear, speak — and use tools.
 
-<div class="video-stage" data-video="qGS9Ghnq1RU" data-start="418" data-end="448"><p>OpenAI · GPT-Realtime-2</p><button type="button" class="play-clip">Play 30-second excerpt</button><p class="footer">06:58–07:28</p></div><p class="video-observe">A spoken question can lead to a search or another action.</p><p class="footer"><a class="youtube-link" href="https://www.youtube.com/watch?v=qGS9Ghnq1RU&amp;t=418s" target="_blank" rel="noopener">Watch on YouTube ↗</a> · 06:58–07:28</p>
+<div class="video-stage" data-video="qGS9Ghnq1RU" data-start="418" data-end="448"><p>OpenAI · GPT-Realtime-2</p><button type="button" class="play-clip">Play 30-second excerpt</button><p class="footer">06:58–07:28</p></div><p class="video-observe">Notice how a spoken question becomes an action.</p><p class="footer"><a class="youtube-link" href="https://www.youtube.com/watch?v=qGS9Ghnq1RU&amp;t=418s" target="_blank" rel="noopener">Watch on YouTube ↗</a> · 06:58–07:28</p>
 
 Note:
-14:32:40–14:34:10，三段合计。此段06:58–07:28，30秒。点击使用本地授权文件（若已设置），否则标准YouTube播放器。嵌入要求登录时用Watch on YouTube进入已登录的原站；原站只会定位开始，必须在07:28手动暂停。不要假称换域名保证绕过登录。课前用V打开视频设置，选择有权使用的本地视频；选完整原片或已截好片段，网页会按对应区间自动暂停。服务或网络仍失败即略过，不在台上调试。详见resources/part0-media.md。
-
----
-
-<!-- .slide: id="world-demo" class="media-slide" -->
-<p class="eyebrow">PART 0 · WHY & WHAT</p>
-
-## A generated world you can navigate.
-
-<div class="video-stage" data-video="PDKhUknuQDg" data-start="7" data-end="31"><p>Google DeepMind · Genie 3</p><button type="button" class="play-clip">Play 24-second excerpt</button><p class="footer">00:07–00:31</p></div><p class="video-observe">Watch how the view changes as the user moves through it.</p><p class="footer"><a class="youtube-link" href="https://www.youtube.com/watch?v=PDKhUknuQDg&amp;t=7s" target="_blank" rel="noopener">Watch on YouTube ↗</a> · 00:07–00:31</p>
-
-Note:
-14:32:40–14:34:10，三段合计。此段00:07–00:31，24秒。点击使用本地授权文件（若已设置），否则标准YouTube播放器。嵌入要求登录时用Watch on YouTube进入已登录的原站；原站只会定位开始，必须在00:31手动暂停。不要假称换域名保证绕过登录。课前用V打开视频设置，选择有权使用的本地视频；选完整原片或已截好片段，网页会按对应区间自动暂停。服务或网络仍失败即略过，不在台上调试。详见resources/part0-media.md。
+14:33:35–14:34:15。
+播放30秒。看，刚才的交流不只是问一句、答一句，它还可以调用工具去完成后续动作。
+操作：课前按 V 设置本地视频，或使用 YouTube。原站播放时在07:28暂停。播放准备见 resources/part0-media.md。
 
 ---
 
 <!-- .slide: id="media-demo" class="media-slide" -->
 <p class="eyebrow">PART 0 · WHY & WHAT</p>
 
-## Generated media goes beyond text.
+## Turn an idea into moving images.
 
-<div class="video-stage" data-video="ei2PsDpPbB4" data-start="6" data-end="26"><p>Runway · Gen-4.5</p><button type="button" class="play-clip">Play 20-second excerpt</button><p class="footer">00:06–00:26</p></div><p class="video-observe">Notice the movement, camera changes and visual detail.</p><p class="footer"><a class="youtube-link" href="https://www.youtube.com/watch?v=ei2PsDpPbB4&amp;t=6s" target="_blank" rel="noopener">Watch on YouTube ↗</a> · 00:06–00:26</p>
+<div class="video-stage" data-video="ei2PsDpPbB4" data-start="6" data-end="26"><p>Runway · Gen-4.5</p><button type="button" class="play-clip">Play 20-second excerpt</button><p class="footer">00:06–00:26</p></div><p class="video-observe">Watch the movement, camera changes and visual detail.</p><p class="footer"><a class="youtube-link" href="https://www.youtube.com/watch?v=ei2PsDpPbB4&amp;t=6s" target="_blank" rel="noopener">Watch on YouTube ↗</a> · 00:06–00:26</p>
 
 Note:
-14:32:40–14:34:10，三段合计。此段00:06–00:26，20秒。点击使用本地授权文件（若已设置），否则标准YouTube播放器。嵌入要求登录时用Watch on YouTube进入已登录的原站；原站只会定位开始，必须在00:26手动暂停。不要假称换域名保证绕过登录。课前用V打开视频设置，选择有权使用的本地视频；选完整原片或已截好片段，网页会按对应区间自动暂停。服务或网络仍失败即略过，不在台上调试。详见resources/part0-media.md。
+14:34:15–14:34:45。
+播放20秒。过去需要不少制作时间的视觉表达，现在可以先用 AI 很快地做出一个版本。接下来，我们把注意力从这些演示转回自己的课程。
+操作：原站播放时在00:26暂停；播放不了就直接进入下一页。
+
+---
+
+<!-- .slide: id="demo-to-practice" -->
+<p class="eyebrow">PART 0 · YOUR TURN</p>
+
+## Impressive demos.<br>What about your next exam?
+
+<div class="pathway"><div><span class="icon" data-icon="book"></span><h3>Your question</h3><p>Something from your course.</p></div><div><span class="icon" data-icon="pen"></span><h3>Your attempt</h3><p>Show how you solved it.</p></div><div><span class="icon" data-icon="chat"></span><h3>AI feedback</h3><p>Discuss one step together.</p></div></div><p class="takeaway">Start with a question you can already solve.</p>
+
+Note:
+14:34:45–14:35:20。
+这些演示很精彩，但今天更重要的问题是：它能不能帮你学会明天要考的内容？我们先从一道已经会做的题开始。你了解这道题，比较容易判断它的反馈有没有道理。请打开自己完成的作业，选一题。
 
 ---
 
 <!-- .slide: id="first-demo" class="warmup-slide" -->
-<p class="eyebrow">PART 0 · WHY & WHAT</p>
+<p class="eyebrow">PART 0 · TRY</p>
 
-## Exercise 1 · start with a question you can solve.
+## Exercise 1 · discuss a familiar question.
 
-<p class="sub">Open your assignment. Pick one familiar question and your own solution.</p><div class="prompt"><pre><code>I am studying [course]. Here is a question I can already solve:
-[paste one question]
-My solution and reasoning: [paste my own attempt]
-Check my reasoning without rewriting the solution.
-If it is correct, say so; do not invent an error.
-Ask one question to test my understanding, then wait.</code></pre><button class="copy" type="button">Copy prompt</button></div><div class="timer" data-seconds="240"><output aria-live="off">04:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="footer">Use only material your course allows you to share with AI. <a href="demo-materials/assignment-warmup.html" target="_blank" rel="noopener">No assignment? Try this practice question ↗</a></p>
+<p class="sub">Open Gemini. Bring one question and your own solution.</p><div class="prompt"><pre><code>I am studying [course].
+Question: [paste one question]
+My solution and reasoning: [paste your attempt]
+Check my reasoning. If it is correct, say so.
+Ask one question to test my understanding, then wait.</code></pre><button class="copy" type="button">Copy prompt</button></div><div class="timer" data-seconds="240"><output aria-live="off">04:00</output><button type="button" data-timer="toggle">Start</button><button type="button" data-timer="reset">Reset</button></div><p class="footer">Use a question your course allows you to discuss with AI. <a href="demo-materials/assignment-warmup.html" target="_blank" rel="noopener">Try our practice question ↗</a></p>
 
 Note:
-14:34:10–14:34:50，讲者先示范约40秒；14:34:50–14:38:50学生交流4分钟。目的不是让AI先解题，而是从学生有能力核对的熟题开始，看看它是否读对题、能否检查和追问。不要让大家把整份assignment含姓名学号上传。只贴课程允许使用AI的一题和自己的解法；限制使用AI的作业请换已完成且允许使用的练习，或用公开备用题。
-
-讲者打开 Gemini 普通聊天（这里不需要Canvas），直接粘贴：
-“I am studying introductory quantitative reasoning. A price rises from HK$100 to HK$120. What is the percentage increase? My solution is (120 - 100) / 100 × 100% = 20%, because the original price is the reference value. Check my reasoning without rewriting my solution. If it is correct, say so. Ask me one question about why I used 100 in the denominator, then wait.”
-
-若Gemini问“为什么分母是100？”，输入：
-“My denominator is the original price because percentage change compares the change with the starting value. Is that explanation precise? Please check it, then ask one related question without giving the answer.”
-
-若它问“从120降回100需要降多少？”，先让学生想，再输入：
-“I would use (120 - 100) / 120 × 100%, about 16.7%, because 120 is now the starting price. Check my explanation.”
-
-若它直接给完答案，输入：
-“Pause. Do not give another solution. Ask me one check question and wait for my response.”
-
-若它错误否定20%，输入：
-“Check which value is the starting price. It is HK$100. Please recompute the percentage change and identify the exact step you think is wrong.”
-讲者独立核验：涨幅20%；反向跌幅约16.7%。不为了表演假设模型必定犯错。
-
-学生4分钟：1分钟选熟题、贴题及自己的解法；2分钟读反馈并自己回答一次追问；1分钟核对是否同意反馈并保存对话。巡视时问：“你能指出它哪一句解释是对的吗？有哪一句需要核对？”模型慢则两人共用一个已打开的聊天；没权限用纸上备用题，不上传敏感资料。后面Part 2以这段对话为基础改进prompt。
+14:35:20–14:36示范；14:36–14:40学生练习。
+讲者示范：价格从100元涨到120元，我用(120−100)/100，得到20%。把题目和这个解释一起贴给 Gemini，请它检查，再问我一个问题。若追问降回100元需要降多少，先请学生想，再算20/120，约16.7%。
+学生用1分钟贴题和自己的解法，2分钟读反馈并回答追问，1分钟保存对话。巡视时问：你同意它的反馈吗？哪一句最有帮助？具体示范消息见 presenter-guide。
 
 ---
 
-<!-- .slide: id="working-agreement" class="" -->
-<p class="eyebrow">PART 0 · WHY & WHAT</p>
+<!-- .slide: id="working-agreement" -->
+<p class="eyebrow">PART 0 · TAKE STOCK</p>
 
-## Keep the thinking that builds understanding.
+## What made that conversation useful?
 
-<div class="cards"><div><h3>THINK</h3><p>What did I explain or work out myself?</p></div><div><h3>VERIFY</h3><p>Did the feedback match the question and my reasoning?</p></div><div><h3>INTEGRITY</h3><p>Was this use allowed for my assignment?</p></div></div><p class="takeaway">Keep your conversation. We will improve it after choosing our tools.</p>
+<div class="cards"><div><span class="icon" data-icon="pen"></span><h3>You explained</h3><p>Your reasoning was visible.</p></div><div><span class="icon" data-icon="chat"></span><h3>AI responded</h3><p>The feedback addressed your attempt.</p></div><div><span class="icon" data-icon="check"></span><h3>You decided</h3><p>You checked whether it made sense.</p></div></div><p class="takeaway">Keep this conversation. We will improve it in Exercise 2.</p>
 
 Note:
-14:38:50–14:40。问1位学生：“Gemini认可了你解法中的哪一点？追问有没有让你重新想过？”不要求模型输出完美，重点是学生熟悉的问题可自己核对。下一节选工具和思考强度。
+14:40–14:41。
+请一位同学说说，刚才哪一句反馈有用。今天的重点就在这里：不是让 AI 把你替换掉，而是让它帮你看见自己的思路。接下来我们看看，除了聊天，还有哪些工具适合复习和期末项目。

@@ -35,6 +35,8 @@ jobs:
         run: npm run build
       - name: Browser checks
         run: python scripts/browser_check.py
+      - name: Visual revision checks
+        run: python scripts/browser_visual_check.py
       - name: Save QA results
         if: always()
         uses: actions/upload-artifact@v4

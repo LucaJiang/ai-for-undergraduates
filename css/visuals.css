@@ -1,0 +1,50 @@
+/* Small, local line icons and visual explanations. No remote assets. */
+.reveal .icon{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;color:var(--accent);vertical-align:middle;margin:0 0 12px;flex-shrink:0;line-height:0}
+.reveal .icon svg{display:block;width:100%;height:100%;overflow:visible}
+.reveal .cards>div{min-width:0;padding:22px}
+.reveal .cards h3{margin-bottom:12px}
+.reveal .cards p{font-size:25px;line-height:1.35}
+.reveal .prompt pre{font-size:23px;line-height:1.4}
+.reveal .prompt{padding:20px;margin:20px 0}
+.reveal .prompt button{margin-top:12px}
+.pathway{display:flex;gap:24px;margin:25px 0;align-items:stretch}
+.pathway>div{position:relative;flex:1;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.pathway>div:not(:last-child)::after{content:'→';position:absolute;right:-22px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:24px;line-height:1;z-index:1}
+.reveal .pathway h3{font-size:27px;margin:0 0 12px}
+.reveal .pathway p{font-size:24px;line-height:1.35;color:var(--muted);margin:0}
+.reveal .four h3{font-size:25px}.reveal .four p{font-size:23px}
+.reveal .compact-path>div{padding:18px}.reveal .compact-path .icon{width:32px;height:32px;margin-bottom:10px}
+.reveal .compact-path h3{font-size:25px}.reveal .compact-path p{font-size:23px}
+.reveal .dialogue.compact{font-size:28px;line-height:1.35;padding:18px 24px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:24px 0}
+.stat-grid>div{min-width:0;padding:20px 24px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.reveal .stat-grid .icon{float:right;width:32px;height:32px;margin:0 0 5px 12px}
+.reveal .stat-grid p{font-size:23px;line-height:1.3;margin:8px 0;color:var(--muted)}
+.reveal .stat-grid .stat{display:block;font-size:76px;line-height:1.08;letter-spacing:-.045em;margin:8px 0}
+.reveal .positive{color:var(--accent)}.reveal .negative{color:var(--bad)}
+.study-compare,.evidence-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:22px 0}
+.study-compare>div,.evidence-pair>div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 24px;min-width:0}
+.reveal .study-compare .icon{float:right;width:32px;height:32px;margin:0 0 8px 12px}
+.reveal .study-compare h3{font-size:27px;margin:0 0 12px}.reveal .study-compare p{font-size:24px;line-height:1.35;margin:0;color:var(--muted)}
+.result-strip{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;border-top:2px solid var(--accent);margin-top:20px;padding-top:15px}
+.reveal .result-strip p{font-size:22px;line-height:1.4;margin:0;color:var(--muted)}.result-strip b{font-size:24px;color:var(--accent)}
+.reveal .calculation h3{margin-right:35px}.reveal .calculation strong{display:block;font-size:43px;line-height:1.2;margin:20px 0 12px}
+.reveal .calculation .answer{font-size:40px;color:var(--accent);font-weight:700;margin:0}
+.quiz-visual{display:flex;gap:22px;margin:22px 0}.quiz-visual>div{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.reveal .quiz-visual .icon{float:right}.quiz-visual strong{display:block;font-size:64px;line-height:1.1;color:var(--accent)}.reveal .quiz-visual p{font-size:25px;margin:10px 0 0;color:var(--muted)}
+.reveal .evidence-pair h3{font-size:26px}.reveal .evidence-pair p{font-size:26px;line-height:1.4;margin:12px 0}.reveal .evidence-pair .claim-text{font-size:32px;color:var(--warn)}
+.reveal .mini-label{font-size:17px!important;line-height:1.35;letter-spacing:.045em;color:var(--muted);margin:6px 0 16px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:30px 0}
+.timeline>div{min-width:0;border-top:3px solid var(--accent);padding:22px 18px;background:var(--panel);border-radius:0 0 14px 14px}
+.timeline b{display:block;font-size:27px;line-height:1.2;color:var(--accent);margin:3px 0 17px;white-space:nowrap}
+.reveal .timeline h3{font-size:26px;line-height:1.15;margin-bottom:12px}.reveal .timeline p{font-size:22px;color:var(--muted);line-height:1.35;margin:0}
+.reveal .frontier h3{font-size:31px;line-height:1.15}.reveal .frontier p{font-size:26px;line-height:1.4}
+.strengths{display:flex;align-items:stretch;gap:12px;margin:28px 0}.strengths>div{flex:1;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 20px}
+.strengths .join{display:flex;align-items:center;font-size:36px;color:var(--accent);font-weight:700}
+.reveal .strengths h3{font-size:28px;line-height:1.15}.reveal .strengths p{font-size:25px;margin:0;color:var(--muted)}
+.reveal .reflection-lines p{font-size:28px;line-height:1.4;padding:9px 0;border-bottom:1px solid var(--line);margin:12px 0}
+.reveal .reflection-lines .icon{width:32px;height:32px;margin:0 16px 0 0}.reflection-lines b{color:var(--accent)}
+.reveal #still-learn-math h2{font-size:49px}.reveal #agenda h2{font-size:50px}
+.reveal #exercise3 .prompt{padding:18px;margin:16px 0}.reveal #exercise3 .timer{margin:14px 0}
+.reveal #future-reflection .timer{margin:18px 0}.reveal #future-reflection .footer{margin-top:14px}
+@media print{.pathway>div:not(:last-child)::after{color:var(--accent)}.reveal .fragment{opacity:1;visibility:visible}}

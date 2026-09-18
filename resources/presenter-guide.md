@@ -1,167 +1,108 @@
-# Presenter guide — reader-focused revision
+# Presenter guide
 
 **Wenxin Jiang · 23 September 2026 · Hong Kong**
 
-English slides and Mandarin delivery. The deck has 52 pages. Presenter logistics belong here and in `Note:` blocks, not on student slides. Four exercises now run in chronological order; existing fragment IDs remain stable for old links.
+English slides, conversational Mandarin notes, 52 pages. Use the [clock schedule](../schedule.md): the break stays at 15:15, teaching ends at 16:10, and Q&A runs until 16:30.
 
-## Clock schedule
+## Before the room opens
 
-| Time | Segment | Student activity |
-|---|---|---|
-| 14:30–14:40 | Opening / Part 0 | Evidence, short demos and Exercise 1 (four minutes on a familiar assignment question) |
-| 14:40–14:50 | Part 1 | Tool and thinking choices; Notebook demonstration |
-| 14:50–15:05 | Part 2 | Role + Context + Constraints + Format; follow-up questions |
-| 15:05–15:15 | Exercise 2 | Improve the first conversation |
-| 15:15–15:25 | Break | Ten-minute break after Part 2, before Part 3 |
-| 15:25–15:40 | Part 3 | Difficult concepts and multiple representations |
-| 15:40–15:48 | Exercise 3 | Explain without looking at the AI answer |
-| 15:48–15:56 | Part 4 | In-chat interactive visualization, prediction and independent checks |
-| 15:56–16:02 | Exercise 4 | Accept or reject AI feedback with a reason |
-| 16:02–16:10 | Part 5 | Sources, course rules, privacy and closing |
-| 16:10–16:30 | Q&A | Questions and unresolved concerns |
+Open the slides, Gemini, the teaching Notebook account, and the two prepared interactive labs. Check the projector and sound. Students should have a computer, a Google account, and relevant course materials, preferably a completed assignment with their own solution. The [public warm-up](../demo-materials/assignment-warmup.html) is available when they need a question.
 
-90 minutes teaching/practice + 10-minute break + 20-minute Q&A. Debriefs stay inside exercise slots. Do not let a generation delay consume an exercise or the break.
+Prepare three notebooks: A is empty for the import demonstration; B already contains the sources; C has a quiz and a short study-slide output ready. Use the [course-source pack](../materials.html#notebook). Review the actual menus in the account you will use.
 
-Ask students to bring an assignment and their own solutions before arrival. They must check whether discussing the question with AI is allowed. Share one question, not a whole document with names or student IDs. Use the [public warm-up](../demo-materials/assignment-warmup.html) when an assignment cannot be used.
+Press **V** to set up locally available video files you have permission to use, or rehearse the YouTube links. There are now two clips, 50 seconds in total. See the [media runbook](part0-media.md).
 
-## Part 0 — exact Gemini conversation
+## Opening: from a demo to a familiar question
 
-Suggested timing: cover and outline 40 seconds; mathematics study 70 seconds; positive study 35 seconds; capabilities 15 seconds; videos and transitions 90 seconds; instructor demonstration 40 seconds; student exercise four minutes; debrief and transition about one minute. Simplify commentary rather than rushing student work.
+14:30–14:41, including the four-minute exercise. The first study is a quick contrast; the physics example now has two slides, showing the learning comparison and the tutoring design. The optional GPT Tutor explanation is in [presenter Q&A](../references/part0-evidence.md).
 
-开场：“我是 Wenxin Jiang。今天我们练习怎样和 AI 讨论功课、核对解释，再用它帮助自己学会。”目录明确休息在Part 2及练习之后。研究数值是相对对照组的变化，不是百分点变化；不把短期研究结果推广成普遍的学期成绩保证。
+After the two clips, pause on “Impressive demos. What about your next exam?” Say:
 
-### 讲者第一条消息
+“这些演示很精彩，但今天更重要的问题是：它能不能帮你学会明天要考的内容？我们先从一道已经会做的题开始。”
 
-打开Gemini普通聊天，不需要Canvas。直接粘贴：
+### Demonstration conversation
+
+Open ordinary Gemini chat and paste:
 
 ```text
 I am studying introductory quantitative reasoning.
 A price rises from HK$100 to HK$120. What is the percentage increase?
 My solution is (120 - 100) / 100 × 100% = 20%, because the original price is the reference value.
-Check my reasoning without rewriting my solution. If it is correct, say so.
-Ask me one question about why I used 100 in the denominator, then wait.
+Check my reasoning. If it is correct, say so.
+Ask one question to test my understanding, then wait.
 ```
 
-若问为什么分母是100，回答：
+When asked about the denominator:
 
 ```text
-My denominator is the original price because percentage change compares the change with the starting value.
-Is that explanation precise? Please check it, then ask one related question without giving the answer.
+I used 100 because percentage change compares the change with the starting price.
+Is that explanation clear? Ask me a related question.
 ```
 
-若问从120降回100，先请学生预测，再回答：
+For the reverse change, from HK$120 to HK$100, let students predict first. The decrease is 20/120, approximately 16.7%.
 
-```text
-I would use (120 - 100) / 120 × 100%, about 16.7%, because 120 is now the starting price. Check my explanation.
-```
+If the response runs ahead, ask: “Pause here. Ask one question and let me answer.” If its feedback seems wrong, return to the given starting price and calculate together.
 
-若直接给完答案：
+Exercise 1, **14:36–14:40**: one minute to choose and paste, two minutes to discuss, one minute to decide whether the feedback makes sense and save the conversation. Debrief at 14:40, then move to tools.
 
-```text
-Pause. Do not give another solution. Ask me one check question and wait for my response.
-```
+## Part 1: NotebookLM and Deep Research
 
-若它错误否定20%：
+14:41–14:53. [Official feature guides and prompts](google-study-tools.html).
 
-```text
-Check which value is the starting price. It is HK$100.
-Please recompute the percentage change and identify the exact step you think is wrong.
-```
+| Time | Presenter action |
+|---|---|
+| 14:41 | Start importing sources into A; return to the slides |
+| 14:42 | Compare the uses of Gemini, DeepSeek and NotebookLM |
+| 14:43 | Show revision formats, check import once, and start a quiz in A or B |
+| 14:44 | Demonstrate the available thinking-mode menu |
+| 14:45 | Open Google's Deep Research feature tour; explain question, plan, search and report |
+| 14:46:30 | Walk through the focused final-project prompt |
+| 14:48 | Return to the notebook and open a citation in an answer |
+| 14:50 | Let students answer the fixed teaching question, then show the prepared quiz |
+| 14:52 | Summarize exam revision versus a final-project search |
 
-独立核验：涨幅20%；反向跌幅约16.7%。不要为了演示制造虚假的模型错误。回应慢时让学生开始自己的交流，不等讲者示范完成。
+Use C whenever it is the most convenient demonstration, saying “这份是我提前准备的。” A full Deep Research run belongs in preparation or follow-up work; a prepared report is useful for showing its structure and source links.
 
-### 学生四分钟
+The notebook question asks about sensitivity versus the probability of disease after a positive result. In our teaching source, 90 of 180 positive tests are true positives, giving 50%. This is the 1,000-person source table; Part 4 uses a separate 10,000-person visualization.
 
-1分钟选择会做的一题、贴题及自己的解法；2分钟阅读反馈并回答一次追问；1分钟判断反馈是否正确并保存。巡视问：“它检查的是同一道题吗？你能判断它哪句话是对的吗？”这里不让AI先解一道学生完全不会做的题。后面Exercise 2继续改进这段交流。
+## Part 2: improve the first conversation
 
-### Video playback
+14:53–15:15. Introduce Role, Context, Constraints and Format as a practical way to explain what help you need. Move between “teach me” and “let me practise”. Connect the examples to current revision and final projects.
 
-See [media runbook](part0-media.md). Press **V** before class, or open the deck with `?presenter=1`, to select video files you have permission to use. Full source videos use the saved source times; already-trimmed excerpts begin at zero. Files remain local, survive slide navigation, and must be selected again after reload. Leaving a slide stops its player. No video files are committed or uploaded.
+Exercise 2, **15:05–15:15**: two minutes to inspect the earlier conversation, four to try an improved request, three to follow up, one to record the difference. Share one example inside the final minute.
 
-Standard YouTube embeds are an alternative, not a promised fix for login/anti-bot restrictions. Watch on YouTube opens the source in the signed-in browser at the start time; manually stop at the listed end. Do not imply that changing the embed domain bypasses authentication. Failed playback should not become an on-stage debugging session.
+Break: **15:15–15:25**. Start the ten-minute timer.
 
-## Part 1 — two waiting stages, only in the presenter workflow
+## Part 3: understand, predict, explain
 
-Prepare A: empty Notebook, B: sources already imported, C: quiz and optional study slides already generated. Use the actual school account.
+15:25–15:45. Use the eigenvector lab to compare (1,0) and (1,1) when the matrix doubles x and keeps y unchanged. Ask for a prediction before revealing the output. Connect the picture to Av = λv with v nonzero. A negative λ reverses the vector; zero λ sends the output to zero.
 
-| Elapsed | Presenter action | Student-facing topic |
-|---|---|---|
-| 0:00–1:00 | Start import in A, return to slides | What a course notebook helps you do |
-| 1:00–3:30 | Leave import running | Tool choice; notes versus wider knowledge |
-| 3:30–4:00 | Check A once; use B if needed; start Quiz | Quiz, flashcards and study slides |
-| 4:00–6:30 | Leave generation running | Thinking modes and checking answers |
-| 6:30–9:15 | Show an answer/citation, one quiz question and optional slides; use C if needed | Read the source and answer before feedback |
-| 9:15–10:00 | Return to slides | Source, effort and verification |
+Exercise 3, **15:37–15:45**: one minute to choose a concept, three for an explanation and example, two to hide the answer and write independently, two to check and try another case. The final debrief is part of these eight minutes. Students keep their own paragraph for Exercise 4.
 
-具体提问：
+## Part 4: interactive exploration and feedback
 
-```text
-Use the selected course notes to explain the difference between sensitivity and the chance of disease after a positive test.
-Show the passage that supports your explanation.
-```
+15:45–15:58. Use ordinary Gemini chat for the visualization request; Canvas is not required. The [interactive guide](interactive-guide.html) contains the request and account-rehearsal details. Ask for a prevalence slider and visible counts. If a usable visualization does not appear after one follow-up, open the [prepared PPV lab](../demo-materials/medicine/ppv-lab.html) and say it is the prepared example.
 
-点击引用让学生看到原文。Quiz可以用确定问题：“Among the 180 people with positive tests, 90 have the disease. What fraction is that?” 答案50%。这里是1000人的source表，不要与Part 4的10000人表混淆。
+Have students predict before changing prevalence from 10% to 1%. With 10,000 fictional people and sensitivity = specificity = 90%, the independent calculations are 900/1,800 = 50% and 90/1,080 ≈ 8.3%. The prepared lab also supports the zero-positive-result case, where PPV is undefined.
 
-使用预生成结果时，口头如实说明“这份是我提前生成的”。学生不需要看备课标记。等待时间不作保证。导入网页文字不代表已经读到全部图片或视频画面。
+Exercise 4, **15:52–15:58**: one minute to reopen the paragraph, three to examine feedback alongside the source, two to revise or retain the wording with a reason.
 
-## Part 2 — improve the first conversation
+## Part 5: check a concrete claim
 
-Retain RCCF. It is a checklist, not four mandatory paragraphs. Simple questions may be short. The teaching dialogue is illustrative; do not call it a recorded Gemini run. Its provenance belongs in notes, not as a caption interrupting the student conversation.
+15:58–16:03. Reuse the Harvard study rather than introducing a new source. The deliberately overstated sentence is “AI doubles students’ final exam scores.” Ask students which words should change. Then show the routine: open the paper, locate what was measured, and rewrite the summary.
 
-Exercise 2: reopen Exercise 1, identify missing context or an unhelpful response, then revise and ask again. Suggested split: two minutes inspect, four minutes test, three minutes follow up, one minute record. Keep before/after prompts and a specific difference. Debrief inside the last minute.
+Close with three practical coursework habits: check the assignment instructions, choose suitable materials, and describe the help you received. Use public examples instead of patient, company or classmates' private material.
 
-Break: 15:15–15:25. Show a ten-minute timer; the outline already establishes its position. Do not add work to the break.
+## Part 6: AI and your future
 
-## Part 3 — understand and explain
+16:03–16:10. [Sources and further reading](../references/future.html).
 
-Use the student's own course where possible. Eigenvectors are the demonstration, not a requirement for every discipline. Let students predict what happens to (1,0) and (1,1) under a matrix doubling x and keeping y fixed. Connect the picture to Av = λv. Require nonzero input; negative λ can reverse orientation, and zero λ can collapse the vector.
+Move from a short milestone timeline to mathematical research, then ask the future hypothetical: “If AI became better than every mathematician, would you still learn maths?” Invite answers about understanding, making choices and enjoying discovery.
 
-Exercise 3: one minute choose, three minutes explanation/example, two minutes hide the answer and write independently, two minutes check against the material. Keep the paragraph for Exercise 4. Ask where an analogy fails, not only where it sounds appealing.
+The next slide focuses on a combination students can build: domain depth, AI fluency and judgement. Make this concrete with their fields: deciding a research question, interpreting an analysis, evaluating an argument, or choosing what evidence a project needs.
 
-## Part 4 — interactive visualization directly in chat
+At 16:07, invite the three-line reflection. Leave a full minute for writing, then take one response. Acknowledge that enjoying a skill and delegating work to AI can coexist. End the teaching at 16:10.
 
-**Canvas is not required.** Use the [student guide](interactive-guide.html). Google documents an in-chat visualization feature distinct from writing code in Canvas. In a new ordinary Gemini chat select Pro if offered; start from “help me visualize” plus the concept and one control. Do not begin by requesting HTML, JavaScript, a downloadable file or Canvas Preview: the objective is a usable learning visualization, not a code listing.
+## Q&A and rehearsal record
 
-```text
-Help me visualize how disease prevalence changes the meaning
-of a positive test. Show an interactive visualization in this chat,
-with a prevalence slider, not an HTML code block.
-Use 10,000 fictional people. Keep sensitivity and specificity at 90%.
-Show true positives, false positives and PPV as I move the slider.
-Ask me to predict what changes from 10% to 1% prevalence.
-```
-
-If only text/code appears, try once:
-
-```text
-Please show an interactive visualization directly in this conversation.
-I want to move a prevalence slider and see the counts change.
-Do not give me code or instructions for building an app.
-If this chat cannot display an interactive visualization, tell me plainly.
-```
-
-For a simpler pre-class capability check:
-
-```text
-Help me visualize a pendulum. Show an interactive simulation here with a length slider and a play/pause button.
-```
-
-A successful pendulum demo does not guarantee the PPV request will work. A failed request does not by itself identify an account restriction. The prompts are proposed workshop requests; they have not been tested in the lecturer's authenticated account. No prompt can guarantee enabling a feature.
-
-Use the [prepared PPV lab](../demo-materials/medicine/ppv-lab.html) if no usable result appears. Say it is a prepared tool, not a newly generated Gemini result. Students can still predict, change parameters and verify. Do not require buying a plan or moving restricted materials to a private account.
-
-Timing: one minute show how to ask, one minute send request, three minutes operate the available visualization or prepared lab, one minute manual checks, two minutes boundaries/transition. With N=10000 and sensitivity=specificity=90%, prevalence 10% gives 900/(900+900)=50%; prevalence 1% gives 90/(90+990)=8.33%. In the prepared lab, prevalence 0% and specificity 100% gives no positives and PPV undefined. These are expected-count calculations, not patient data or clinical recommendations.
-
-Exercise 4: one minute reopen own paragraph, three minutes evaluate feedback, two minutes revise or reject a suggestion with a reason. Correct work need not be changed.
-
-## Part 5 — check claims
-
-Show the source passage and let students choose A/B before revealing the explanation. The source contains an argument, not a controlled experiment. Distinguish unsupported from false. Check course rules before assessed use. Disclosure must describe the help and checks actually performed.
-
-## Sources and rehearsal boundaries
-
-- [Google, 9 April 2026: interactive simulations directly in Gemini chat](https://blog.google/innovation-and-ai/products/gemini-app/3d-models-charts/): Pro and “show me”/“help me visualize” guidance.
-- [Google, 19 August 2026: student tools](https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/), section 4 and footnote 8: consumer and school-issued accounts. This supersedes the narrower education exclusion in the April launch note; actual availability and limits still require checking.
-- [YouTube player parameters](https://developers.google.com/youtube/player_parameters): start/end are playback settings, not authentication workarounds.
-
-Official feature descriptions checked 14 September 2026. Local/CI tests cover the website, layout, copy buttons, timers and numerical examples, not authenticated Gemini/Notebook, YouTube login or campus audio/network. Host policy and school-account behavior must be rehearsed; do not present them as verified by a successful CI run.
+16:10–16:30 is reserved for questions. Website tests cover layout, links, notes, prompts, timers and the prepared labs. Sign-in, actual AI generation, streamed video, projector sound and venue connectivity are checked during the live rehearsal.

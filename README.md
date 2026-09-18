@@ -1,57 +1,45 @@
-# AI for undergraduates
+# Boost Your Study Skills with AI
 
-A public workshop by **Wenxin Jiang** for undergraduate students in Hong Kong. English slides, Mandarin presenter notes. **Use AI to think better — not to stop thinking.**
+A practical workshop for undergraduate students. **Wenxin Jiang · 23 September 2026 · 14:30–16:30 HKT.**
 
-## Open the workshop
+[Open the slides](https://lucajiang.github.io/ai-for-undergraduates/) · [Student materials](https://lucajiang.github.io/ai-for-undergraduates/materials.html) · [Prompt library](https://lucajiang.github.io/ai-for-undergraduates/prompts/index.html)
 
-- [Slides](https://lucajiang.github.io/ai-for-undergraduates/)
-- [Student materials](https://lucajiang.github.io/ai-for-undergraduates/materials.html)
-- [Searchable prompt library](https://lucajiang.github.io/ai-for-undergraduates/prompts/)
-- [Interactive visualizations in Gemini chat](https://lucajiang.github.io/ai-for-undergraduates/resources/interactive-guide.html)
-- [Sources](https://lucajiang.github.io/ai-for-undergraduates/references/)
+## Workshop route
 
-## Current teaching version
+The 52-slide deck has an opening and six parts: **Choose, Ask, Understand, Explore, Verify, and AI past & future**. Slides are in English; presenter notes are in Mandarin.
 
-52 projected pages, with a standalone cover and outline. The schedule remains 90 minutes of teaching/practice, a 10-minute break after Part 2 and 20 minutes of Q&A. Four exercises now begin with a familiar assignment question and the student's own solution. See [schedule](schedule.md) and the detailed [presenter guide](resources/presenter-guide.md).
+The opening connects two research examples and two short capability demos to a familiar assignment question. Part 1 includes NotebookLM and Gemini Deep Research. The later sections move through concept explanations, interactive prediction, feedback and source checking. Part 6 closes with mathematical AI and a personal learning reflection.
 
-Student slides explain what to learn and try. Setup, generation waits, backup results and example provenance belong in presenter notes. Notebook import and quiz-generation waits have separate presenter checkpoints. The interactive-visualization request uses ordinary Gemini chat rather than requiring Canvas. Availability and generated output must be checked in the actual account; the prepared browser labs remain usable without an AI account.
+Four exercises run for 4, 10, 8 and 6 minutes. The ten-minute break is after Part 2. Teaching and practice total 90 minutes, followed by 20 minutes of Q&A. See the [clock schedule](schedule.md).
 
-All parts use external Markdown without nested sections. Copy buttons read the visible prompt. Eigenvector and PPV labs use original fictional teaching examples. The original outline remains labelled archived.
+## Teaching resources
 
-## Editing and local preview
+- [Presenter guide](resources/presenter-guide.md), [video setup](resources/part0-media.md), and [opening-study Q&A](references/part0-evidence.md).
+- [NotebookLM and Deep Research official guides](resources/google-study-tools.html), [in-chat interactive guide](resources/interactive-guide.html), and [AI future reading](references/future.html).
+- [Materials](materials.html), [20 prompt templates](prompts/index.html), [eigenvector lab](demo-materials/stem/eigenvectors.html), and [PPV lab](demo-materials/medicine/ppv-lab.html).
 
-Content: `slides/part0.md` through `slides/part5.md`. Styles: `css/workshop.css` and `css/reader.css`. Use `---` for slide breaks, `Note:` for Mandarin notes and `<!-- .slide: id="..." -->` for stable anchors. Do not wrap Markdown pages in `<section>`.
+## Edit the workshop
 
-Quick Internet-connected preview:
+Edit `slides/part0.md` through `slides/part6.md`. Each slide has an ID, an English body, and one `Note:` block. Slide breaks use `---`. `index.html` loads all seven files through Reveal.js 5.2.1.
 
-```bash
-python -m http.server 8000
-```
+The existing theme is in `css/workshop.css` and `css/reader.css`. The visual layouts and small local SVG icons are in `css/visuals.css` and `js/visuals.js`. No external icon library, image service or font download is needed. Keep explanatory labels alongside decorative icons.
 
-Bundled build:
+Prompts copy their visible text. Timers start manually. The four exercise anchors remain `first-demo`, `exercise1`, `exercise2` and `exercise3`; the displayed exercise numbers are 1–4. Press **S** or use **Notes** for presenter view. Press **V** for local-video setup. Source clips are linked, not distributed.
 
-```bash
+## Build and test
+
+```sh
 npm install --ignore-scripts --no-audit --no-fund
+python scripts/check_sources.py
 npm run build
-python -m http.server 8000 --directory _site
+python -m pip install playwright==1.55.0
+python -m playwright install chromium
+python scripts/browser_check.py
+python scripts/browser_visual_check.py
 ```
 
-Open localhost:8000. Reveal.js 5.2.1 is bundled locally by the build; external AI tools and YouTube still need Internet access. No font files or third-party videos are redistributed.
+The build places the pinned Reveal runtime in `_site/vendor/reveal/`. GitHub Actions runs structural/link checks, browser regression checks and visual-feature checks before publishing. QA screenshots and reports are saved as the `workshop-qa` workflow artifact.
 
-## Teaching material
+For a quick development preview, serve the repository with `python -m http.server 8000` and open `http://localhost:8000`. The source entry point uses a CDN for Reveal; the built site uses its local bundled copy.
 
-- [Prompt templates](prompts/undergraduate-study-prompts.md)
-- [First assignment conversation](demo-materials/assignment-warmup.html)
-- [Eigenvector lab](demo-materials/stem/eigenvectors.html)
-- [PPV lab](demo-materials/medicine/ppv-lab.html)
-- [Interactive prompts and troubleshooting](resources/interactive-guide.html)
-- [Answer keys](resources/answer-keys.md)
-- [Evidence notes](references/part0-evidence.md)
-- [Video runbook](resources/part0-media.md)
-- [QA scope](resources/qa.md)
-
-Press S or Notes for speaker view, Esc for overview. Timers are manual. Press V before class to select video files you have permission to use, or open `?presenter=1` for the Video setup button. Files stay on the device and must be reselected after reload. External source-video links locate only the start; stop those manually at the listed end.
-
-## Before delivery
-
-Rehearse with the actual school account, venue network and audio setup. A successful website test does not verify authenticated Gemini/Notebook or YouTube playback. Current host policy must be supplied by the organizer; do not invent permission to use AI on an assignment. No private student, patient or research data belongs in this repository.
+Before delivery, rehearse sign-in, AI generation, video playback and the venue's display/audio setup in the teaching account. The archived original outline is retained under `archive/`; it is not the current delivery plan.

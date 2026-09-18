@@ -1,26 +1,22 @@
 # Part 0 media runbook
 
-Three source-video excerpts: OpenAI GPT-Realtime-2 06:58–07:28 (30 s), Genie 3 00:07–00:31 (24 s), Runway Gen-4.5 00:06–00:26 (20 s). Total video time: 74 seconds. These are publisher demonstrations; detailed provenance belongs in notes, not on the capability overview slide.
+Two source-video excerpts, **50 seconds in total**. The generated-world example has been removed.
 
-| Source | Start | End |
-|---|---|---|
-| [OpenAI](https://www.youtube.com/watch?v=qGS9Ghnq1RU) | 418 s | 448 s |
-| [Google DeepMind](https://www.youtube.com/watch?v=PDKhUknuQDg) | 7 s | 31 s |
-| [Runway](https://www.youtube.com/watch?v=ei2PsDpPbB4) | 6 s | 26 s |
+| Source | Start | End | Duration |
+|---|---|---|---|
+| [OpenAI GPT-Realtime-2](https://www.youtube.com/watch?v=qGS9Ghnq1RU) | 06:58 | 07:28 | 30 s |
+| [Runway Gen-4.5](https://www.youtube.com/watch?v=ei2PsDpPbB4) | 00:06 | 00:26 | 20 s |
 
-## Preferred rehearsal workflow
+## Before class
 
-1. Open the deck in the actual presentation browser. Press V to open Video setup, or add `?presenter=1` to expose the setup button.
-2. Select a video file you have permission to use. Choose full source video or already-trimmed excerpt. Files are local object URLs only: not uploaded, persisted or added to the public repository.
-3. Play the excerpt. For a full source file, playback seeks to the recorded start and pauses at the end. A trimmed excerpt starts at zero and plays up to the specified excerpt length or the shorter file duration. Native controls allow pausing; Replay restarts the excerpt.
-4. Re-select files after reloading. Leaving a slide stops playback. Keep a fallback sentence rather than debugging audio or streaming on stage.
+Open the presentation browser and press **V** for Video setup, or open the slides with `?presenter=1`. Select local video files you have permission to use, choosing either full source videos or already-trimmed excerpts. Check the sound and play each clip once.
 
-## External player
+A full source file uses the recorded start and end; a trimmed clip starts at zero. Leaving the slide stops playback. Files remain on the device and need to be selected again after a reload. No video file is uploaded or committed to the repository.
 
-The default uses standard youtube.com embeds. Timestamp parameters do not bypass sign-in, age, anti-bot, region, network or embedding restrictions. An iframe alone cannot identify why a particular user was asked to sign in. Changing from youtube-nocookie.com is an alternative, not a confirmed fix.
+## During the workshop
 
-The Watch on YouTube link opens the original video at the starting timestamp. It does not enforce the ending timestamp; pause it manually. Use the same signed-in browser if needed. Do not weaken browser security or suggest circumvention.
+Use the in-slide player. The **Watch on YouTube** link is an alternative; it locates the starting timestamp, so pause manually at the listed end. If the video cannot be played, use the observation sentence on the slide and continue.
 
-No third-party video is downloaded or redistributed by this repository. Local player mechanics and external URL construction are testable; actual YouTube playback and campus audio/network remain rehearsal tasks.
+After the two videos, use the transition slide: “Impressive demos. What about your next exam?” Then begin with a familiar assignment question and the student's own attempt.
 
-[Official player parameters](https://developers.google.com/youtube/player_parameters) · [Presenter guide](presenter-guide.md)
+[Official YouTube player parameters](https://developers.google.com/youtube/player_parameters) · [Presenter guide](presenter-guide.md)

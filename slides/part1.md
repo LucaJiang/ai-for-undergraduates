@@ -1,109 +1,126 @@
-<!-- .slide: id="part1" class="" -->
+<!-- .slide: id="part1" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Turn your course materials into a study notebook.
+## Turn your notes into a study notebook.
 
-<div class="cards"><div><h3>Bring your sources</h3><p>Lecture notes, readings and slides from the same topic.</p></div><div><h3>Study from them</h3><p>Ask a question, inspect its source, then test yourself.</p></div></div><p class="links"><a href="materials.html#notebook" target="_blank" rel="noopener">Course source pack ↗</a> · <a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Open Notebook ↗</a></p>
+<div class="pathway"><div><span class="icon" data-icon="files"></span><h3>Your materials</h3><p>Lecture notes, readings and slides.</p></div><div><span class="icon" data-icon="book"></span><h3>NotebookLM</h3><p>Ask questions about those sources.</p></div><div><span class="icon" data-icon="target"></span><h3>Your revision</h3><p>Review a topic. Test yourself.</p></div></div><p class="links"><a href="https://notebooklm.google.com/" target="_blank" rel="noopener">Open NotebookLM ↗</a> · <a href="resources/google-study-tools.html#notebook" target="_blank" rel="noopener">Google feature guides ↗</a></p>
 
 Note:
-0:00–1:00。讲者现在切到学校账号的新Notebook A，开始导入三份公开source，马上回slides讲工具选择。不要等导入完成才离开。学生此时看演示即可。准备Notebook B已导入资料，C已生成Quiz/Slides。两段等待只写讲稿，不作为学生必须理解的新概念。
+14:41–14:42。
+聊天适合从一个问题开始。NotebookLM 则适合把同一门课的材料放在一起，围绕这些材料复习。
+操作：切到空白 Notebook A，导入三份公开课程材料，马上回到 slides。B 提前导入好资料，C 提前生成测验，供演示使用。材料在 materials.html#notebook。
 
 ---
 
-<!-- .slide: id="choose-tools" class="" -->
+<!-- .slide: id="choose-tools" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## Choose a tool for your question.
+## Match the tool to the task.
 
-<div class="cards"><div><h3>Gemini</h3><p>Start here for general coursework questions, images and explanations.</p></div><div><h3>DeepSeek</h3><p>Try another explanation or continue when you reach a usage limit.</p></div><div><h3>Notebook</h3><p>Ask about your chosen course materials and see where the answer comes from.</p></div></div>
+<div class="cards"><div><span class="icon" data-icon="chat"></span><h3>Gemini</h3><p>Discuss a question or explore an idea.</p></div><div><span class="icon" data-icon="lightbulb"></span><h3>DeepSeek</h3><p>Try another explanation.</p></div><div><span class="icon" data-icon="book"></span><h3>NotebookLM</h3><p>Study a chosen set of course materials.</p></div></div><p class="takeaway">Today: Gemini for conversation, NotebookLM for course revision.</p>
 
 Note:
-1:00–2:00。Notebook指前页所打开的学校Notebook服务（NotebookLM/Gemini Notebook按实际界面）。不要让命名迁移占用学生注意力。工具不是排行榜：Gemini是课堂默认，DeepSeek用于比较/额度备选，Notebook适合课程sources。
+14:42–14:43。
+我们今天主要用 Gemini。一个解释没听懂，也可以请 DeepSeek 换个角度讲。复习指定讲义时，NotebookLM 很方便：你可以沿着回答回到原来的材料。选工具不用先排出谁第一，先看自己要做什么。
 
 ---
 
-<!-- .slide: id="source-choice" class="" -->
-<p class="eyebrow">PART 1 · CHOOSE</p>
-
-## Should the answer use your notes or wider knowledge?
-
-<div class="cards"><div><h3>Studying your course notes</h3><p>Ask: “Which passage supports this?” If the notes do not answer the question, the AI should say so rather than guess.</p></div><div><h3>Exploring beyond the notes</h3><p>Ask for another explanation or example. Check new claims against a textbook or reliable source.</p></div></div><p class="footer">In Notebook, a website link imports page text; a YouTube link imports its transcript. <a href="https://support.google.com/notebooklm/answer/16215270?hl=en" target="_blank" rel="noopener">Source types ↗</a></p>
-
-Note:
-2:00–3:30。两个工具类型不是互斥：一般聊天也能上传材料；Notebook也有发现来源功能。这里是使用策略，不是说某产品只能做某任务。Google说明网页URL只导入文字、YouTube只导入字幕；上传图片/PDF属于其他source类型。
-
----
-
-<!-- .slide: id="notebook-checkpoint" class="" -->
-<p class="eyebrow">PART 1 · CHOOSE</p>
+<!-- .slide: id="notebook-checkpoint" -->
+<p class="eyebrow">PART 1 · NOTEBOOKLM</p>
 
 ## Choose how you want to review.
 
-<div class="cards"><div><h3>Quiz</h3><p>Answer a question before revealing the explanation.</p></div><div><h3>Flashcards</h3><p>Try to recall the idea before turning the card.</p></div><div><h3>Study slides</h3><p>See how topics fit together, then return to the original notes.</p></div></div>
+<div class="cards"><div><span class="icon" data-icon="target"></span><h3>Quizzes</h3><p>Answer, then read the explanation.</p></div><div><span class="icon" data-icon="layers"></span><h3>Flashcards</h3><p>Recall, then turn the card.</p></div><div><span class="icon" data-icon="mic"></span><h3>Audio / video</h3><p>Hear or watch an overview.</p></div><div><span class="icon" data-icon="files"></span><h3>Study slides</h3><p>See the main ideas together.</p></div></div><p class="footer"><a href="https://support.google.com/gemininotebook/answer/16958963?hl=en" target="_blank" rel="noopener">Google: flashcards & quizzes ↗</a> · <a href="https://support.google.com/gemininotebook/answer/16454555?hl=en" target="_blank" rel="noopener">Video Overviews ↗</a> · <a href="resources/google-study-tools.html" target="_blank" rel="noopener">All feature guides ↗</a></p>
 
 Note:
-3:30–4:00。讲完这页切回Notebook A检查一次导入；准备好就在Studio点Quiz，没准备好用已导入的B。然后回slides讲思考强度，不盯进度条。可说“我们用这份资料做一道小测”，不要求学生理解后台流程。C中预生成slides留到返回时展示；使用预先准备的结果口头如实说明，不放一条让学生看不懂的备课提醒。
+14:43–14:44。
+同一份材料可以变成不同的复习方式。想知道自己会不会，就做题；想回忆定义，就用闪卡；想先抓住大意，可以听音频或看视频概览。
+操作：现在检查一次导入，准备好就在 Studio 生成 Quiz；否则用 B。接着回来讲思考模式，让测验在后台生成。
 
 ---
 
-<!-- .slide: id="reasoning" class="" -->
+<!-- .slide: id="reasoning" -->
 <p class="eyebrow">PART 1 · CHOOSE</p>
 
-## How much thinking does this task need?
+## Give harder questions more thinking time.
 
-<div class="cards"><div><h3>Quick, routine work</h3><p>Translate a sentence, format notes or extract definitions.</p></div><div><h3>Multi-step reasoning</h3><p>Check a proof, compare assumptions or debug a difficult error.</p></div></div><p class="takeaway">Use a thinking mode when the task needs it.</p><p class="footer">More thinking may take longer or use more of your available quota. It still does not guarantee a correct answer.</p>
+<div class="cards"><div><span class="icon" data-icon="clock"></span><h3>Quick tasks</h3><p>Translate a sentence.<br>Organize a few definitions.</p></div><div><span class="icon" data-icon="math"></span><h3>Multi-step tasks</h3><p>Check a proof.<br>Compare assumptions or debug code.</p></div></div><p class="takeaway">Choose an available thinking mode in the model menu.</p><p class="footer">Use the options shown in your account. <a href="references/index.html#products" target="_blank" rel="noopener">Tool guides ↗</a></p>
 
 Note:
-4:00–5:00。Notebook生成Quiz。讲选择思考强度，也强调“短问题”可能难、“长摘要”也可能需要核验，不能机械分类。不要写固定每日额度。
+14:44–14:45。
+整理格式通常不需要很长的思考；检查证明或分析复杂错误，值得给模型多一点时间。这里演示一下我账号里的模式菜单。选好以后再提问。拿到回答，仍然回到题目和材料判断它是否解决了问题。
 
 ---
 
-<!-- .slide: id="actual-controls" class="" -->
-<p class="eyebrow">PART 1 · CHOOSE</p>
+<!-- .slide: id="deep-research" -->
+<p class="eyebrow">PART 1 · DEEP RESEARCH</p>
 
-## Choose a mode before you ask.
+## From a research question to a source-based report.
 
-<div class="cards"><div><h3>Gemini / DeepSeek</h3><p>Open the model or thinking menu. Choose from the options in your account.</p></div><div><h3>Notebook</h3><p>Select the course sources and the output you need, such as a quiz.</p></div></div><p class="caution">Typing “think carefully” does not change the model setting.</p><p class="footer">Available modes depend on your account. <a href="references/index.html#products" target="_blank" rel="noopener">Tool guides ↗</a></p>
+<div class="pathway four"><div><span class="icon" data-icon="target"></span><h3>Question</h3><p>Define the topic.</p></div><div><span class="icon" data-icon="layers"></span><h3>Plan</h3><p>Review the search plan.</p></div><div><span class="icon" data-icon="search"></span><h3>Search</h3><p>Explore relevant sources.</p></div><div><span class="icon" data-icon="files"></span><h3>Report</h3><p>Read the synthesis and citations.</p></div></div><p class="takeaway">Useful for a project: “What does the research say?”</p><p class="footer"><a href="https://gemini.google/overview/deep-research/" target="_blank" rel="noopener">Google: Deep Research feature tour ↗</a> · <a href="resources/google-study-tools.html#deep-research" target="_blank" rel="noopener">Workshop example ↗</a></p>
 
 Note:
-5:00–5:45。用你实际账号展示一次model/thinking菜单，不伪造截图。不将DeepSeek API的effort参数当网页按钮。不要求学生购买高级功能。个人Google和学校账号菜单可能不同。
+14:45–14:46:30。
+NotebookLM 这次演示从我们选好的课程材料出发。Deep Research 适合另一个问题：我想做一个项目，需要先了解这个领域有哪些研究。它会先给计划，再检索和整理。我们先看计划，确认方向对了，再让它往下做。报告出来以后，挑重要的论文打开读。
+操作：打开 Google 官方功能页，展示流程；有已准备好的报告就展示目录和一个来源入口，完整检索留给课后。
 
 ---
 
-<!-- .slide: id="judge-answer" class="" -->
-<p class="eyebrow">PART 1 · CHOOSE</p>
+<!-- .slide: id="research-example" -->
+<p class="eyebrow">PART 1 · DEEP RESEARCH</p>
 
-## More thinking can help. Still check.
+## Give your project a focused starting point.
 
-<div class="chips"><span>Correct?</span><span>Clear?</span><span>Assumptions visible?</span><span>Checkable?</span></div><p class="lead small-lead">Two models agreeing is not proof.<br>Two models disagreeing is a reason to investigate.</p><p class="takeaway">Use sources, calculations or a counterexample — not a popularity vote.</p>
+<p class="sub">Example project: spaced practice versus cramming</p><div class="prompt"><pre><code>Compare spaced practice and cramming for university students.
+Focus on primary studies testing recall at least one week later.
+For each study, list the participants, task, follow-up and result.
+Link the original papers and explain where findings differ.
+Begin with a research plan for me to review.</code></pre><button class="copy" type="button">Copy prompt</button></div><p class="takeaway">Set the scope before asking for a long report.</p><p class="footer">Adapt the topic to your own final project. <a href="https://gemini.google/overview/deep-research/" target="_blank" rel="noopener">Google feature description ↗</a></p>
 
 Note:
-5:45–6:30。比较答案时尽量保持问题、材料和约束一样，不同时换prompt又换模型然后把差异归因于模型。这里只给评估准则，真正比较留练习/课后，不再赌两次生成延迟。
+14:46:30–14:48。
+“帮我查学习方法”很宽。这条问题具体到大学生、两种方法、至少一周后的记忆表现。返回计划以后，我们可以删掉不相关的方向。报告不是项目终稿，而是一张阅读清单：先找到最相关的几篇，再自己读方法和结果。
+这里只演示研究问题，不预设检索一定会找到多少篇或得到什么结论。
 
 ---
 
-<!-- .slide: id="notebook-return" class="" -->
-<p class="eyebrow">PART 1 · CHOOSE</p>
+<!-- .slide: id="notebook-return" -->
+<p class="eyebrow">PART 1 · BACK TO YOUR NOTES</p>
 
-## From your notes to a question you can answer.
+## Ask a question. Open the supporting passage.
 
-<div class="sequence"><div><b>Find the evidence</b><p>Open a citation and read the supporting passage.</p></div><div><b>Try a quiz</b><p>Choose your answer before looking at the feedback.</p></div><div><b>See the overview</b><p>Use study slides to see how the ideas connect.</p></div></div><div class="prompt"><pre><code>Use the selected course notes to explain the difference between
+<div class="prompt"><pre><code>Use the selected course notes to explain the difference between
 sensitivity and the chance of disease after a positive test.
-Show the passage that supports your explanation.</code></pre><button class="copy" type="button">Copy prompt</button></div>
+Show the passage that supports your explanation.</code></pre><button class="copy" type="button">Copy prompt</button></div><div class="pathway compact-path"><div><span class="icon" data-icon="chat"></span><h3>Ask</h3></div><div><span class="icon" data-icon="link"></span><h3>Click the citation</h3></div><div><span class="icon" data-icon="book"></span><h3>Read the passage</h3></div></div>
 
 Note:
-6:30–9:15，给讲者2分45秒演示。先粘贴屏幕上的具体问题：
-“Use the selected course notes to explain the difference between sensitivity and the chance of disease after a positive test. Show the passage that supports your explanation.”
-点击引用让学生看到真实原文，再切到Quiz请学生作答。如果要一个确定提问，使用“Among the 180 people with positive tests, 90 have the disease. What fraction is that?” 等学生回答50%后，核对原文中的表格。最后快速看预先生成的slides1–2页，口头说“这份是我提前生成的”。如果仍在生成，直接用C；不能登录则用公开source页面和答案，不把页面当Notebook的输出。
+14:48–14:50。
+切回 Notebook，输入屏幕上的问题。让大家看回答以后，点击一条引用，回到原文中的定义或表格。可以问：敏感度的分母是哪一群人？阳性预测值的分母又是哪一群人？
+如果 A 还没准备好，用 C，并说“这份是我提前准备的”。无法登录时直接打开我们的公开课程材料，继续讨论同一个问题。
 
 ---
 
-<!-- .slide: id="tool-summary" class="" -->
-<p class="eyebrow">PART 1 · CHOOSE</p>
+<!-- .slide: id="notebook-quiz" -->
+<p class="eyebrow">PART 1 · TEST YOURSELF</p>
 
-## You choose the tool and the effort.
+## Answer before you reveal.
 
-<div class="sequence"><div><b>Source?</b><p>Course materials or open exploration?</p></div><div><b>Effort?</b><p>Choose an available mode that fits the task.</p></div><div><b>Check?</b><p>What evidence would make the answer trustworthy?</p></div></div><p class="takeaway">Next: how to ask about your coursework.</p>
+<p class="sub">From our diagnostic-testing teaching example</p><div class="quiz-visual"><div><span class="icon" data-icon="users"></span><strong>180</strong><p>people tested positive</p></div><div><span class="icon" data-icon="target"></span><strong>90</strong><p>of them have the disease</p></div></div><p class="lead small-lead">What fraction of positive tests are true positives?</p><p class="fragment takeaway">90 ÷ 180 = 50%</p><p class="footer"><a href="demo-materials/notebook/lecture-diagnostic-testing.html" target="_blank" rel="noopener">Open the teaching source ↗</a></p>
 
 Note:
-9:15–10:00。决策树不用把Notebook接到统一Thinking按钮。下一节按Role Context Constraints Format讨论学习问题。
+14:50–14:52。
+先停下来让学生回答，再揭晓。回到 Notebook 展示生成的 Quiz，以及答题后的解释。这样我们就完成了一次复习：读解释、看来源、自己做题。
+屏幕上的固定题来自本 workshop 的教学表，方便现场一起算。也可再看一页提前生成的复习 slides。保留时间让学生说出分母为什么是180。
+
+---
+
+<!-- .slide: id="tool-summary" -->
+<p class="eyebrow">PART 1 · CHOOSE</p>
+
+## What are you working on today?
+
+<div class="cards"><div><span class="icon" data-icon="book"></span><h3>Exam revision</h3><p>Start with your course notes.<br>Ask, recall and test yourself.</p></div><div><span class="icon" data-icon="search"></span><h3>Final project</h3><p>Explore the wider literature.<br>Find and read original sources.</p></div></div><p class="takeaway">Next: make the question useful, whichever tool you choose.</p><p class="footer"><a href="resources/google-study-tools.html" target="_blank" rel="noopener">NotebookLM & Deep Research: official guides and examples ↗</a></p>
+
+Note:
+14:52–14:53。
+准备考试，先抓住课程材料；准备项目，可以向外查文献。同一个工具也能做不止一类事，重要的是先知道自己这一轮要完成什么。接下来我们回到刚才的作业对话，把问题问得更清楚。

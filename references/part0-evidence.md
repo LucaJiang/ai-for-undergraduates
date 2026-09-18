@@ -1,21 +1,19 @@
-# Part 0: evidence and limits
+# Opening studies: presenter Q&A
 
-Verified against primary sources on 13 September 2026. The teaching routines in this workshop are our recommendations, not the interventions tested in these studies.
+Checked against the papers on 18 September 2026. The main slides use the GPT Base contrast, then spend two pages on the positive physics example.
 
-## Bastani et al. (2025)
+## Why did GPT Tutor not improve the independent test?
 
-*Generative AI without guardrails can harm learning: Evidence from high school mathematics.* PNAS. DOI: [10.1073/pnas.2422633122](https://doi.org/10.1073/pnas.2422633122). [Author manuscript](https://hamsabastani.github.io/education_llm.pdf).
+[Bastani et al., PNAS (2025)](https://doi.org/10.1073/pnas.2422633122).
 
-The study used a high-school mathematics field experiment. Its reported practice improvements were 48% (GPT Base) and 127% (GPT Tutor), relative to the no-AI control. Subsequent unassisted test performance was 17% lower for GPT Base; GPT Tutor did not differ significantly from control. These are relative differences, not percentage points or a within-student before/after change. Table 1 in the author manuscript gives the GPT Base exam coefficient −0.054 on a 0–1 scale against a 0.321 control mean: approximately −5.4 percentage points, or −17% relatively.
+The authors suggest a practical explanation: tutor users could check answers **before submitting**, while control students saw solutions **after submitting**. This can improve submitted practice work without producing the same improvement in independent mastery. The GPT Tutor test difference was not statistically significant. The mechanism is the authors' interpretation, rather than a separate causal test.
 
-The tutor included teacher-written solutions, common mistakes and targeted guidance, not merely “give hints”. No significant effect does not prove an exact zero effect. Do not generalize this short-term setting to every student, subject, tool or semester.
+讲给学生听可以说：“老师帮你在交作业前检查了一遍，交上去的答案当然可能更好。但考试时能不能自己做出来，还要看练习时有没有真正理解。”
 
-## Kestin et al. (2025)
+## Why make the physics study the main example?
 
-*AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting.* Scientific Reports 15, 17458. DOI: [10.1038/s41598-025-97652-6](https://doi.org/10.1038/s41598-025-97652-6).
+[Kestin et al., Scientific Reports (2025)](https://doi.org/10.1038/s41598-025-97652-6).
 
-A crossover study of two physics lessons with 194 eligible Harvard students found higher immediate post-test performance with its structured AI tutor than with the active-learning classroom comparison. The tutor used pedagogical scaffolding and teacher-prepared answers. The result supports a positive example in this context, not “AI always teaches better” or a guarantee of doubled course grades. The workshop's generic prompts are not a replication of this intervention.
+The study directly connects a tutoring design to learning: sequential problem parts, content-specific support, timely feedback and self-paced work. The two opening slides introduce the comparison and these design choices. The workshop's suggested conversation is a teaching adaptation.
 
-## Scope of this revision
-
-Unused PISA and EEG/preprint references from the first draft have been removed from the live deck, rather than used as additional unsupported slogans. They are not needed for the opening argument. The full revision history remains in Git.
+For the result, point to the labelled **learning gain** and **study time** on the slide. In Part 5, students return to this same study to practise checking a summary against what was measured.
