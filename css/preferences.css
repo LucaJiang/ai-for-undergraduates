@@ -1,0 +1,122 @@
+/* Projector-friendly light palette; the original dark palette stays available. */
+:root {
+  --workshop-font: Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --button-ink: #08231e;
+  --media-bg: #07101e;
+  --prompt-bg: var(--panel);
+  --preference-hover: #20344b;
+}
+html[data-theme="light"] {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --ink: #172838;
+  --muted: #47566c;
+  --accent: #096b5c;
+  --line: #c7d2df;
+  --warn: #875207;
+  --bad: #b62547;
+  --button-ink: #ffffff;
+  --media-bg: #edf2f7;
+  --prompt-bg: #eef3f8;
+  --preference-hover: #e5f2ee;
+  color-scheme: light;
+}
+html[data-theme="dark"] { color-scheme: dark; }
+body, .reveal { font-family: var(--workshop-font); }
+body.reveal-viewport { background: var(--bg); color: var(--ink); }
+.reveal button, .media-settings button { color: var(--button-ink); }
+.reveal .prompt { background: var(--prompt-bg); }
+.reveal .video-stage { background: var(--media-bg); }
+.media-settings input, .media-settings select { background: var(--panel); color: var(--ink); }
+.media-settings select { border: 1px solid var(--line); border-radius: 6px; padding: 7px; }
+html[data-theme="light"] .reveal .cards > div,
+html[data-theme="light"] .pathway > div,
+html[data-theme="light"] .stat-grid > div,
+html[data-theme="light"] .study-compare > div,
+html[data-theme="light"] .evidence-pair > div {
+  box-shadow: 0 2px 5px rgb(23 40 56 / 4%);
+}
+/* Leave the upper-right corner for the two controls. Chapter navigation stays left. */
+.deck-nav {
+  left: 16px;
+  right: auto;
+  top: 12px;
+  max-width: calc(100% - 232px);
+  gap: 6px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 2px;
+}
+.deck-nav::-webkit-scrollbar { display: none; }
+.deck-nav a, .deck-nav button { flex-shrink: 0; }
+.deck-nav a:focus-visible, .deck-nav button:focus-visible { outline-offset: -2px; }
+.deck-preferences {
+  position: fixed;
+  top: 10px;
+  right: 16px;
+  z-index: 31;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--workshop-font);
+}
+.deck-preferences .preference-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+}
+.deck-preferences .preference-button:hover { background: var(--preference-hover); border-color: var(--accent); }
+.deck-preferences .preference-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.deck-preferences .language-zh, .deck-preferences .language-en { color: var(--muted); font-weight: 400; }
+[data-language="zh"] .language-zh, [data-language="en"] .language-en { color: var(--accent); font-weight: 800; }
+.preference-divider { color: var(--muted); font-weight: 400; }
+.deck-preferences .theme-icon { width: 17px; height: 17px; flex-shrink: 0; }
+.deck-preferences [hidden] { display: none !important; }
+#presentation-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+/* Chinese lines need less tracking and a little more vertical breathing room. */
+html[lang="zh-CN"] .reveal h1,
+html[lang="zh-CN"] .reveal h2,
+html[lang="zh-CN"] .reveal h3 { letter-spacing: 0; line-height: 1.2; }
+html[lang="zh-CN"] .reveal .cover h2 { font-size: 72px; }
+html[lang="zh-CN"] .reveal .eyebrow { letter-spacing: .07em; }
+html[lang="zh-CN"] .reveal .prompt code {
+  font-family: Consolas, "Noto Sans Mono CJK SC", "Microsoft YaHei", monospace;
+}
+html[lang="zh-CN"] .reveal .prompt pre { line-height: 1.5; }
+html[lang="zh-CN"] .reveal #still-learn-math h2 { font-size: 47px; }
+@media (max-width: 860px) {
+  .deck-nav a[href^="#/part"] { display: none; }
+}
+@media (max-width: 520px) {
+  .deck-preferences { right: 8px; top: 8px; gap: 5px; }
+  .deck-preferences .preference-button { padding: 7px 9px; min-height: 36px; font-size: 12px; }
+  .deck-preferences [data-theme-label] { display: none; }
+  .deck-nav { top: 11px; left: 8px; gap: 4px; max-width: calc(100% - 145px); }
+  .deck-nav a, .deck-nav button { font-size: 11px; padding: 4px 5px; }
+}
+@media print {
+  .deck-preferences, #presentation-status { display: none !important; }
+}
+html.print-pdf .deck-preferences, html.print-pdf .deck-nav { display: none !important; }

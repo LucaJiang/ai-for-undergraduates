@@ -30,19 +30,26 @@ jobs:
           python -m pip install playwright==1.55.0
           python -m playwright install --with-deps chromium
       - name: Structural and link checks
-        run: python scripts/check_sources.py
+        run: |
+          python scripts/check_sources.py
+          node --check js/preferences.js
+          node --check js/translations-zh.js
       - name: Build bundled site
         run: npm run build
       - name: Browser checks
         run: python scripts/browser_check.py
       - name: Visual revision checks
         run: python scripts/browser_visual_check.py
-      - name: Save QA results
+      - name: Language and theme checks
+        run: python scripts/browser_preferences_check.py
+      - name: Save QA results and tested site
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: workshop-qa
-          path: test-results
+          path: |
+            test-results
+            _site
           retention-days: 7
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

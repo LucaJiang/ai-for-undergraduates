@@ -1,9 +1,16 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Boost Your Study Skills with AI · Wenxin Jiang</title>
+<meta name="theme-color" content="#f8fafc">
+<script src="js/preferences.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css">
-<link rel="stylesheet" href="css/workshop.css"><link rel="stylesheet" href="css/reader.css"><link rel="stylesheet" href="css/visuals.css"></head><body>
+<link rel="stylesheet" href="css/workshop.css"><link rel="stylesheet" href="css/reader.css"><link rel="stylesheet" href="css/visuals.css"><link rel="stylesheet" href="css/preferences.css"></head><body>
 <nav class="deck-nav" aria-label="Workshop chapters"><a href="#/start">Home</a><a href="#/agenda">Outline</a><a href="#/part1" aria-label="Part 1">1</a><a href="#/part2" aria-label="Part 2">2</a><a href="#/part3" aria-label="Part 3">3</a><a href="#/part4" aria-label="Part 4">4</a><a href="#/part5" aria-label="Part 5">5</a><a href="#/part6" aria-label="Part 6">6</a><a href="materials.html" target="_blank" rel="noopener">Materials</a><button type="button" data-notes>Notes</button></nav>
+<div class="deck-preferences" role="group" aria-label="Presentation settings">
+<button type="button" class="preference-button" data-language-toggle data-language="en" aria-label="切换为中文" title="切换为中文"><span class="language-zh" lang="zh-CN" aria-hidden="true">中文</span><span class="preference-divider" aria-hidden="true">/</span><span class="language-en" lang="en" aria-hidden="true">EN</span></button>
+<button type="button" class="preference-button" data-theme-toggle aria-label="Switch to dark theme" title="Switch to dark theme"><svg class="theme-icon" data-light-icon hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="theme-icon" data-dark-icon viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.7 13.1A8.5 8.5 0 0 1 10.9 3.3 8.5 8.5 0 1 0 20.7 13.1Z"></path></svg><span data-theme-label>Dark</span></button>
+</div>
+<div id="presentation-status" role="status" aria-live="polite" aria-atomic="true"></div>
 <noscript><p class="load-error">JavaScript is needed for the slides. Read the <a href="materials.html">student materials</a> or the Markdown files in the repository.</p></noscript>
 <div class="reveal"><div class="slides">
 <section data-markdown="slides/part0.md" data-separator="^\s*---\s*$" data-separator-notes="^Note:" data-charset="utf-8"></section>
@@ -17,7 +24,7 @@
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js"></script>
-<script src="js/workshop.js"></script><script src="js/media-player.js"></script><script src="js/visuals.js"></script>
+<script src="js/workshop.js"></script><script src="js/media-player.js"></script><script src="js/visuals.js"></script><script src="js/translations-zh.js"></script>
 <script>
-Reveal.initialize({width:1280,height:720,margin:0.06,center:true,hash:true,slideNumber:'c/t',transition:'none',plugins:[RevealMarkdown,RevealNotes]}).then(function(){window.initWorkshop();window.initWorkshopMedia();window.initWorkshopVisuals();});
+Reveal.initialize({width:1280,height:720,margin:0.06,center:true,hash:true,slideNumber:'c/t',transition:'none',plugins:[RevealMarkdown,RevealNotes]}).then(function(){window.initWorkshop();window.initWorkshopMedia();window.initWorkshopVisuals();window.WorkshopPreferences.init();});
 </script></body></html>

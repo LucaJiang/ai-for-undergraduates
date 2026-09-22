@@ -36,7 +36,8 @@ try:
         page.on('pageerror', lambda error: js_errors.append(str(error)))
         context.route('**/*youtube*/*', lambda route: route.fulfill(status=200,content_type='text/html',body='<p>External streaming excluded.</p>'))
         if not args.materials_only:
-            page.goto(base, wait_until='networkidle'); page.wait_for_function('window.Reveal && Reveal.isReady()')
+            # Keep the original dark-theme regression; the preferences suite checks both palettes.
+            page.goto(base+'?theme=dark', wait_until='networkidle'); page.wait_for_function('window.Reveal && Reveal.isReady()')
             ids = page.evaluate('Reveal.getSlides().map(s=>s.id)'); assert len(ids)==52, len(ids)
             assert page.locator('.slides > section > section').count()==0
             assert 'Wenxin Jiang' in page.locator('#start').inner_text()

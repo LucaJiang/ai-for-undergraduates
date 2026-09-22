@@ -2,6 +2,7 @@
 (function(){
   'use strict';
   const timers = new WeakMap();
+  const t = text => window.WorkshopPreferences?.t(text) || text;
   function announce(text){
     let status=document.getElementById('copy-status');
     if(!status){status=document.createElement('div');status.id='copy-status';status.setAttribute('role','status');document.body.append(status);}
@@ -19,21 +20,26 @@
     return timers.get(box);
   }
   function draw(box){
-    const t=state(box);if(t.running){t.remaining=Math.max(0,t.end-Date.now());if(!t.remaining)t.running=false;}
-    const seconds=Math.ceil(t.remaining/1000);box.querySelector('output').textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
-    box.querySelector('[data-timer="toggle"]').textContent=t.running?'Pause':seconds===0?'Restart':'Start';box.classList.toggle('finished',seconds===0);
+    const timer=state(box);if(timer.running){timer.remaining=Math.max(0,timer.end-Date.now());if(!timer.remaining)timer.running=false;}
+    const seconds=Math.ceil(timer.remaining/1000);
+    const time=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
+    const output=box.querySelector('output'),button=box.querySelector('[data-timer="toggle"]');
+    if(output.textContent!==time)output.textContent=time;
+    const label=t(timer.running?'Pause':seconds===0?'Restart':'Start');
+    if(button.textContent!==label)button.textContent=label;
+    box.classList.toggle('finished',seconds===0);
   }
   function closeVideos(){document.querySelectorAll('.video-stage iframe').forEach(frame=>{delete frame.parentElement.dataset.loaded;frame.remove();});}
   document.addEventListener('click',async event=>{
     const copy=event.target.closest('button.copy');
     if(copy){
       const code=copy.closest('.prompt')?.querySelector('pre code, pre');
-      if(!code){announce('No prompt found.');return;}
-      const ok=await copyText(code.textContent);announce(ok?'Prompt copied.':'Copy unavailable: select and copy the prompt text.');
-      const old=copy.textContent;copy.textContent=ok?'Copied':'Select text to copy';setTimeout(()=>copy.textContent=old,1500);return;
+      if(!code){announce(t('No prompt found.'));return;}
+      const ok=await copyText(code.textContent);announce(t(ok?'Prompt copied.':'Copy unavailable: select and copy the prompt text.'));
+      copy.textContent=t(ok?'Copied':'Select text to copy');setTimeout(()=>copy.textContent=t('Copy prompt'),1500);return;
     }
     const timer=event.target.closest('[data-timer]');
-    if(timer){const box=timer.closest('.timer'),t=state(box);if(timer.dataset.timer==='reset'){t.running=false;t.remaining=Number(box.dataset.seconds)*1000;}else if(t.running){t.remaining=Math.max(0,t.end-Date.now());t.running=false;}else{if(!t.remaining)t.remaining=Number(box.dataset.seconds)*1000;t.end=Date.now()+t.remaining;t.running=true;}draw(box);return;}
+    if(timer){const box=timer.closest('.timer'),value=state(box);if(timer.dataset.timer==='reset'){value.running=false;value.remaining=Number(box.dataset.seconds)*1000;}else if(value.running){value.remaining=Math.max(0,value.end-Date.now());value.running=false;}else{if(!value.remaining)value.remaining=Number(box.dataset.seconds)*1000;value.end=Date.now()+value.remaining;value.running=true;}draw(box);return;}
     const play=event.target.closest('.play-clip');
     if(play){
       const box=play.closest('[data-video]');closeVideos();const frame=document.createElement('iframe');
@@ -43,6 +49,7 @@
     if(event.target.closest('[data-notes]'))window.Reveal?.getPlugin('notes')?.open();
   });
   setInterval(()=>document.querySelectorAll('.timer').forEach(draw),250);
+  document.addEventListener('workshoplanguagechange',()=>document.querySelectorAll('.timer').forEach(draw));
   window.initWorkshop=function(){if(window.Reveal){Reveal.on('slidechanged',closeVideos);Reveal.on('overviewshown',closeVideos);}};
   document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('.video-stage iframe').forEach(f=>f.contentWindow?.postMessage(JSON.stringify({event:'command',func:'pauseVideo',args:[]}), 'https://www.youtube-nocookie.com'));});
 })();
