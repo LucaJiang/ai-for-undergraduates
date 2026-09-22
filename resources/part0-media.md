@@ -4,7 +4,7 @@ Two source-video excerpts, **50 seconds in total**. The generated-world example 
 
 | Source | Start | End | Duration |
 |---|---|---|---|
-| [OpenAI GPT-Realtime-2](https://www.youtube.com/watch?v=qGS9Ghnq1RU) | 06:58 | 07:28 | 30 s |
+| [OpenAI GPT-Realtime-2](https://www.youtube.com/watch?v=qGS9Ghnq1RU) | 07:00 | 07:30 | 30 s |
 | [Runway Gen-4.5](https://www.youtube.com/watch?v=ei2PsDpPbB4) | 00:06 | 00:26 | 20 s |
 
 ## Before class
