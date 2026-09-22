@@ -83,12 +83,12 @@ AI 的输入和输出都不只限于文字。我们先看两段很短的演示�
 
 ## Hear, speak — and use tools.
 
-<div class="video-stage" data-video="qGS9Ghnq1RU" data-start="418" data-end="448"><p>OpenAI · GPT-Realtime-2</p><button type="button" class="play-clip">Play 30-second excerpt</button><p class="footer">06:58–07:28</p></div><p class="video-observe">Notice how a spoken question becomes an action.</p><p class="footer"><a class="youtube-link" href="https://www.youtube.com/watch?v=qGS9Ghnq1RU&amp;t=418s" target="_blank" rel="noopener">Watch on YouTube ↗</a> · 06:58–07:28</p>
+<div class="video-stage" data-video="qGS9Ghnq1RU" data-start="420" data-end="450"><p>OpenAI · GPT-Realtime-2</p><button type="button" class="play-clip">Play 30-second excerpt</button><p class="footer">07:00–07:30</p></div><p class="video-observe">Notice how a spoken question becomes an action.</p><p class="footer"><a class="youtube-link" href="https://www.youtube.com/watch?v=qGS9Ghnq1RU&amp;t=420s" target="_blank" rel="noopener">Watch on YouTube ↗</a> · 07:00–07:30</p>
 
 Note:
 14:33:35–14:34:15。
 播放30秒。看，刚才的交流不只是问一句、答一句，它还可以调用工具去完成后续动作。
-操作：课前按 V 设置本地视频，或使用 YouTube。原站播放时在07:28暂停。播放准备见 resources/part0-media.md。
+操作：课前按 V 设置本地视频，或使用 YouTube。原站播放时在07:30暂停。播放准备见 resources/part0-media.md。
 
 ---
 
