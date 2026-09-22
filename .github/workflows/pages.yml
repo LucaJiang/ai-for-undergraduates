@@ -34,6 +34,8 @@ jobs:
           python scripts/check_sources.py
           node --check js/preferences.js
           node --check js/translations-zh.js
+          node --check js/materials.js
+          node --check js/prompt-library.js
       - name: Build bundled site
         run: npm run build
       - name: Browser checks
@@ -42,6 +44,8 @@ jobs:
         run: python scripts/browser_visual_check.py
       - name: Language and theme checks
         run: python scripts/browser_preferences_check.py
+      - name: Student materials checks
+        run: python scripts/browser_materials_check.py
       - name: Save QA results and tested site
         if: always()
         uses: actions/upload-artifact@v4

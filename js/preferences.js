@@ -4,13 +4,16 @@
 (function () {
   'use strict';
   const root = document.documentElement;
+  const originalTitle = document.title;
+  const siteBase = new URL('../', document.currentScript.src);
   const keys = { lang: 'ai-study-language', theme: 'ai-study-theme' };
   function read(key) { try { return localStorage.getItem(key); } catch (_) { return null; } }
   function save(key, value) { try { localStorage.setItem(key, value); } catch (_) { /* Private/restricted browser. */ } }
   const query = new URLSearchParams(location.search);
   function choice(name, allowed, fallback) {
     const requested = query.get(name), saved = read(keys[name]);
-    return allowed.includes(requested) ? requested : allowed.includes(saved) ? saved : fallback;
+    const pageDefault = name === 'lang' ? root.dataset.defaultLanguage : null;
+    return allowed.includes(requested) ? requested : allowed.includes(pageDefault) ? pageDefault : allowed.includes(saved) ? saved : fallback;
   }
   let language = choice('lang', ['en', 'zh'], 'en');
   let theme = choice('theme', ['light', 'dark'], 'light');
@@ -113,7 +116,7 @@
           else updateAttributes(record.target);
         }
       });
-      if (doc === document) connectLabs();
+      if (doc === document) { connectLabs(); syncLinks(); }
     });
     observers.set(doc, observer);
     observer.observe(doc.body, observeOptions);
@@ -145,7 +148,23 @@
       doc.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
       withObserverPaused(doc, () => translateSubtree(doc.body));
     });
-    document.title = language === 'zh' ? '用 AI 提高学习效率 · Wenxin Jiang' : 'Boost Your Study Skills with AI · Wenxin Jiang';
+    document.title = originalTitle === 'Boost Your Study Skills with AI · Wenxin Jiang' && language === 'zh' ? '用 AI 提高学习效率 · Wenxin Jiang' : translatedPair(originalTitle)?.[language] || originalTitle;
+    syncLinks();
+  }
+  // Carry settings through links, including when localStorage is unavailable.
+  // Only our own HTML pages are changed. External sources and downloads stay intact.
+  function syncLinks() {
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || link.hasAttribute('download')) return;
+      try {
+        const url = new URL(href, document.baseURI);
+        if (url.origin !== siteBase.origin || !url.pathname.startsWith(siteBase.pathname) || !url.pathname.endsWith('.html')) return;
+        url.searchParams.set('lang', language);
+        url.searchParams.set('theme', theme);
+        if (link.href !== url.href) link.href = url.href;
+      } catch (_) { /* Keep malformed/non-web links as authored. */ }
+    });
   }
   function updateURL(name, value) {
     try {
@@ -159,7 +178,8 @@
     const languageButton = document.querySelector('[data-language-toggle]');
     const themeButton = document.querySelector('[data-theme-toggle]');
     const group = document.querySelector('.deck-preferences');
-    group?.setAttribute('aria-label', chinese ? '演示设置' : 'Presentation settings');
+    const reading = document.body?.classList.contains('source-page');
+    group?.setAttribute('aria-label', chinese ? (reading ? '阅读设置' : '演示设置') : (reading ? 'Reading settings' : 'Presentation settings'));
     if (languageButton) {
       const label = chinese ? 'Switch to English' : '切换为中文';
       languageButton.setAttribute('aria-label', label);
@@ -193,7 +213,8 @@
   function setTheme(value) {
     if (!['light', 'dark'].includes(value)) return;
     theme = value; root.dataset.theme = value; root.style.colorScheme = value;
-    save(keys.theme, value); updateURL('theme', value); updateControls(); announce();
+    save(keys.theme, value); updateURL('theme', value); updateControls(); syncLinks(); announce();
+    document.dispatchEvent(new CustomEvent('workshopthemechange', { detail: { theme } }));
   }
   function init() {
     if (initialized) return;

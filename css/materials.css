@@ -1,0 +1,44 @@
+/* Reading pages use the same palette and controls as the presentation. */
+body.source-page { background:var(--bg); color:var(--ink); font-family:var(--workshop-font); }
+.source-page .page-wrap { padding-top:70px; }
+.source-page .page-nav { flex-wrap:wrap; gap:14px 22px; }
+.source-page a { color:var(--accent); }
+.source-page .hint { color:var(--muted); }
+.source-page .tag { color:var(--accent); }
+.source-page .box, .source-page .cards>div { background:var(--panel); border-color:var(--line); }
+.source-page .callout, .source-page .result { background:var(--preference-hover); border-color:var(--accent); }
+.source-page .prompt { background:var(--prompt-bg); border-color:var(--line); }
+.source-page button { background:var(--accent); color:var(--button-ink); }
+.source-page input, .source-page select { background:var(--panel); color:var(--ink); border-color:var(--line); }
+.source-page th, .source-page td { border-color:var(--line); }
+.source-page th { background:var(--prompt-bg); }
+.source-page .quiz-answer { border-color:var(--line); }
+.source-page pre { font-family:Consolas,"Noto Sans Mono CJK SC","Microsoft YaHei",monospace; }
+.source-page p, .source-page h1, .source-page h2, .source-page h3, .source-page li { overflow-wrap:break-word; }
+html[lang="zh-CN"] .source-page h1 { letter-spacing:0; line-height:1.3; }
+html[lang="zh-CN"] .source-page p, html[lang="zh-CN"] .source-page li, html[lang="zh-CN"] .source-page pre { line-height:1.7; }
+.source-page section[id], .source-page h2[id], .source-page details[id] { scroll-margin-top:62px; }
+.source-page .table-scroll { max-width:100%; overflow-x:auto; margin:16px 0; }
+.source-page .table-scroll table { min-width:450px; }
+.source-page .lab-grid .table-scroll table { min-width:250px; }
+.source-page .deck-preferences .preference-button { background:var(--panel); color:var(--ink); }
+.source-page .deck-preferences .preference-button:hover { background:var(--preference-hover); }
+.source-page.embedded .page-wrap { padding:12px 20px; }
+.source-page.embedded .deck-preferences { display:none; }
+.source-page.embedded .table-scroll { margin:0; }
+.source-page .lab-grid svg { background:#fff; }
+@media(max-width:700px) {
+ .source-page .page-wrap { padding-top:64px; }
+ .source-page .table-scroll table { font-size:15px; }
+ .source-page .filters label { margin-top:4px; }
+ .source-page .filters input, .source-page .filters select { width:100%; }
+}
+@media print {
+ body.source-page { background:white; color:#122033; }
+ .source-page .page-wrap { padding-top:0; }
+ .source-page .table-scroll { overflow:visible; }
+ .source-page .table-scroll table { min-width:0; }
+ .source-page .box, .source-page .cards>div, .source-page .prompt, .source-page .callout { background:white; color:#122033; }
+ .source-page a, .source-page .hint, .source-page .tag { color:#122033; }
+ .source-page th { background:#edf2f8; color:#122033; }
+}

@@ -1,6 +1,7 @@
 """Build a static site with the pinned Reveal runtime copied locally; no fonts."""
 from pathlib import Path
 import shutil
+from localize_materials import localize
 
 root = Path(__file__).resolve().parents[1]
 reveal = root / "node_modules/reveal.js"
@@ -27,6 +28,7 @@ optional = reveal / "plugin/notes/speaker-view.html"
 if optional.exists():
     shutil.copy2(optional, output / "vendor/reveal/plugin/notes/speaker-view.html")
 index = output / "index.html"
-index.write_text(index.read_text().replace("https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/", "vendor/reveal/"))
+index.write_text(index.read_text(encoding="utf-8").replace("https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/", "vendor/reveal/"), encoding="utf-8")
+localize(output)
 (output / ".nojekyll").touch()
 print(f"Built {output} with Reveal.js 5.2.1. External videos remain click-to-load.")

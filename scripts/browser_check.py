@@ -65,7 +65,7 @@ try:
             page.evaluate("Reveal.slide(Reveal.getSlides().findIndex(s=>s.id==='voice-demo'))")
             page.locator('#voice-demo .play-clip').click()
             url = page.locator('#voice-demo iframe').get_attribute('src')
-            assert 'youtube.com/embed/' in url and 'start=418' in url and 'end=448' in url, url
+            assert 'youtube.com/embed/' in url and 'start=420' in url and 'end=450' in url, url
             page.evaluate('Reveal.next()'); assert page.locator('#voice-demo iframe').count()==0
             report['checks'].append('YouTube URL bounds and unloading; external streaming mocked')
             # Wait for observable state, not 1.2 seconds close to a 1-second/250-ms boundary.
