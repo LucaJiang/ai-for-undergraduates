@@ -6,7 +6,7 @@ window.WorkshopChinese = Object.freeze(Object.assign({}, window.WorkshopChinese,
   "You fill values": "你填写数值",
   "Change one number each round.": "每轮只改一个数。",
   "Draw + explain": "画出来，再解释",
-  "Gemini shows a text visual and interprets it.": "Gemini 用文字可视化结果，并解释变化。",
-  "If you cannot render an interactive app, use a conversation loop.\nFirst give me a fill-in template for the parameters.\nAfter I fill it in, draw a compact text visualization of the result,\ncalculate the key numbers, and explain what changed.\nThen ask me which one parameter I want to change next.": "如果不能渲染交互工具，就改用对话循环。\n请先给我一个参数填写模板。\n我填好以后，请画出紧凑的文字可视化结果，\n计算关键数字，并解释发生了什么变化。\n然后问我下一轮想改变哪一个参数。",
-  "Fallback does not mean weaker: keep prediction → result → explanation.": "备用方案不等于效果更弱：保留 预测 → 结果 → 解释。"
+  "Gemini shows a text visual and interprets it.": "Gemini 用文字展示结果并解释变化。",
+  "If you cannot render an interactive app, use a conversation loop.\nFirst give me a fill-in template for the parameters.\nAfter I fill it in, draw a compact text visualization of the result,\ncalculate the key numbers, and explain what changed.\nThen ask me which one parameter I want to change next.": "如果不能渲染交互工具，就用对话循环。\n先给我一个参数模板。\n我填好后，用简洁的文字图展示结果，\n计算关键数字并解释变化。\n再问我下一轮想改哪个参数。",
+  "Fallback does not mean weaker: keep prediction → result → explanation.": "没有滑块也可以：保留 预测 → 结果 → 解释。"
 }));
