@@ -323,7 +323,7 @@ window.WorkshopChinese = Object.freeze({
   "Materials ↗": "学习材料 ↗",
   "Prompts ↗": "提示词 ↗",
   "PART 3 · TAKE STOCK": "第 3 部分 · 回顾一下",
-  "Could a classmate follow your explanation?": "你的解释，同学听得懂吗？",
+  "Without AI, can you explain it in your own words?": "不看 AI，你还能用自己的话讲清楚吗？",
   "Explain it": "讲明白",
   "Use your own words.": "用你自己的话说。",
   "Apply it": "用一用",
