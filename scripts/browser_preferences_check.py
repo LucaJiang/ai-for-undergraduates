@@ -46,8 +46,8 @@ try:
         assert page.locator('html').get_attribute('data-theme') == 'light'
         assert page.evaluate('getComputedStyle(document.body).backgroundColor') == 'rgb(248, 250, 252)'
         ids = page.evaluate('Reveal.getSlides().map(s=>s.id)')
-        assert len(ids) == 52
-        report['checks'].append('First visit defaults to English + light; 52 original slide IDs')
+        assert len(ids) == 54
+        report['checks'].append('First visit defaults to English + light; 54 original slide IDs')
 
         # Require complete translation coverage, with only intentional proper names retained.
         missing = page.evaluate('''() => {
@@ -97,7 +97,7 @@ try:
                     assert page.evaluate('Reveal.getCurrentSlide() === originalSlideNodes[Reveal.getIndices().h]')
                     if ident in ['start','evidence-warning','specific-question','part6']:
                         page.screenshot(path=str(out / f'preferences-{lang}-{theme}-{ident}.png'))
-        report['checks'].append('All 52 slides fit at 1280×720 in EN/中文 × light/dark; both palettes meet 4.5:1 text contrast')
+        report['checks'].append('All 54 slides fit at 1280×720 in EN/中文 × light/dark; both palettes meet 4.5:1 text contrast')
 
         # Chinese prompts copy the actual displayed text; changing language does not replace nodes.
         slide(page, 'specific-question')

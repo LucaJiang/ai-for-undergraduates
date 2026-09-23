@@ -48,3 +48,16 @@
 .reveal #exercise3 .prompt{padding:18px;margin:16px 0}.reveal #exercise3 .timer{margin:14px 0}
 .reveal #future-reflection .timer{margin:18px 0}.reveal #future-reflection .footer{margin-top:14px}
 @media print{.pathway>div:not(:last-child)::after{color:var(--accent)}.reveal .fragment{opacity:1;visibility:visible}}
+
+/* Part 6 discussion: question first, evidence after a click. */
+.reveal .future-discussion h2{font-size:48px;line-height:1.12}
+.reveal .future-discussion .cards{margin:18px 0;gap:20px}
+.reveal .future-discussion .cards p{font-size:24px;line-height:1.45}
+.reveal .future-discussion .cards h3{font-size:27px;margin-bottom:10px}
+.reveal .future-discussion .chips{margin:18px 0;gap:14px}
+.reveal .future-discussion .chips span{font-size:25px;padding:12px 18px}
+.reveal .future-discussion .takeaway{font-size:28px;margin-top:18px}
+.reveal .future-discussion .dialogue.compact{font-size:27px;margin:18px 0}
+.reveal .future-discussion .footer{font-size:17px;margin-top:16px}
+.reveal #ai-task-patterns .cards h3{margin:0}
+.reveal #future-reflection .reflection-lines p{font-size:27px}

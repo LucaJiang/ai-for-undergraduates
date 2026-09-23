@@ -33,7 +33,7 @@ python scripts/browser_preferences_check.py
 python scripts/browser_materials_check.py
 ```
 
-The original browser regression explicitly opens the dark theme. The preferences suite checks all 52 slides in all four combinations, translation coverage, text contrast, bounds, exact clipboard text, timers, fragments, media, embedded labs, responsive controls, URL precedence and unavailable storage. CI retains the tested site, screenshots and JSON reports in the `workshop-qa` artifact for seven days.
+The original browser regression explicitly opens the dark theme. The preferences suite checks all 54 slides in all four combinations, translation coverage, text contrast, bounds, exact clipboard text, timers, fragments, media, embedded labs, responsive controls, URL precedence and unavailable storage. CI retains the tested site, screenshots and JSON reports in the `workshop-qa` artifact for seven days.
 
 ## Student materials
 

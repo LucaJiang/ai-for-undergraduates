@@ -99,6 +99,7 @@ def localize(site):
                           f'<script src="{prefix}js/prompt-library.js"></script>', text, count=1)
         runtime = (f'<script src="{prefix}js/translations-zh.js"></script>'
                    f'<script src="{prefix}js/materials-zh.js"></script>'
+                   f'<script src="{prefix}js/translations-zh-part6.js"></script>'
                    f'<script src="{prefix}js/materials.js"></script>')
         return text.replace('</body>', runtime + '</body>', 1)
 

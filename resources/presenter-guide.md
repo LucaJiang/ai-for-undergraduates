@@ -2,7 +2,7 @@
 
 **Wenxin Jiang · 23 September 2026 · Hong Kong**
 
-English slides, conversational Mandarin notes, 52 pages. Use the [clock schedule](../schedule.md): the break stays at 15:15, teaching ends at 16:10, and Q&A runs until 16:30.
+English/Chinese slides, conversational Mandarin notes, 54 pages. Use the [clock schedule](../schedule.md): the break stays at 15:15, teaching ends at 16:10, and Q&A runs until 16:30.
 
 ## Before the room opens
 
@@ -93,15 +93,29 @@ Exercise 4, **15:52–15:58**: one minute to reopen the paragraph, three to exam
 
 Close with three practical coursework habits: check the assignment instructions, choose suitable materials, and describe the help you received. Use public examples instead of patient, company or classmates' private material.
 
-## Part 6: AI and your future
+## Part 6: three questions about AI and opportunity
 
-16:03–16:10. [Sources and further reading](../references/future.html).
+16:03–16:10. [Evidence and discussion sources](../references/future.html). Keep the seven-minute slot and the full minute of quiet writing. Let students answer before using the right arrow to reveal the prompts. Longer exchanges continue in Q&A.
 
-Move from a short milestone timeline to mathematical research, then ask the future hypothetical: “If AI became better than every mathematician, would you still learn maths?” Invite answers about understanding, making choices and enjoying discovery.
+| Time | Page and facilitation |
+|---|---|
+| 16:03–16:04 | Timeline, then mathematics: 30 seconds each. Plant the future question about learning mathematics alongside stronger AI. |
+| 16:04–16:05:30 | Capabilities: ask what coding, maths and games share; hear one idea; reveal goals, feedback and repeated attempts. |
+| 16:05:30–16:07 | Access: ask what a student would need to reproduce a research result; distinguish access, run budget and tools. |
+| 16:07–16:09 | Opportunity: invite narrow/widen/both and one reason from two students; reveal both possible mechanisms; ask whether equal accounts mean equal opportunities. |
+| 16:09–16:10 | Start the 60-second timer and leave it quiet. Three lines: one learning goal, one AI-assisted task, one needed resource or kind of support. |
 
-The next slide focuses on a combination students can build: domain depth, AI fluency and judgement. Make this concrete with their fields: deciding a research question, interpreting an analysis, evaluating an argument, or choosing what evidence a project needs.
+### 讲者提问与接话
 
-At 16:07, invite the three-line reflection. Leave a full minute for writing, then take one response. Acknowledge that enjoying a skill and delegating work to AI can coexist. End the teaching at 16:10.
+**能力：**“数学和编程都很难，为什么 AI 在这些地方进步很快？”接住学生的例子，再讲目标、反馈和反复尝试。追加一句：“解出一道题，和选择值得研究的问题，是一回事吗？”不必把任务类型讲成 AI 与人类的永久分界。
+
+**获取：**“新闻里的那个系统，你觉得自己能不能用？”用资料页的 First Proof 实例解释：模型公开，仍要考虑运行费用、时间和配套程序。Google 的个人账号文档则提供一个额度和思考级别的实例。这里讨论门槛，不做套餐推销。
+
+**机会：**“AI 会缩小差距、扩大差距，还是两者都有？”不要预先规定答案。客服研究提供了帮助初学者的实例；经济研究讨论收益如何分配。追问：“学校给大家同样的账号，机会就完全一样了吗？除了账号，还需要什么？”学生可以讨论假设情形，不需要透露家庭收入或个人订阅。
+
+**反思：**“即使 AI 有一天比所有数学家都强，你仍想学懂什么？又需要什么支持？”把专业理解、AI 使用和判断力带回学生自己的目标。喜欢一门学科，也是继续学习的理由。资源差异不全是个人努力的问题；把所需支持写下来，与目标并列。
+
+16:10 进入 Q&A，可邀请学生分享三行中的任意一行。原来的数学学习、优势组合与个人反思已合并进这一收尾，而不是另加三页讲解。
 
 ## Q&A and rehearsal record
 

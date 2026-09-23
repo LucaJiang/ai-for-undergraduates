@@ -30,6 +30,23 @@ try:
         page.wait_for_function('Reveal.getCurrentSlide().id === "part6"')
         page.screenshot(path=str(out / 'part6-navigation.png'))
         report['checks'].append(f'{hosts} local SVG icons and Part 6 navigation')
+        # Discussion answers stay hidden until the audience has responded.
+        final_ids = page.evaluate('Reveal.getSlides().slice(-7).map(s=>s.id)')
+        assert final_ids == ['part6', 'math-frontier', 'ai-task-patterns', 'ai-access', 'ai-inequality', 'future-reflection', 'questions'], final_ids
+        for ident in ['ai-task-patterns', 'ai-access', 'ai-inequality']:
+            page.evaluate('(id)=>Reveal.slide(Reveal.getSlides().findIndex(s=>s.id===id))', ident)
+            page.evaluate('Reveal.navigateFragment(-1)')
+            assert page.locator('#'+ident+' .fragment.visible').count() == 0
+            expect(page.locator('#'+ident+' h2')).to_be_visible()
+            page.evaluate('Reveal.next()')
+            assert page.locator('#'+ident+' .fragment.visible').count() == 1
+            page.evaluate('WorkshopPreferences.setLanguage("zh"); WorkshopPreferences.setTheme("dark")')
+            assert page.locator('#'+ident+' .fragment.visible').count() == 1
+            page.evaluate('Reveal.next()')
+            assert page.locator('#'+ident+' .fragment.visible').count() == 2
+            page.screenshot(path=str(out / ('discussion-zh-dark-'+ident+'.png')))
+            page.evaluate('WorkshopPreferences.setLanguage("en"); WorkshopPreferences.setTheme("light")')
+        report['checks'].append('Three discussion questions: prompt-first reveals and preserved state across language/theme changes')
         page.evaluate("Reveal.slide(Reveal.getSlides().findIndex(s=>s.id==='future-reflection'))")
         output = page.locator('#future-reflection output')
         toggle = page.locator('#future-reflection [data-timer="toggle"]')
@@ -50,6 +67,13 @@ try:
             assert not page.evaluate('document.documentElement.scrollWidth > innerWidth+1'), path
             page.screenshot(path=str(out / ('mobile-' + path.replace('/', '-').replace('.html', '') + '.png')), full_page=True)
         report['checks'].append('Three revised resource pages at 390px')
+        page.goto(base + '/references/future.html?lang=zh&theme=light', wait_until='networkidle')
+        for ident in ['capabilities', 'access', 'inequality']:
+            section = page.locator('#'+ident)
+            assert '讨论：' in section.inner_text(), ident
+            assert 'Discuss:' not in section.inner_text(), ident
+        assert '贫富' in page.locator('#inequality').inner_text() or '财富' in page.locator('#inequality').inner_text()
+        report['checks'].append('Three source sections translated into Chinese with original research links')
         browser.close()
 except Exception as error:
     report['failures'].append(f'{type(error).__name__}: {error}')

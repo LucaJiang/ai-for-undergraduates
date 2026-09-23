@@ -20,13 +20,13 @@ for part in range(7):
         if not found: errors.append(f'Missing anchor in {path.name}')
         else: ids.append(found[1])
         visible.append(chunk.split('\nNote:\n')[0])
-assert len(ids) == 52, len(ids)
+assert len(ids) == 54, len(ids)
 assert len(set(ids)) == len(ids)
 assert 'Wenxin Jiang' in visible[0]
 assert 'PART 0' not in visible[0]
 assert 'id="agenda"' in visible[1]
 assert ids[-1] == 'questions'
-for required in ('part6', 'demo-to-practice', 'deep-research', 'math-frontier', 'future-reflection', 'first-demo', 'exercise1', 'exercise2', 'exercise3'):
+for required in ('part6', 'demo-to-practice', 'deep-research', 'math-frontier', 'ai-task-patterns', 'ai-access', 'ai-inequality', 'future-reflection', 'first-demo', 'exercise1', 'exercise2', 'exercise3'):
     assert required in ids, required
 for forbidden in ['The lecturer starts import', 'Importing sources and generating a quiz are different waiting steps', 'A prepared notebook is a backup', 'Illustrative teaching dialogue', 'Scheduled return:', 'Open Canvas', 'A generated world you can navigate', 'not percentage-point changes', 'Short-term results in this setting', 'A citation is a route to evidence, not a verdict', 'Does this source support that claim?']:
     if any(forbidden in text for text in visible): errors.append(f'Reader-facing text regression: {forbidden}')
@@ -52,4 +52,4 @@ for path in root.rglob('*'):
         if url.scheme or url.netloc or not url.path: continue
         if not (base / unquote(url.path)).resolve().exists(): errors.append(f'{path.relative_to(root)} -> missing {raw}')
 if errors: raise SystemExit('\n'.join(errors))
-print('PASS: 52 slides across seven parts, reader-facing checks, anchors, notes, timers and local links.')
+print('PASS: 54 slides across seven parts, reader-facing checks, anchors, notes, timers and local links.')

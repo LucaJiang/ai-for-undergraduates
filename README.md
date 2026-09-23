@@ -6,7 +6,7 @@ A practical workshop for undergraduate students. **Wenxin Jiang · 23 September 
 
 ## Workshop route
 
-The 52-slide deck has an opening and six parts: **Choose, Ask, Understand, Explore, Verify, and AI past & future**. Slides are in English; presenter notes are in Mandarin.
+The 54-slide deck has an opening and six parts: **Choose, Ask, Understand, Explore, Verify, and AI past & future**. Slides switch between English and Chinese; presenter notes are in Mandarin. Part 6 asks about AI capabilities, access and inequality before a one-minute learning reflection.
 
 The opening connects two research examples and two short capability demos to a familiar assignment question. Part 1 includes NotebookLM and Gemini Deep Research. The later sections move through concept explanations, interactive prediction, feedback and source checking. Part 6 closes with mathematical AI and a personal learning reflection.
 

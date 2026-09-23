@@ -2,7 +2,7 @@
 
 23 September 2026 · Hong Kong time · Wenxin Jiang.
 
-52 slides across the opening and Parts 1–6. **90 minutes of learning and practice + 10-minute break + 20-minute Q&A.** Debriefs are included in exercise slots.
+54 slides across the opening and Parts 1–6. **90 minutes of learning and practice + 10-minute break + 20-minute Q&A.** Debriefs are included in exercise slots.
 
 | Time | Segment | Main output |
 |---|---|---|
@@ -18,7 +18,19 @@
 | 15:45–15:52 | Part 4 | Interactive visualization and independent checks |
 | 15:52–15:58 | Exercise 4 | Accept or reject feedback with a reason |
 | 15:58–16:03 | Part 5 | Check a real study summary; explain AI use in coursework |
-| 16:03–16:10 | Part 6 | AI milestones, research mathematics and a one-minute reflection |
+| 16:03–16:10 | Part 6 | Three questions: capabilities, access and inequality; one-minute reflection |
 | 16:10–16:30 | Q&A | Questions and discussion |
 
 Slide notes use this same clock. See the [presenter guide](resources/presenter-guide.md) for preparation and demonstration steps.
+
+## Part 6 discussion clock
+
+| Time | Activity |
+|---|---|
+| 16:03–16:04 | Timeline and mathematics examples, 30 seconds each |
+| 16:04–16:05:30 | What do coding, maths and games have in common? |
+| 16:05:30–16:07 | Can we access and run the AI behind research results? |
+| 16:07–16:09 | Will AI narrow or widen gaps? Same account, same opportunities? |
+| 16:09–16:10 | Full minute of quiet writing: learning, AI task, needed support |
+
+Question first; reveal the prompts after hearing students. Continue longer discussion and sharing in Q&A.

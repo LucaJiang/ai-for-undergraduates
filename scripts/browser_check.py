@@ -38,7 +38,7 @@ try:
         if not args.materials_only:
             # Keep the original dark-theme regression; the preferences suite checks both palettes.
             page.goto(base+'?theme=dark', wait_until='networkidle'); page.wait_for_function('window.Reveal && Reveal.isReady()')
-            ids = page.evaluate('Reveal.getSlides().map(s=>s.id)'); assert len(ids)==52, len(ids)
+            ids = page.evaluate('Reveal.getSlides().map(s=>s.id)'); assert len(ids)==54, len(ids)
             assert page.locator('.slides > section > section').count()==0
             assert 'Wenxin Jiang' in page.locator('#start').inner_text()
             assert 'PART 0' not in page.locator('#start').inner_text()
@@ -60,7 +60,7 @@ try:
                         expected = button.locator('..').locator('pre').inner_text(); button.click()
                         actual = page.evaluate('navigator.clipboard.readText()')
                         assert actual==expected and '\\n' not in actual, ident
-            report['checks'] += ['52 Reveal slides at two desktop sizes','cover, outline, notes, contrast and exact clipboard text']
+            report['checks'] += ['54 Reveal slides at two desktop sizes','cover, outline, notes, contrast and exact clipboard text']
             page.set_viewport_size({'width':1280,'height':720})
             page.evaluate("Reveal.slide(Reveal.getSlides().findIndex(s=>s.id==='voice-demo'))")
             page.locator('#voice-demo .play-clip').click()
