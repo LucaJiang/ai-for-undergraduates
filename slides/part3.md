@@ -97,7 +97,7 @@ Note:
 <!-- .slide: id="exercise2-debrief" -->
 <p class="eyebrow">PART 3 · TAKE STOCK</p>
 
-## Could a classmate follow your explanation?
+## Without AI, can you explain it in your own words?
 
 <div class="cards"><div><span class="icon" data-icon="chat"></span><h3>Explain it</h3><p>Use your own words.</p></div><div><span class="icon" data-icon="math"></span><h3>Apply it</h3><p>Try a different example.</p></div><div><span class="icon" data-icon="search"></span><h3>Find the gap</h3><p>What is still unclear?</p></div></div><p class="takeaway">Keep the paragraph. Next, we will explore and check.</p>
 
