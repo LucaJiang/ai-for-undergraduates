@@ -500,7 +500,6 @@ window.WorkshopChinese = Object.freeze({
   "Test −": "检测阴性",
   "Green: true positives · amber: false positives": "绿色：真阳性 · 黄色：假阳性",
   "PPV denominator = everyone testing positive.": "阳性预测值的分母 = 所有检测呈阳性的人。",
-  "Toy model only. Not patient data, a diagnostic calculator or clinical advice.": "仅作教学演示，不使用患者数据，也不用于临床诊断。",
   "PPV undefined": "PPV 未定义",
   "When is Av a scalar multiple of v?": "Av 什么时候是 v 的一个倍数？",
   "Input vector and its transformed output on a labelled coordinate grid": "坐标系中的输入向量及其变换结果",
