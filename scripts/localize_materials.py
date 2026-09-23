@@ -81,7 +81,12 @@ def localize(site):
             chinese = None
             if 'demo-materials/notebook/' in href and href.endswith('.html'):
                 chinese = href[:-5] + '.zh.html'
-            elif href.endswith('undergraduate-study-prompts.md') or href.endswith('answer-keys.md'):
+            elif any(href.endswith(name) for name in (
+                'undergraduate-study-prompts.md',
+                'answer-keys.md',
+                'part0-evidence.md',
+                'part0-media.md',
+            )):
                 chinese = href[:-3] + '.zh.md'
             if not chinese:
                 return match.group(0)
