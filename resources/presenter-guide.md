@@ -89,7 +89,7 @@ Exercise 4, **15:52–15:58**: one minute to reopen the paragraph, three to exam
 
 ## Part 5: check a concrete claim
 
-15:58–16:03. Reuse the Harvard study rather than introducing a new source. The deliberately overstated sentence is “AI doubles students’ final exam scores.” Ask students which words should change. Then show the routine: open the paper, locate what was measured, and rewrite the summary.
+15:58–16:03. Use Peng et al. (2023) as a fresh verification example. The deliberately misleading sentence is “GitHub Copilot improves programmers’ coding ability by 55%.” The 55% is based on a real result, but the study measured time to complete one JavaScript HTTP server task, not general coding ability. Ask students what was relabelled, then show the routine: open the paper, locate the participants, task and outcome, and rewrite the summary.
 
 Close with three practical coursework habits: check the assignment instructions, choose suitable materials, and describe the help you received. Use public examples instead of patient, company or classmates' private material.
 
