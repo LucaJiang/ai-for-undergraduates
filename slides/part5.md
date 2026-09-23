@@ -3,7 +3,7 @@
 
 ## Pick one important claim. Check it properly.
 
-<div class="pathway"><div><span class="icon" data-icon="target"></span><h3>Pick the claim</h3><p>A number, a definition or a key conclusion.</p></div><div><span class="icon" data-icon="book"></span><h3>Find the evidence</h3><p>Open the source or calculate an example.</p></div><div><span class="icon" data-icon="pen"></span><h3>Decide</h3><p>Keep it, correct it or ask for help.</p></div></div><p class="takeaway">Let’s check a claim about the study from our opening.</p>
+<div class="pathway"><div><span class="icon" data-icon="target"></span><h3>Pick the claim</h3><p>A number, a definition or a key conclusion.</p></div><div><span class="icon" data-icon="book"></span><h3>Find the evidence</h3><p>Open the source or calculate an example.</p></div><div><span class="icon" data-icon="pen"></span><h3>Decide</h3><p>Keep it, correct it or ask for help.</p></div></div><p class="takeaway">Let’s check a claim from a real study.</p>
 
 Note:
 15:58–15:59。
@@ -16,12 +16,12 @@ Note:
 
 ## The link is real. Is the summary right?
 
-<div class="evidence-pair"><div><span class="icon" data-icon="chat"></span><h3>Summary to check</h3><p class="claim-text">“AI doubles students’ final exam scores.”</p><p class="mini-label">An example of an overstatement</p></div><div><span class="icon" data-icon="book"></span><h3>What the study measured</h3><p>Two physics lessons.<br>Tests before and after each lesson.<br>Learning gains.</p></div></div><p class="takeaway">Which words would you change?</p><p class="footer">Kestin et al. (2025) · <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Open the original study ↗</a></p>
+<div class="evidence-pair"><div><span class="icon" data-icon="chat"></span><h3>Summary to check</h3><p class="claim-text">“GitHub Copilot improves programmers’ coding ability by 55%.”</p><p class="mini-label">The number is real. The conclusion is not.</p></div><div><span class="icon" data-icon="book"></span><h3>What the study measured</h3><p>95 developers.<br>One JavaScript HTTP server task.<br>Time to complete the task.<br>Copilot group: 55.8% faster.</p></div></div><p class="takeaway">The 55% is real. What changed in the summary?</p><p class="footer">Peng et al. (2023) · <a href="https://arxiv.org/abs/2302.06590" target="_blank" rel="noopener">Open the original study ↗</a></p>
 
 Note:
 15:59–16:00。
-假设你在一段 AI 回答里看到左边这句话，后面还有一个真实的论文链接。请大家想想：这句话和开头看到的研究是同一个意思吗？
-先让学生说，再指向右边：研究测的是两节课前后的学习增益。我们需要把 final exam scores 这些词改准确。右边是对研究设计的概括，左边是为这次核查练习写的例句。
+假设你在一段 AI 回答里看到左边这句话，后面还有一个真实的论文链接。55% 这个数字是真的，但研究有没有测“编程能力”？
+先让学生说，再指向右边：95 名开发者完成同一个 JavaScript HTTP server 任务，研究比较的是完成任务所需的时间。Copilot 组平均快 55.8%。问题不是数字造假，而是把“任务完成速度”偷换成了“编程能力”。
 
 ---
 
@@ -30,12 +30,12 @@ Note:
 
 ## Open the paper. Find the result. Rewrite.
 
-<div class="pathway compact-path"><div><span class="icon" data-icon="link"></span><h3>Open</h3><p>Follow the source link.</p></div><div><span class="icon" data-icon="search"></span><h3>Find</h3><p>Read the methods and result.</p></div><div><span class="icon" data-icon="pen"></span><h3>Rewrite</h3><p>Say what the study actually found.</p></div></div><div class="dialogue"><p><b>A clearer summary:</b> In two Harvard physics lessons, students made larger learning gains with a structured AI tutor than in an active-learning class.</p></div><p class="footer">Try the same check on one citation in your next project. <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Study ↗</a></p>
+<div class="pathway compact-path"><div><span class="icon" data-icon="link"></span><h3>Open</h3><p>Follow the source link.</p></div><div><span class="icon" data-icon="search"></span><h3>Find</h3><p>Read the methods and result.</p></div><div><span class="icon" data-icon="pen"></span><h3>Rewrite</h3><p>Say what the study actually found.</p></div></div><div class="dialogue"><p><b>A clearer summary:</b> In a controlled experiment of 95 developers, the group using GitHub Copilot completed a JavaScript HTTP server task 55.8% faster than the group without Copilot.</p></div><p class="footer">Try the same check on one citation in your next project. <a href="https://arxiv.org/abs/2302.06590" target="_blank" rel="noopener">Study ↗</a></p>
 
 Note:
 16:00–16:01:30。
-操作时很具体：打开论文，找作者到底测了什么，再看结果。最后用一句自己的话写清楚。以后做项目，不用把整篇报告一口气核查完，可以先从最重要的两三个结论开始。
-若现场论文页加载慢，使用前面已展示的研究信息，完整出处放在来源页。
+操作时很具体：打开论文，先找研究对象和任务，再找主要 outcome。这里的 outcome 是完成任务的时间，不是长期学习，也不是脱离 AI 后的编程能力。
+最后用一句自己的话写清楚：在这个受控实验里，Copilot 组完成指定 JavaScript 任务的速度平均快 55.8%。以后做项目，不用把整篇报告一口气核查完，可以先从最重要的两三个结论开始。
 
 ---
 
