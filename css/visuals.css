@@ -61,3 +61,7 @@
 .reveal .future-discussion .footer{font-size:17px;margin-top:16px}
 .reveal #ai-task-patterns .cards h3{margin:0}
 .reveal #future-reflection .reflection-lines p{font-size:27px}
+
+/* Keep the Part 4 conversation fallback within the 720p slide safe area in both languages. */
+.reveal #text-loop .prompt{margin:14px 0;padding:16px 20px}
+.reveal #text-loop .prompt button{margin-top:8px}
